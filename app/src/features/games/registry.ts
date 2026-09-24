@@ -33,6 +33,15 @@ export const GAMES: GameManifest[] = [
     level: "B1",
     tone: "ink",
   },
+  {
+    slug: "opuestos",
+    title: "El Rayo Modificador",
+    subtitle: "Opposites that change physics",
+    blurb: "Zap objects with Spanish opposites: pesado, ligero, elástico… and solve each room your way.",
+    skills: ["opposites"],
+    level: "A2",
+    tone: "light",
+  },
 ];
 
 export function gameBySlug(slug: string): GameManifest | undefined {

@@ -1,0 +1,9 @@
+- [ ] Opposites (size,w eight, shape, touch, temperature, condition,judgement, pace , not adjectives )
+- [x] Where things are (location phrases)
+- [ ] Fue vs estaba vs estuve vs era
+- [ ] Gustar
+- [ ] Joining sentences
+- [ ] Ya, ya no, todavia
+- [ ] Present subjunctive (regular & irregular)
+- [ ] Si tuviera, iria
+- [ ] Using lo - the neuter one

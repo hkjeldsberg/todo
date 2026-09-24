@@ -1,0 +1,1970 @@
+{
+  "words": [
+    {
+      "id": "grande",
+      "word": "grande",
+      "antonym_id": "pequeno",
+      "engine_target": "scale",
+      "value_modifier": 1.6,
+      "shader_trigger": "fx_grow",
+      "translation": "big",
+      "category": "size",
+      "sort": 10
+    },
+    {
+      "id": "pequeno",
+      "word": "pequeño",
+      "antonym_id": "grande",
+      "engine_target": "scale",
+      "value_modifier": 0.5,
+      "shader_trigger": "fx_shrink",
+      "translation": "small",
+      "category": "size",
+      "sort": 11
+    },
+    {
+      "id": "largo",
+      "word": "largo",
+      "antonym_id": "corto",
+      "engine_target": "scale_x",
+      "value_modifier": 2.2,
+      "shader_trigger": "fx_stretch_x",
+      "translation": "long",
+      "category": "size",
+      "sort": 12
+    },
+    {
+      "id": "corto",
+      "word": "corto",
+      "antonym_id": "largo",
+      "engine_target": "scale_x",
+      "value_modifier": 0.5,
+      "shader_trigger": "fx_squash_x",
+      "translation": "short (in length)",
+      "category": "size",
+      "sort": 13
+    },
+    {
+      "id": "alto",
+      "word": "alto",
+      "antonym_id": "bajo",
+      "engine_target": "scale_y",
+      "value_modifier": 2,
+      "shader_trigger": "fx_stretch_y",
+      "translation": "tall, high",
+      "category": "size",
+      "sort": 14
+    },
+    {
+      "id": "bajo",
+      "word": "bajo",
+      "antonym_id": "alto",
+      "engine_target": "scale_y",
+      "value_modifier": 0.2,
+      "shader_trigger": "fx_squash_y",
+      "translation": "low, short (in height)",
+      "category": "size",
+      "sort": 15
+    },
+    {
+      "id": "pesado",
+      "word": "pesado",
+      "antonym_id": "ligero",
+      "engine_target": "mass",
+      "value_modifier": 12,
+      "shader_trigger": "mat_heavy_iron",
+      "translation": "heavy",
+      "category": "weight",
+      "sort": 20
+    },
+    {
+      "id": "ligero",
+      "word": "ligero",
+      "antonym_id": "pesado",
+      "engine_target": "mass",
+      "value_modifier": 0.08,
+      "shader_trigger": "mat_light_feather",
+      "translation": "light (in weight)",
+      "category": "weight",
+      "sort": 21
+    },
+    {
+      "id": "lleno",
+      "word": "lleno",
+      "antonym_id": "vacio",
+      "engine_target": "fill",
+      "value_modifier": 5,
+      "shader_trigger": "mat_full_water",
+      "translation": "full",
+      "category": "weight",
+      "sort": 22
+    },
+    {
+      "id": "vacio",
+      "word": "vacío",
+      "antonym_id": "lleno",
+      "engine_target": "fill",
+      "value_modifier": 0.25,
+      "shader_trigger": "mat_empty",
+      "translation": "empty",
+      "category": "weight",
+      "sort": 23
+    },
+    {
+      "id": "duro",
+      "word": "duro",
+      "antonym_id": "blando",
+      "engine_target": "hardness",
+      "value_modifier": 8,
+      "shader_trigger": "mat_hard_stone",
+      "translation": "hard (to the touch)",
+      "category": "touch",
+      "sort": 30
+    },
+    {
+      "id": "blando",
+      "word": "blando",
+      "antonym_id": "duro",
+      "engine_target": "hardness",
+      "value_modifier": 0,
+      "shader_trigger": "mat_soft_foam",
+      "translation": "soft (gives way)",
+      "category": "touch",
+      "sort": 31
+    },
+    {
+      "id": "aspero",
+      "word": "áspero",
+      "antonym_id": "suave",
+      "engine_target": "friction",
+      "value_modifier": 1.6,
+      "shader_trigger": "mat_rough_bumps",
+      "translation": "rough",
+      "category": "touch",
+      "sort": 32
+    },
+    {
+      "id": "suave",
+      "word": "suave",
+      "antonym_id": "aspero",
+      "engine_target": "friction",
+      "value_modifier": 0.05,
+      "shader_trigger": "mat_smooth_gloss",
+      "translation": "smooth",
+      "category": "touch",
+      "sort": 33
+    },
+    {
+      "id": "elastico",
+      "word": "elástico",
+      "antonym_id": "rigido",
+      "engine_target": "restitution",
+      "value_modifier": 0.9,
+      "shader_trigger": "mat_bouncy_rubber",
+      "translation": "elastic, bouncy",
+      "category": "touch",
+      "sort": 34
+    },
+    {
+      "id": "rigido",
+      "word": "rígido",
+      "antonym_id": "elastico",
+      "engine_target": "restitution",
+      "value_modifier": 0,
+      "shader_trigger": "mat_stiff",
+      "translation": "rigid, stiff",
+      "category": "touch",
+      "sort": 35
+    },
+    {
+      "id": "caliente",
+      "word": "caliente",
+      "antonym_id": "frio",
+      "engine_target": "temperature",
+      "value_modifier": 1,
+      "shader_trigger": "mat_hot_glow",
+      "translation": "hot",
+      "category": "temperature",
+      "sort": 40
+    },
+    {
+      "id": "frio",
+      "word": "frío",
+      "antonym_id": "caliente",
+      "engine_target": "temperature",
+      "value_modifier": -1,
+      "shader_trigger": "mat_cold_frost",
+      "translation": "cold",
+      "category": "temperature",
+      "sort": 41
+    },
+    {
+      "id": "mojado",
+      "word": "mojado",
+      "antonym_id": "seco",
+      "engine_target": "friction",
+      "value_modifier": 0,
+      "shader_trigger": "mat_wet_sheen",
+      "translation": "wet",
+      "category": "condition",
+      "sort": 50
+    },
+    {
+      "id": "seco",
+      "word": "seco",
+      "antonym_id": "mojado",
+      "engine_target": "friction",
+      "value_modifier": 0.7,
+      "shader_trigger": "mat_dry",
+      "translation": "dry",
+      "category": "condition",
+      "sort": 51
+    },
+    {
+      "id": "fuerte",
+      "word": "fuerte",
+      "antonym_id": "debil",
+      "engine_target": "strength",
+      "value_modifier": 1000,
+      "shader_trigger": "mat_strong_steel",
+      "translation": "strong",
+      "category": "condition",
+      "sort": 52
+    },
+    {
+      "id": "debil",
+      "word": "débil",
+      "antonym_id": "fuerte",
+      "engine_target": "strength",
+      "value_modifier": 0.1,
+      "shader_trigger": "mat_weak_cracks",
+      "translation": "weak",
+      "category": "condition",
+      "sort": 53
+    },
+    {
+      "id": "rapido",
+      "word": "rápido",
+      "antonym_id": "lento",
+      "engine_target": "speed",
+      "value_modifier": 2.2,
+      "shader_trigger": "mat_fast_streaks",
+      "translation": "fast",
+      "category": "pace",
+      "sort": 60
+    },
+    {
+      "id": "lento",
+      "word": "lento",
+      "antonym_id": "rapido",
+      "engine_target": "speed",
+      "value_modifier": 0.35,
+      "shader_trigger": "mat_slow_ripple",
+      "translation": "slow",
+      "category": "pace",
+      "sort": 61
+    },
+    {
+      "id": "abrir",
+      "word": "abrir",
+      "antonym_id": "cerrar",
+      "engine_target": "open",
+      "value_modifier": 1,
+      "shader_trigger": "fx_open",
+      "translation": "to open",
+      "category": "action",
+      "sort": 70
+    },
+    {
+      "id": "cerrar",
+      "word": "cerrar",
+      "antonym_id": "abrir",
+      "engine_target": "open",
+      "value_modifier": 0,
+      "shader_trigger": "fx_close",
+      "translation": "to close",
+      "category": "action",
+      "sort": 71
+    },
+    {
+      "id": "encender",
+      "word": "encender",
+      "antonym_id": "apagar",
+      "engine_target": "power",
+      "value_modifier": 1,
+      "shader_trigger": "fx_power_on",
+      "translation": "to turn on",
+      "category": "action",
+      "sort": 72
+    },
+    {
+      "id": "apagar",
+      "word": "apagar",
+      "antonym_id": "encender",
+      "engine_target": "power",
+      "value_modifier": 0,
+      "shader_trigger": "fx_power_off",
+      "translation": "to turn off",
+      "category": "action",
+      "sort": 73
+    },
+    {
+      "id": "subir",
+      "word": "subir",
+      "antonym_id": "bajar",
+      "engine_target": "lift",
+      "value_modifier": 1,
+      "shader_trigger": "fx_lift_up",
+      "translation": "to go up",
+      "category": "action",
+      "sort": 74
+    },
+    {
+      "id": "bajar",
+      "word": "bajar",
+      "antonym_id": "subir",
+      "engine_target": "lift",
+      "value_modifier": -1,
+      "shader_trigger": "fx_lift_down",
+      "translation": "to go down",
+      "category": "action",
+      "sort": 75
+    }
+  ],
+  "levels": [
+    {
+      "id": "puente",
+      "sort": 1,
+      "title_es": "El puente de cristal",
+      "title_en": "The glass bridge",
+      "clue_es": "La bola de hierro es muy pesada. ¿Puede cruzar el puente de cristal?",
+      "clue_en": "The iron ball is very heavy. Can it cross the glass bridge?",
+      "words": [
+        "pesado",
+        "ligero"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -3.5,
+              1
+            ],
+            "size": [
+              4,
+              2
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.188,
+              2.679
+            ],
+            "size": [
+              2.72,
+              0.3
+            ],
+            "angle": -36.027,
+            "target": false
+          },
+          {
+            "id": "puente",
+            "kind": "glass",
+            "noun": "el puente",
+            "gender": "m",
+            "noun_en": "the bridge",
+            "pos": [
+              0,
+              1.9
+            ],
+            "size": [
+              3,
+              0.2
+            ],
+            "strength": 2
+          },
+          {
+            "id": "suelo_2",
+            "kind": "ground",
+            "pos": [
+              2.25,
+              1
+            ],
+            "size": [
+              1.5,
+              2
+            ]
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              3.95,
+              0.9
+            ],
+            "size": [
+              1.9,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              5.05,
+              1.7
+            ],
+            "size": [
+              0.3,
+              2.2
+            ]
+          },
+          {
+            "id": "bola",
+            "kind": "ball",
+            "noun": "la bola",
+            "gender": "f",
+            "noun_en": "the iron ball",
+            "pos": [
+              -4.671,
+              3.772
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true,
+            "density": 12,
+            "color": "#7d8597"
+          }
+        ],
+        "goal": {
+          "object": "bola",
+          "zone": [
+            3,
+            1.1,
+            4.9,
+            2.2
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "bola",
+                "word": "ligero"
+              }
+            ],
+            "note": "A light ball rolls over the glass without breaking it."
+          }
+        ]
+      }
+    },
+    {
+      "id": "rampa",
+      "sort": 2,
+      "title_es": "¡Resbala!",
+      "title_en": "Slide!",
+      "clue_es": "La caja no se mueve: la rampa agarra. Haz que la caja resbale hasta la cesta.",
+      "clue_en": "The box won't move: the ramp grips it. Make the box slide down into the basket.",
+      "words": [
+        "mojado",
+        "seco",
+        "aspero",
+        "suave"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -1.686,
+              2.354
+            ],
+            "size": [
+              7.519,
+              0.3
+            ],
+            "angle": -13.851,
+            "target": true,
+            "noun": "la rampa",
+            "gender": "f",
+            "noun_en": "the ramp"
+          },
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -1.75,
+              0.65
+            ],
+            "size": [
+              7.5,
+              1.3
+            ]
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              2.9,
+              0.4
+            ],
+            "size": [
+              1.8,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              3.95,
+              1.25
+            ],
+            "size": [
+              0.3,
+              2.3
+            ]
+          },
+          {
+            "id": "caja",
+            "kind": "box",
+            "noun": "la caja",
+            "gender": "f",
+            "noun_en": "the box",
+            "pos": [
+              -4.182,
+              3.536
+            ],
+            "size": [
+              0.8,
+              0.8
+            ],
+            "angle": -13.851
+          }
+        ],
+        "goal": {
+          "object": "caja",
+          "zone": [
+            2,
+            0.6,
+            3.8,
+            1.8
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "caja",
+                "word": "mojado"
+              }
+            ],
+            "note": "A wet box slides on anything."
+          },
+          {
+            "steps": [
+              {
+                "object": "rampa",
+                "word": "mojado"
+              }
+            ],
+            "note": "A wet ramp lets the box slide."
+          },
+          {
+            "steps": [
+              {
+                "object": "caja",
+                "word": "suave"
+              }
+            ],
+            "note": "A smooth box slides too."
+          },
+          {
+            "steps": [
+              {
+                "object": "rampa",
+                "word": "suave"
+              }
+            ],
+            "note": "So does a smooth ramp."
+          }
+        ]
+      }
+    },
+    {
+      "id": "tubo",
+      "sort": 3,
+      "title_es": "El tubo",
+      "title_en": "The pipe",
+      "clue_es": "La pelota es demasiado grande para el tubo. ¿Qué cambias: la pelota o el tubo?",
+      "clue_en": "The ball is too big for the pipe. What do you change: the ball or the pipe?",
+      "words": [
+        "grande",
+        "pequeno",
+        "largo",
+        "corto"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -1.15,
+              0.5
+            ],
+            "size": [
+              8.7,
+              1
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.258,
+              2.096
+            ],
+            "size": [
+              3.324,
+              0.3
+            ],
+            "angle": -46.219,
+            "target": false
+          },
+          {
+            "id": "tubo",
+            "kind": "pipe",
+            "noun": "el tubo",
+            "gender": "m",
+            "noun_en": "the pipe",
+            "pos": [
+              0.3,
+              1
+            ],
+            "size": [
+              3,
+              0.25
+            ],
+            "opening": 0.65
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              4.05,
+              -0.1
+            ],
+            "size": [
+              1.7,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              5.05,
+              0.7
+            ],
+            "size": [
+              0.3,
+              2.2
+            ]
+          },
+          {
+            "id": "pelota",
+            "kind": "ball",
+            "noun": "la pelota",
+            "gender": "f",
+            "noun_en": "the ball",
+            "pos": [
+              -4.745,
+              3.471
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true
+          }
+        ],
+        "goal": {
+          "object": "pelota",
+          "zone": [
+            3.2,
+            0.1,
+            4.9,
+            1.2
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "pelota",
+                "word": "pequeno"
+              }
+            ],
+            "note": "A small ball fits through the pipe."
+          },
+          {
+            "steps": [
+              {
+                "object": "tubo",
+                "word": "grande"
+              }
+            ],
+            "note": "A big pipe lets the ball through."
+          }
+        ]
+      }
+    },
+    {
+      "id": "tabla",
+      "sort": 4,
+      "title_es": "La tabla corta",
+      "title_en": "The short plank",
+      "clue_es": "La tabla es corta y no llega al otro lado.",
+      "clue_en": "The plank is short and doesn't reach the other side.",
+      "words": [
+        "largo",
+        "corto",
+        "rapido",
+        "lento"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -3.5,
+              1
+            ],
+            "size": [
+              4,
+              2
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.341,
+              2.681
+            ],
+            "size": [
+              2.64,
+              0.3
+            ],
+            "angle": -37.304,
+            "target": false
+          },
+          {
+            "id": "tabla",
+            "kind": "plank",
+            "noun": "la tabla",
+            "gender": "f",
+            "noun_en": "the plank",
+            "pos": [
+              -0.8,
+              1.9
+            ],
+            "size": [
+              1.4,
+              0.2
+            ],
+            "anchor": "left"
+          },
+          {
+            "id": "suelo_2",
+            "kind": "ground",
+            "pos": [
+              2.35,
+              0.7
+            ],
+            "size": [
+              1.3,
+              1.4
+            ]
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              3.95,
+              0.3
+            ],
+            "size": [
+              1.9,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              5.05,
+              1.1
+            ],
+            "size": [
+              0.3,
+              2.2
+            ]
+          },
+          {
+            "id": "pelota",
+            "kind": "ball",
+            "noun": "la pelota",
+            "gender": "f",
+            "noun_en": "the ball",
+            "pos": [
+              -4.817,
+              3.798
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true
+          }
+        ],
+        "goal": {
+          "object": "pelota",
+          "zone": [
+            3,
+            0.5,
+            4.9,
+            1.6
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "tabla",
+                "word": "largo"
+              }
+            ],
+            "note": "A long plank bridges the gap."
+          },
+          {
+            "steps": [
+              {
+                "object": "pelota",
+                "word": "rapido"
+              }
+            ],
+            "note": "A fast ball jumps the gap."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cristal",
+      "sort": 5,
+      "title_es": "El muro de cristal",
+      "title_en": "The glass wall",
+      "clue_es": "Un muro de cristal corta el camino. Hay que romperlo.",
+      "clue_en": "A glass wall blocks the way. It has to break.",
+      "words": [
+        "duro",
+        "blando",
+        "fuerte",
+        "debil"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -1.15,
+              0.5
+            ],
+            "size": [
+              8.7,
+              1
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.258,
+              2.096
+            ],
+            "size": [
+              3.324,
+              0.3
+            ],
+            "angle": -46.219,
+            "target": false
+          },
+          {
+            "id": "cristal",
+            "kind": "glass",
+            "noun": "el cristal",
+            "gender": "m",
+            "noun_en": "the glass",
+            "pos": [
+              1,
+              2.1
+            ],
+            "size": [
+              0.25,
+              2.2
+            ],
+            "strength": 2
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              4.05,
+              -0.1
+            ],
+            "size": [
+              1.7,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              5.05,
+              0.7
+            ],
+            "size": [
+              0.3,
+              2.2
+            ]
+          },
+          {
+            "id": "pelota",
+            "kind": "ball",
+            "noun": "la pelota",
+            "gender": "f",
+            "noun_en": "the ball",
+            "pos": [
+              -4.745,
+              3.471
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true
+          }
+        ],
+        "goal": {
+          "object": "pelota",
+          "zone": [
+            3.2,
+            0.1,
+            4.9,
+            1.2
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "pelota",
+                "word": "duro"
+              }
+            ],
+            "note": "A hard ball smashes the glass."
+          },
+          {
+            "steps": [
+              {
+                "object": "cristal",
+                "word": "debil"
+              }
+            ],
+            "note": "Weak glass breaks at a touch."
+          }
+        ]
+      }
+    },
+    {
+      "id": "puerta",
+      "sort": 6,
+      "title_es": "La puerta",
+      "title_en": "The door",
+      "clue_es": "La puerta está cerrada. El botón la abre si pesa bastante.",
+      "clue_en": "The door is shut. The button opens it if it's heavy enough.",
+      "words": [
+        "abrir",
+        "cerrar",
+        "lleno",
+        "vacio"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -1.15,
+              0.5
+            ],
+            "size": [
+              8.7,
+              1
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.258,
+              2.096
+            ],
+            "size": [
+              3.324,
+              0.3
+            ],
+            "angle": -46.219,
+            "target": false
+          },
+          {
+            "id": "estante",
+            "kind": "ground",
+            "pos": [
+              -0.4,
+              3.05
+            ],
+            "size": [
+              2.4,
+              0.3
+            ]
+          },
+          {
+            "id": "boton",
+            "kind": "plate",
+            "pos": [
+              -0.4,
+              3.275
+            ],
+            "size": [
+              1.2,
+              0.15
+            ],
+            "links": "puerta",
+            "threshold": 1.5
+          },
+          {
+            "id": "cubo",
+            "kind": "bucket",
+            "noun": "el cubo",
+            "gender": "m",
+            "noun_en": "the bucket",
+            "pos": [
+              -0.4,
+              3.75
+            ],
+            "size": [
+              0.7,
+              0.8
+            ]
+          },
+          {
+            "id": "puerta",
+            "kind": "door",
+            "noun": "la puerta",
+            "gender": "f",
+            "noun_en": "the door",
+            "pos": [
+              1.6,
+              2
+            ],
+            "size": [
+              0.3,
+              2
+            ]
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              4.05,
+              -0.1
+            ],
+            "size": [
+              1.7,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              5.05,
+              0.7
+            ],
+            "size": [
+              0.3,
+              2.2
+            ]
+          },
+          {
+            "id": "pelota",
+            "kind": "ball",
+            "noun": "la pelota",
+            "gender": "f",
+            "noun_en": "the ball",
+            "pos": [
+              -4.745,
+              3.471
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true
+          }
+        ],
+        "goal": {
+          "object": "pelota",
+          "zone": [
+            3.2,
+            0.1,
+            4.9,
+            1.2
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "puerta",
+                "word": "abrir"
+              }
+            ],
+            "note": "Just open the door."
+          },
+          {
+            "steps": [
+              {
+                "object": "cubo",
+                "word": "lleno"
+              }
+            ],
+            "note": "A full bucket presses the button."
+          }
+        ]
+      }
+    },
+    {
+      "id": "salto",
+      "sort": 7,
+      "title_es": "¡Salta!",
+      "title_en": "Jump!",
+      "clue_es": "La pelota cae y choca con la pared. ¿Salta por encima o baja la pared?",
+      "clue_en": "The ball drops and hits the wall. Does it bounce over, or does the wall come down?",
+      "words": [
+        "elastico",
+        "rigido",
+        "alto",
+        "bajo"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -1.15,
+              0.5
+            ],
+            "size": [
+              8.7,
+              1
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.258,
+              2.096
+            ],
+            "size": [
+              3.324,
+              0.3
+            ],
+            "angle": -46.219,
+            "target": false
+          },
+          {
+            "id": "pared",
+            "kind": "wall",
+            "noun": "la pared",
+            "gender": "f",
+            "noun_en": "the wall",
+            "pos": [
+              1.8,
+              1.6
+            ],
+            "size": [
+              0.4,
+              1.2
+            ]
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              4.05,
+              -0.1
+            ],
+            "size": [
+              1.7,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              5.05,
+              0.7
+            ],
+            "size": [
+              0.3,
+              2.2
+            ]
+          },
+          {
+            "id": "pelota",
+            "kind": "ball",
+            "noun": "la pelota",
+            "gender": "f",
+            "noun_en": "the ball",
+            "pos": [
+              -4.6,
+              6.2
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true
+          }
+        ],
+        "goal": {
+          "object": "pelota",
+          "zone": [
+            3.2,
+            0.1,
+            4.9,
+            1.2
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "pared",
+                "word": "bajo"
+              }
+            ],
+            "note": "A low wall lets the ball roll over."
+          },
+          {
+            "steps": [
+              {
+                "object": "pelota",
+                "word": "elastico"
+              }
+            ],
+            "note": "An elastic ball bounces over the wall."
+          }
+        ]
+      }
+    },
+    {
+      "id": "frena",
+      "sort": 8,
+      "title_es": "¡Frena!",
+      "title_en": "Slow down!",
+      "clue_es": "La pelota va tan rápida que salta por encima de la cesta.",
+      "clue_en": "The ball goes so fast it flies right over the basket.",
+      "words": [
+        "rapido",
+        "lento",
+        "alto",
+        "bajo"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -3.25,
+              0.8
+            ],
+            "size": [
+              4.5,
+              1.6
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.061,
+              3
+            ],
+            "size": [
+              4.036,
+              0.3
+            ],
+            "angle": -48.013,
+            "target": false
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              -0.1,
+              -0.1
+            ],
+            "size": [
+              1.8,
+              0.6
+            ]
+          },
+          {
+            "id": "pared",
+            "kind": "wall",
+            "noun": "la pared",
+            "gender": "f",
+            "noun_en": "the wall",
+            "pos": [
+              0.95,
+              0.2
+            ],
+            "size": [
+              0.3,
+              1.2
+            ]
+          },
+          {
+            "id": "pelota",
+            "kind": "ball",
+            "noun": "la pelota",
+            "gender": "f",
+            "noun_en": "the ball",
+            "pos": [
+              -4.75,
+              4.661
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true
+          }
+        ],
+        "goal": {
+          "object": "pelota",
+          "zone": [
+            -1,
+            -0.2,
+            0.8,
+            1.2
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "pelota",
+                "word": "lento"
+              }
+            ],
+            "note": "A slow ball drops into the basket."
+          },
+          {
+            "steps": [
+              {
+                "object": "pared",
+                "word": "alto"
+              }
+            ],
+            "note": "A tall wall catches the ball."
+          }
+        ]
+      }
+    },
+    {
+      "id": "viento",
+      "sort": 9,
+      "title_es": "El viento",
+      "title_en": "The wind",
+      "clue_es": "Hay un hueco enorme. El ventilador está apagado.",
+      "clue_en": "There's a huge gap. The fan is off.",
+      "words": [
+        "encender",
+        "apagar",
+        "ligero",
+        "pesado",
+        "rapido",
+        "lento"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -3.65,
+              1.4
+            ],
+            "size": [
+              3.7,
+              2
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.43,
+              2.873
+            ],
+            "size": [
+              2.247,
+              0.3
+            ],
+            "angle": -32.276,
+            "target": false
+          },
+          {
+            "id": "ventilador",
+            "kind": "fan",
+            "noun": "el ventilador",
+            "gender": "m",
+            "noun_en": "the fan",
+            "pos": [
+              -0.3,
+              0.2
+            ],
+            "size": [
+              1.2,
+              0.4
+            ],
+            "zone": [
+              -1.8,
+              0.4,
+              1.4,
+              4.5
+            ],
+            "dir": [
+              0.45,
+              1
+            ],
+            "force": 0.45,
+            "on": false
+          },
+          {
+            "id": "suelo_2",
+            "kind": "ground",
+            "pos": [
+              2.2,
+              0.8
+            ],
+            "size": [
+              1.6,
+              0.8
+            ]
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              3.95,
+              0.1
+            ],
+            "size": [
+              1.9,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              5.05,
+              0.9
+            ],
+            "size": [
+              0.3,
+              2.2
+            ]
+          },
+          {
+            "id": "pelota",
+            "kind": "ball",
+            "noun": "la pelota",
+            "gender": "f",
+            "noun_en": "the ball",
+            "pos": [
+              -4.87,
+              3.86
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true
+          }
+        ],
+        "goal": {
+          "object": "pelota",
+          "zone": [
+            3,
+            0.3,
+            4.9,
+            1.4
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "ventilador",
+                "word": "encender"
+              },
+              {
+                "object": "pelota",
+                "word": "ligero"
+              }
+            ],
+            "note": "The fan blows a light ball across."
+          },
+          {
+            "steps": [
+              {
+                "object": "pelota",
+                "word": "rapido"
+              }
+            ],
+            "note": "A fast ball jumps the gap."
+          }
+        ]
+      }
+    },
+    {
+      "id": "hielo",
+      "sort": 10,
+      "title_es": "Hielo y agua",
+      "title_en": "Ice and water",
+      "clue_es": "Un bloque de hielo corta el paso, y después hay agua.",
+      "clue_en": "A block of ice blocks the way, and then there's water.",
+      "words": [
+        "caliente",
+        "frio",
+        "mojado",
+        "seco"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -2.75,
+              0.9
+            ],
+            "size": [
+              5.5,
+              1.8
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.341,
+              2.481
+            ],
+            "size": [
+              2.64,
+              0.3
+            ],
+            "angle": -37.304,
+            "target": false
+          },
+          {
+            "id": "hielo",
+            "kind": "ice",
+            "noun": "el hielo",
+            "gender": "m",
+            "noun_en": "the ice",
+            "pos": [
+              -1.2,
+              2.6
+            ],
+            "size": [
+              0.8,
+              1.6
+            ]
+          },
+          {
+            "id": "piscina",
+            "kind": "ground",
+            "pos": [
+              1.4,
+              0.1
+            ],
+            "size": [
+              2.8,
+              0.2
+            ]
+          },
+          {
+            "id": "agua",
+            "kind": "water",
+            "noun": "el agua",
+            "gender": "f",
+            "noun_en": "the water",
+            "pos": [
+              1.4,
+              1
+            ],
+            "zone": [
+              0,
+              0.2,
+              2.8,
+              1.8
+            ]
+          },
+          {
+            "id": "suelo_2",
+            "kind": "ground",
+            "pos": [
+              3,
+              0.9
+            ],
+            "size": [
+              0.4,
+              1.8
+            ]
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              4.05,
+              0.7
+            ],
+            "size": [
+              1.7,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              5.05,
+              1.5
+            ],
+            "size": [
+              0.3,
+              2.2
+            ]
+          },
+          {
+            "id": "pelota",
+            "kind": "ball",
+            "noun": "la pelota",
+            "gender": "f",
+            "noun_en": "the ball",
+            "pos": [
+              -4.817,
+              3.598
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true
+          }
+        ],
+        "goal": {
+          "object": "pelota",
+          "zone": [
+            3.2,
+            0.9,
+            4.9,
+            2
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "hielo",
+                "word": "caliente"
+              },
+              {
+                "object": "agua",
+                "word": "frio"
+              }
+            ],
+            "note": "Melt the ice, freeze the water."
+          },
+          {
+            "steps": [
+              {
+                "object": "pelota",
+                "word": "caliente"
+              },
+              {
+                "object": "agua",
+                "word": "frio"
+              }
+            ],
+            "note": "A hot ball melts the ice on its own."
+          },
+          {
+            "steps": [
+              {
+                "object": "pelota",
+                "word": "frio"
+              },
+              {
+                "object": "hielo",
+                "word": "caliente"
+              }
+            ],
+            "note": "A cold ball freezes the water as it lands."
+          }
+        ]
+      }
+    },
+    {
+      "id": "cadena",
+      "sort": 11,
+      "title_es": "La gran cadena",
+      "title_en": "The big chain",
+      "clue_es": "Tubo, hueco y hielo. Tú decides cómo pasar.",
+      "clue_en": "Pipe, gap and ice. You decide how to get through.",
+      "words": [
+        "pequeno",
+        "grande",
+        "subir",
+        "bajar",
+        "caliente",
+        "frio",
+        "pesado",
+        "ligero"
+      ],
+      "layout": {
+        "objects": [
+          {
+            "id": "suelo_1",
+            "kind": "ground",
+            "pos": [
+              -3.05,
+              2.9
+            ],
+            "size": [
+              4.9,
+              1
+            ]
+          },
+          {
+            "id": "rampa",
+            "kind": "ramp",
+            "pos": [
+              -4.644,
+              3.883
+            ],
+            "size": [
+              1.921,
+              0.3
+            ],
+            "angle": -38.66,
+            "target": false
+          },
+          {
+            "id": "tubo",
+            "kind": "pipe",
+            "noun": "el tubo",
+            "gender": "m",
+            "noun_en": "the pipe",
+            "pos": [
+              -2.2,
+              3.4
+            ],
+            "size": [
+              2,
+              0.25
+            ],
+            "opening": 0.65
+          },
+          {
+            "id": "plataforma",
+            "kind": "lift",
+            "noun": "la plataforma",
+            "gender": "f",
+            "noun_en": "the platform",
+            "pos": [
+              0.2,
+              0.5
+            ],
+            "size": [
+              1.6,
+              0.3
+            ],
+            "travel": [
+              0.5,
+              3.25
+            ],
+            "start": "down"
+          },
+          {
+            "id": "foso",
+            "kind": "ground",
+            "pos": [
+              0.2,
+              0.15
+            ],
+            "size": [
+              1.6,
+              0.3
+            ]
+          },
+          {
+            "id": "suelo_2",
+            "kind": "ground",
+            "pos": [
+              2,
+              2.9
+            ],
+            "size": [
+              2,
+              1
+            ]
+          },
+          {
+            "id": "hielo",
+            "kind": "ice",
+            "noun": "el hielo",
+            "gender": "m",
+            "noun_en": "the ice",
+            "pos": [
+              2.2,
+              4.1
+            ],
+            "size": [
+              0.6,
+              1.4
+            ]
+          },
+          {
+            "id": "cesta_fondo",
+            "kind": "ground",
+            "pos": [
+              3.95,
+              2.3
+            ],
+            "size": [
+              1.9,
+              0.6
+            ]
+          },
+          {
+            "id": "cesta_pared",
+            "kind": "ground",
+            "pos": [
+              5.05,
+              3.1
+            ],
+            "size": [
+              0.3,
+              2.2
+            ]
+          },
+          {
+            "id": "pelota",
+            "kind": "ball",
+            "noun": "la pelota",
+            "gender": "f",
+            "noun_en": "the ball",
+            "pos": [
+              -4.794,
+              4.771
+            ],
+            "size": [
+              0.9,
+              0.9
+            ],
+            "held": true
+          }
+        ],
+        "goal": {
+          "object": "pelota",
+          "zone": [
+            3,
+            2.5,
+            4.9,
+            3.6
+          ]
+        },
+        "solutions": [
+          {
+            "steps": [
+              {
+                "object": "pelota",
+                "word": "pequeno"
+              },
+              {
+                "object": "plataforma",
+                "word": "subir"
+              },
+              {
+                "object": "hielo",
+                "word": "caliente"
+              }
+            ],
+            "note": "Small ball, platform up, melt the ice."
+          },
+          {
+            "steps": [
+              {
+                "object": "tubo",
+                "word": "grande"
+              },
+              {
+                "object": "plataforma",
+                "word": "subir"
+              },
+              {
+                "object": "pelota",
+                "word": "caliente"
+              }
+            ],
+            "note": "Big pipe, platform up, a hot ball melts the ice."
+          }
+        ]
+      }
+    }
+  ]
+}

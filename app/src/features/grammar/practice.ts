@@ -10,6 +10,7 @@ const TOPIC_SKILLS: Record<string, SkillTag> = {
   "fue-estaba-estuve": "past-tenses",
   "preterito-cambia": "past-tenses",
   futuro: "future",
+  opuestos: "opposites",
 };
 
 /** Drills that fit a topic without being a game. */

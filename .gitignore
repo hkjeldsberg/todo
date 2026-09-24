@@ -41,7 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 # extra dev servers (NEXT_DIST_DIR)
-/.next-*/
+.next-*/
 /.playtest/
 
 # old apps (root folders only — unanchored names would also hide

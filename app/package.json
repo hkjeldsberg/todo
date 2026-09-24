@@ -17,7 +17,9 @@
     "laberinto:playtest": "node scripts/laberinto-playtest.mjs",
     "donde:seed": "node scripts/donde-seed-sql.mjs",
     "donde:playtest": "node scripts/donde-playtest.mjs",
-    "icons": "node scripts/gen-icons.mjs"
+    "icons": "node scripts/gen-icons.mjs",
+    "opuestos:seed": "node scripts/opuestos-seed-sql.mjs",
+    "opuestos:playtest": "node scripts/opuestos-playtest.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
@@ -28,6 +30,7 @@
     "@react-three/drei": "^10.7.8",
     "@react-three/fiber": "^9.8.0",
     "@react-three/postprocessing": "^3.1.2",
+    "@react-three/rapier": "^2.2.0",
     "@supabase/supabase-js": "^2.117.1",
     "framer-motion": "^13.4.2",
     "next": "16.3.6",

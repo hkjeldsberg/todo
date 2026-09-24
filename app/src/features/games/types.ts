@@ -5,7 +5,8 @@ export type SkillTag =
   | "past-tenses"
   | "irregulars"
   | "vocab"
-  | "future";
+  | "future"
+  | "opposites";
 
 export type Level = "A1" | "A2" | "B1" | "B2";
 
