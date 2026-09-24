@@ -44,8 +44,14 @@ next-env.d.ts
 /.next-*/
 /.playtest/
 
-Spanyard
-memo
-tense
-ellaberinto
-donde
+# old apps (root folders only — unanchored names would also hide
+# app/src/features/games/tense and app/src/features/games/donde)
+/Spanyard/
+/memo/
+/tense/
+/ellaberinto/
+/donde/
+
+.next
+.playtest
+node_modules

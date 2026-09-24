@@ -99,7 +99,7 @@ function NextUp({ done }: { done: Set<string> }) {
 
   return (
     <Link
-      href={`/grammar/${next.slug}`}
+      href={`/gramatica/${next.slug}`}
       className="press mb-6 flex items-center gap-3 rounded-[20px] bg-ink p-4 text-on-ink shadow-[0_6px_0_var(--ink-shadow)]"
     >
       <span className="min-w-0 flex-1">
@@ -135,7 +135,7 @@ function Card({
 
   return (
     <Link
-      href={`/grammar/${topic.slug}`}
+      href={`/gramatica/${topic.slug}`}
       className={`sticker press relative flex flex-col justify-between gap-2 rounded-[20px] p-4 shadow-[0_6px_0_var(--card-shadow)] ${
         topic.span === 2 ? "col-span-2" : ""
       } ${highlight ? "bg-accent text-on-ink" : "bg-card"} ${
