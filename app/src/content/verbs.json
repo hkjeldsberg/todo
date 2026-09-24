@@ -1,0 +1,1052 @@
+[
+  {
+    "infinitive": "hacer",
+    "english": "to do / make",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "hago",
+        "tú": "haces",
+        "él/ella": "hace",
+        "nosotros": "hacemos",
+        "ellos": "hacen"
+      },
+      "Pretérito": {
+        "yo": "hice",
+        "tú": "hiciste",
+        "él/ella": "hizo",
+        "nosotros": "hicimos",
+        "ellos": "hicieron"
+      },
+      "Imperfecto": {
+        "yo": "hacía",
+        "tú": "hacías",
+        "él/ella": "hacía",
+        "nosotros": "hacíamos",
+        "ellos": "hacían"
+      },
+      "Perfecto": {
+        "yo": "he hecho",
+        "tú": "has hecho",
+        "él/ella": "ha hecho",
+        "nosotros": "hemos hecho",
+        "ellos": "han hecho"
+      },
+      "Futuro": {
+        "yo": "haré",
+        "tú": "harás",
+        "él/ella": "hará",
+        "nosotros": "haremos",
+        "ellos": "harán"
+      }
+    }
+  },
+  {
+    "infinitive": "querer",
+    "english": "to want",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "quiero",
+        "tú": "quieres",
+        "él/ella": "quiere",
+        "nosotros": "queremos",
+        "ellos": "quieren"
+      },
+      "Pretérito": {
+        "yo": "quise",
+        "tú": "quisiste",
+        "él/ella": "quiso",
+        "nosotros": "quisimos",
+        "ellos": "quisieron"
+      },
+      "Imperfecto": {
+        "yo": "quería",
+        "tú": "querías",
+        "él/ella": "quería",
+        "nosotros": "queríamos",
+        "ellos": "querían"
+      },
+      "Perfecto": {
+        "yo": "he querido",
+        "tú": "has querido",
+        "él/ella": "ha querido",
+        "nosotros": "hemos querido",
+        "ellos": "han querido"
+      },
+      "Futuro": {
+        "yo": "querré",
+        "tú": "querrás",
+        "él/ella": "querrá",
+        "nosotros": "querremos",
+        "ellos": "querrán"
+      }
+    }
+  },
+  {
+    "infinitive": "decir",
+    "english": "to say",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "digo",
+        "tú": "dices",
+        "él/ella": "dice",
+        "nosotros": "decimos",
+        "ellos": "dicen"
+      },
+      "Pretérito": {
+        "yo": "dije",
+        "tú": "dijiste",
+        "él/ella": "dijo",
+        "nosotros": "dijimos",
+        "ellos": "dijeron"
+      },
+      "Imperfecto": {
+        "yo": "decía",
+        "tú": "decías",
+        "él/ella": "decía",
+        "nosotros": "decíamos",
+        "ellos": "decían"
+      },
+      "Perfecto": {
+        "yo": "he dicho",
+        "tú": "has dicho",
+        "él/ella": "ha dicho",
+        "nosotros": "hemos dicho",
+        "ellos": "han dicho"
+      },
+      "Futuro": {
+        "yo": "diré",
+        "tú": "dirás",
+        "él/ella": "dirá",
+        "nosotros": "diremos",
+        "ellos": "dirán"
+      }
+    }
+  },
+  {
+    "infinitive": "haber",
+    "english": "to have (auxiliary)",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "he",
+        "tú": "has",
+        "él/ella": "ha",
+        "nosotros": "hemos",
+        "ellos": "han"
+      },
+      "Pretérito": {
+        "yo": "hube",
+        "tú": "hubiste",
+        "él/ella": "hubo",
+        "nosotros": "hubimos",
+        "ellos": "hubieron"
+      },
+      "Imperfecto": {
+        "yo": "había",
+        "tú": "habías",
+        "él/ella": "había",
+        "nosotros": "habíamos",
+        "ellos": "habían"
+      },
+      "Perfecto": {
+        "yo": "he habido",
+        "tú": "has habido",
+        "él/ella": "ha habido",
+        "nosotros": "hemos habido",
+        "ellos": "han habido"
+      },
+      "Futuro": {
+        "yo": "habré",
+        "tú": "habrás",
+        "él/ella": "habrá",
+        "nosotros": "habremos",
+        "ellos": "habrán"
+      }
+    }
+  },
+  {
+    "infinitive": "saber",
+    "english": "to know",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "sé",
+        "tú": "sabes",
+        "él/ella": "sabe",
+        "nosotros": "sabemos",
+        "ellos": "saben"
+      },
+      "Pretérito": {
+        "yo": "supe",
+        "tú": "supiste",
+        "él/ella": "supo",
+        "nosotros": "supimos",
+        "ellos": "supieron"
+      },
+      "Imperfecto": {
+        "yo": "sabía",
+        "tú": "sabías",
+        "él/ella": "sabía",
+        "nosotros": "sabíamos",
+        "ellos": "sabían"
+      },
+      "Perfecto": {
+        "yo": "he sabido",
+        "tú": "has sabido",
+        "él/ella": "ha sabido",
+        "nosotros": "hemos sabido",
+        "ellos": "han sabido"
+      },
+      "Futuro": {
+        "yo": "sabré",
+        "tú": "sabrás",
+        "él/ella": "sabrá",
+        "nosotros": "sabremos",
+        "ellos": "sabrán"
+      }
+    }
+  },
+  {
+    "infinitive": "poder",
+    "english": "to be able to",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "puedo",
+        "tú": "puedes",
+        "él/ella": "puede",
+        "nosotros": "podemos",
+        "ellos": "pueden"
+      },
+      "Pretérito": {
+        "yo": "pude",
+        "tú": "pudiste",
+        "él/ella": "pudo",
+        "nosotros": "pudimos",
+        "ellos": "pudieron"
+      },
+      "Imperfecto": {
+        "yo": "podía",
+        "tú": "podías",
+        "él/ella": "podía",
+        "nosotros": "podíamos",
+        "ellos": "podían"
+      },
+      "Perfecto": {
+        "yo": "he podido",
+        "tú": "has podido",
+        "él/ella": "ha podido",
+        "nosotros": "hemos podido",
+        "ellos": "han podido"
+      },
+      "Futuro": {
+        "yo": "podré",
+        "tú": "podrás",
+        "él/ella": "podrá",
+        "nosotros": "podremos",
+        "ellos": "podrán"
+      }
+    }
+  },
+  {
+    "infinitive": "poner",
+    "english": "to put",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "pongo",
+        "tú": "pones",
+        "él/ella": "pone",
+        "nosotros": "ponemos",
+        "ellos": "ponen"
+      },
+      "Pretérito": {
+        "yo": "puse",
+        "tú": "pusiste",
+        "él/ella": "puso",
+        "nosotros": "pusimos",
+        "ellos": "pusieron"
+      },
+      "Imperfecto": {
+        "yo": "ponía",
+        "tú": "ponías",
+        "él/ella": "ponía",
+        "nosotros": "poníamos",
+        "ellos": "ponían"
+      },
+      "Perfecto": {
+        "yo": "he puesto",
+        "tú": "has puesto",
+        "él/ella": "ha puesto",
+        "nosotros": "hemos puesto",
+        "ellos": "han puesto"
+      },
+      "Futuro": {
+        "yo": "pondré",
+        "tú": "pondrás",
+        "él/ella": "pondrá",
+        "nosotros": "pondremos",
+        "ellos": "pondrán"
+      }
+    }
+  },
+  {
+    "infinitive": "tener",
+    "english": "to have",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "tengo",
+        "tú": "tienes",
+        "él/ella": "tiene",
+        "nosotros": "tenemos",
+        "ellos": "tienen"
+      },
+      "Pretérito": {
+        "yo": "tuve",
+        "tú": "tuviste",
+        "él/ella": "tuvo",
+        "nosotros": "tuvimos",
+        "ellos": "tuvieron"
+      },
+      "Imperfecto": {
+        "yo": "tenía",
+        "tú": "tenías",
+        "él/ella": "tenía",
+        "nosotros": "teníamos",
+        "ellos": "tenían"
+      },
+      "Perfecto": {
+        "yo": "he tenido",
+        "tú": "has tenido",
+        "él/ella": "ha tenido",
+        "nosotros": "hemos tenido",
+        "ellos": "han tenido"
+      },
+      "Futuro": {
+        "yo": "tendré",
+        "tú": "tendrás",
+        "él/ella": "tendrá",
+        "nosotros": "tendremos",
+        "ellos": "tendrán"
+      }
+    }
+  },
+  {
+    "infinitive": "salir",
+    "english": "to leave / go out",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "salgo",
+        "tú": "sales",
+        "él/ella": "sale",
+        "nosotros": "salimos",
+        "ellos": "salen"
+      },
+      "Pretérito": {
+        "yo": "salí",
+        "tú": "saliste",
+        "él/ella": "salió",
+        "nosotros": "salimos",
+        "ellos": "salieron"
+      },
+      "Imperfecto": {
+        "yo": "salía",
+        "tú": "salías",
+        "él/ella": "salía",
+        "nosotros": "salíamos",
+        "ellos": "salían"
+      },
+      "Perfecto": {
+        "yo": "he salido",
+        "tú": "has salido",
+        "él/ella": "ha salido",
+        "nosotros": "hemos salido",
+        "ellos": "han salido"
+      },
+      "Futuro": {
+        "yo": "saldré",
+        "tú": "saldrás",
+        "él/ella": "saldrá",
+        "nosotros": "saldremos",
+        "ellos": "saldrán"
+      }
+    }
+  },
+  {
+    "infinitive": "venir",
+    "english": "to come",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "vengo",
+        "tú": "vienes",
+        "él/ella": "viene",
+        "nosotros": "venimos",
+        "ellos": "vienen"
+      },
+      "Pretérito": {
+        "yo": "vine",
+        "tú": "viniste",
+        "él/ella": "vino",
+        "nosotros": "vinimos",
+        "ellos": "vinieron"
+      },
+      "Imperfecto": {
+        "yo": "venía",
+        "tú": "venías",
+        "él/ella": "venía",
+        "nosotros": "veníamos",
+        "ellos": "venían"
+      },
+      "Perfecto": {
+        "yo": "he venido",
+        "tú": "has venido",
+        "él/ella": "ha venido",
+        "nosotros": "hemos venido",
+        "ellos": "han venido"
+      },
+      "Futuro": {
+        "yo": "vendré",
+        "tú": "vendrás",
+        "él/ella": "vendrá",
+        "nosotros": "vendremos",
+        "ellos": "vendrán"
+      }
+    }
+  },
+  {
+    "infinitive": "valer",
+    "english": "to be worth",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "valgo",
+        "tú": "vales",
+        "él/ella": "vale",
+        "nosotros": "valemos",
+        "ellos": "valen"
+      },
+      "Pretérito": {
+        "yo": "valí",
+        "tú": "valiste",
+        "él/ella": "valió",
+        "nosotros": "valimos",
+        "ellos": "valieron"
+      },
+      "Imperfecto": {
+        "yo": "valía",
+        "tú": "valías",
+        "él/ella": "valía",
+        "nosotros": "valíamos",
+        "ellos": "valían"
+      },
+      "Perfecto": {
+        "yo": "he valido",
+        "tú": "has valido",
+        "él/ella": "ha valido",
+        "nosotros": "hemos valido",
+        "ellos": "han valido"
+      },
+      "Futuro": {
+        "yo": "valdré",
+        "tú": "valdrás",
+        "él/ella": "valdrá",
+        "nosotros": "valdremos",
+        "ellos": "valdrán"
+      }
+    }
+  },
+  {
+    "infinitive": "gustar",
+    "english": "to like",
+    "isIrregular": false,
+    "forms": {
+      "Presente": {
+        "yo": "gusto",
+        "tú": "gustas",
+        "él/ella": "gusta",
+        "nosotros": "gustamos",
+        "ellos": "gustan"
+      },
+      "Pretérito": {
+        "yo": "gusté",
+        "tú": "gustaste",
+        "él/ella": "gustó",
+        "nosotros": "gustamos",
+        "ellos": "gustaron"
+      },
+      "Imperfecto": {
+        "yo": "gustaba",
+        "tú": "gustabas",
+        "él/ella": "gustaba",
+        "nosotros": "gustábamos",
+        "ellos": "gustaban"
+      },
+      "Perfecto": {
+        "yo": "he gustado",
+        "tú": "has gustado",
+        "él/ella": "ha gustado",
+        "nosotros": "hemos gustado",
+        "ellos": "han gustado"
+      },
+      "Futuro": {
+        "yo": "gustaré",
+        "tú": "gustarás",
+        "él/ella": "gustará",
+        "nosotros": "gustaremos",
+        "ellos": "gustarán"
+      }
+    }
+  },
+  {
+    "infinitive": "ir",
+    "english": "to go",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "voy",
+        "tú": "vas",
+        "él/ella": "va",
+        "nosotros": "vamos",
+        "ellos": "van"
+      },
+      "Pretérito": {
+        "yo": "fui",
+        "tú": "fuiste",
+        "él/ella": "fue",
+        "nosotros": "fuimos",
+        "ellos": "fueron"
+      },
+      "Imperfecto": {
+        "yo": "iba",
+        "tú": "ibas",
+        "él/ella": "iba",
+        "nosotros": "íbamos",
+        "ellos": "iban"
+      },
+      "Perfecto": {
+        "yo": "he ido",
+        "tú": "has ido",
+        "él/ella": "ha ido",
+        "nosotros": "hemos ido",
+        "ellos": "han ido"
+      },
+      "Futuro": {
+        "yo": "iré",
+        "tú": "irás",
+        "él/ella": "irá",
+        "nosotros": "iremos",
+        "ellos": "irán"
+      }
+    }
+  },
+  {
+    "infinitive": "caber",
+    "english": "to fit",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "quepo",
+        "tú": "cabes",
+        "él/ella": "cabe",
+        "nosotros": "cabemos",
+        "ellos": "caben"
+      },
+      "Pretérito": {
+        "yo": "cupe",
+        "tú": "cupiste",
+        "él/ella": "cupo",
+        "nosotros": "cupimos",
+        "ellos": "cupieron"
+      },
+      "Imperfecto": {
+        "yo": "cabía",
+        "tú": "cabías",
+        "él/ella": "cabía",
+        "nosotros": "cabíamos",
+        "ellos": "cabían"
+      },
+      "Perfecto": {
+        "yo": "he cabido",
+        "tú": "has cabido",
+        "él/ella": "ha cabido",
+        "nosotros": "hemos cabido",
+        "ellos": "han cabido"
+      },
+      "Futuro": {
+        "yo": "cabré",
+        "tú": "cabrás",
+        "él/ella": "cabrá",
+        "nosotros": "cabremos",
+        "ellos": "cabrán"
+      }
+    }
+  },
+  {
+    "infinitive": "traer",
+    "english": "to bring",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "traigo",
+        "tú": "traes",
+        "él/ella": "trae",
+        "nosotros": "traemos",
+        "ellos": "traen"
+      },
+      "Pretérito": {
+        "yo": "traje",
+        "tú": "trajiste",
+        "él/ella": "trajo",
+        "nosotros": "trajimos",
+        "ellos": "trajeron"
+      },
+      "Imperfecto": {
+        "yo": "traía",
+        "tú": "traías",
+        "él/ella": "traía",
+        "nosotros": "traíamos",
+        "ellos": "traían"
+      },
+      "Perfecto": {
+        "yo": "he traído",
+        "tú": "has traído",
+        "él/ella": "ha traído",
+        "nosotros": "hemos traído",
+        "ellos": "han traído"
+      },
+      "Futuro": {
+        "yo": "traeré",
+        "tú": "traerás",
+        "él/ella": "traerá",
+        "nosotros": "traeremos",
+        "ellos": "traerán"
+      }
+    }
+  },
+  {
+    "infinitive": "traducir",
+    "english": "to translate",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "traduzco",
+        "tú": "traduces",
+        "él/ella": "traduce",
+        "nosotros": "traducimos",
+        "ellos": "traducen"
+      },
+      "Pretérito": {
+        "yo": "traduje",
+        "tú": "tradujiste",
+        "él/ella": "tradujo",
+        "nosotros": "tradujimos",
+        "ellos": "tradujeron"
+      },
+      "Imperfecto": {
+        "yo": "traducía",
+        "tú": "traducías",
+        "él/ella": "traducía",
+        "nosotros": "traducíamos",
+        "ellos": "traducían"
+      },
+      "Perfecto": {
+        "yo": "he traducido",
+        "tú": "has traducido",
+        "él/ella": "ha traducido",
+        "nosotros": "hemos traducido",
+        "ellos": "han traducido"
+      },
+      "Futuro": {
+        "yo": "traduciré",
+        "tú": "traducirás",
+        "él/ella": "traducirá",
+        "nosotros": "traduciremos",
+        "ellos": "traducirán"
+      }
+    }
+  },
+  {
+    "infinitive": "conducir",
+    "english": "to drive",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "conduzco",
+        "tú": "conduces",
+        "él/ella": "conduce",
+        "nosotros": "conducimos",
+        "ellos": "conducen"
+      },
+      "Pretérito": {
+        "yo": "conduje",
+        "tú": "condujiste",
+        "él/ella": "condujo",
+        "nosotros": "condujimos",
+        "ellos": "condujeron"
+      },
+      "Imperfecto": {
+        "yo": "conducía",
+        "tú": "conducías",
+        "él/ella": "conducía",
+        "nosotros": "conducíamos",
+        "ellos": "conducían"
+      },
+      "Perfecto": {
+        "yo": "he conducido",
+        "tú": "has conducido",
+        "él/ella": "ha conducido",
+        "nosotros": "hemos conducido",
+        "ellos": "han conducido"
+      },
+      "Futuro": {
+        "yo": "conduciré",
+        "tú": "conducirás",
+        "él/ella": "conducirá",
+        "nosotros": "conduciremos",
+        "ellos": "conducirán"
+      }
+    }
+  },
+  {
+    "infinitive": "ser",
+    "english": "to be (permanent)",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "soy",
+        "tú": "eres",
+        "él/ella": "es",
+        "nosotros": "somos",
+        "ellos": "son"
+      },
+      "Pretérito": {
+        "yo": "fui",
+        "tú": "fuiste",
+        "él/ella": "fue",
+        "nosotros": "fuimos",
+        "ellos": "fueron"
+      },
+      "Imperfecto": {
+        "yo": "era",
+        "tú": "eras",
+        "él/ella": "era",
+        "nosotros": "éramos",
+        "ellos": "eran"
+      },
+      "Perfecto": {
+        "yo": "he sido",
+        "tú": "has sido",
+        "él/ella": "ha sido",
+        "nosotros": "hemos sido",
+        "ellos": "han sido"
+      },
+      "Futuro": {
+        "yo": "seré",
+        "tú": "serás",
+        "él/ella": "será",
+        "nosotros": "seremos",
+        "ellos": "serán"
+      }
+    }
+  },
+  {
+    "infinitive": "estar",
+    "english": "to be (temporary)",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "estoy",
+        "tú": "estás",
+        "él/ella": "está",
+        "nosotros": "estamos",
+        "ellos": "están"
+      },
+      "Pretérito": {
+        "yo": "estuve",
+        "tú": "estuviste",
+        "él/ella": "estuvo",
+        "nosotros": "estuvimos",
+        "ellos": "estuvieron"
+      },
+      "Imperfecto": {
+        "yo": "estaba",
+        "tú": "estabas",
+        "él/ella": "estaba",
+        "nosotros": "estábamos",
+        "ellos": "estaban"
+      },
+      "Perfecto": {
+        "yo": "he estado",
+        "tú": "has estado",
+        "él/ella": "ha estado",
+        "nosotros": "hemos estado",
+        "ellos": "han estado"
+      },
+      "Futuro": {
+        "yo": "estaré",
+        "tú": "estarás",
+        "él/ella": "estará",
+        "nosotros": "estaremos",
+        "ellos": "estarán"
+      }
+    }
+  },
+  {
+    "infinitive": "hablar",
+    "english": "to speak",
+    "isIrregular": false,
+    "forms": {
+      "Presente": {
+        "yo": "hablo",
+        "tú": "hablas",
+        "él/ella": "habla",
+        "nosotros": "hablamos",
+        "ellos": "hablan"
+      },
+      "Pretérito": {
+        "yo": "hablé",
+        "tú": "hablaste",
+        "él/ella": "habló",
+        "nosotros": "hablamos",
+        "ellos": "hablaron"
+      },
+      "Imperfecto": {
+        "yo": "hablaba",
+        "tú": "hablabas",
+        "él/ella": "hablaba",
+        "nosotros": "hablábamos",
+        "ellos": "hablaban"
+      },
+      "Perfecto": {
+        "yo": "he hablado",
+        "tú": "has hablado",
+        "él/ella": "ha hablado",
+        "nosotros": "hemos hablado",
+        "ellos": "han hablado"
+      },
+      "Futuro": {
+        "yo": "hablaré",
+        "tú": "hablarás",
+        "él/ella": "hablará",
+        "nosotros": "hablaremos",
+        "ellos": "hablarán"
+      }
+    }
+  },
+  {
+    "infinitive": "comer",
+    "english": "to eat",
+    "isIrregular": false,
+    "forms": {
+      "Presente": {
+        "yo": "como",
+        "tú": "comes",
+        "él/ella": "come",
+        "nosotros": "comemos",
+        "ellos": "comen"
+      },
+      "Pretérito": {
+        "yo": "comí",
+        "tú": "comiste",
+        "él/ella": "comió",
+        "nosotros": "comimos",
+        "ellos": "comieron"
+      },
+      "Imperfecto": {
+        "yo": "comía",
+        "tú": "comías",
+        "él/ella": "comía",
+        "nosotros": "comíamos",
+        "ellos": "comían"
+      },
+      "Perfecto": {
+        "yo": "he comido",
+        "tú": "has comido",
+        "él/ella": "ha comido",
+        "nosotros": "hemos comido",
+        "ellos": "han comido"
+      },
+      "Futuro": {
+        "yo": "comeré",
+        "tú": "comerás",
+        "él/ella": "comerá",
+        "nosotros": "comeremos",
+        "ellos": "comerán"
+      }
+    }
+  },
+  {
+    "infinitive": "vivir",
+    "english": "to live",
+    "isIrregular": false,
+    "forms": {
+      "Presente": {
+        "yo": "vivo",
+        "tú": "vives",
+        "él/ella": "vive",
+        "nosotros": "vivimos",
+        "ellos": "viven"
+      },
+      "Pretérito": {
+        "yo": "viví",
+        "tú": "viviste",
+        "él/ella": "vivió",
+        "nosotros": "vivimos",
+        "ellos": "vivieron"
+      },
+      "Imperfecto": {
+        "yo": "vivía",
+        "tú": "vivías",
+        "él/ella": "vivía",
+        "nosotros": "vivíamos",
+        "ellos": "vivían"
+      },
+      "Perfecto": {
+        "yo": "he vivido",
+        "tú": "has vivido",
+        "él/ella": "ha vivido",
+        "nosotros": "hemos vivido",
+        "ellos": "han vivido"
+      },
+      "Futuro": {
+        "yo": "viviré",
+        "tú": "vivirás",
+        "él/ella": "vivirá",
+        "nosotros": "viviremos",
+        "ellos": "vivirán"
+      }
+    }
+  },
+  {
+    "infinitive": "trabajar",
+    "english": "to work",
+    "isIrregular": false,
+    "forms": {
+      "Presente": {
+        "yo": "trabajo",
+        "tú": "trabajas",
+        "él/ella": "trabaja",
+        "nosotros": "trabajamos",
+        "ellos": "trabajan"
+      },
+      "Pretérito": {
+        "yo": "trabajé",
+        "tú": "trabajaste",
+        "él/ella": "trabajó",
+        "nosotros": "trabajamos",
+        "ellos": "trabajaron"
+      },
+      "Imperfecto": {
+        "yo": "trabajaba",
+        "tú": "trabajabas",
+        "él/ella": "trabajaba",
+        "nosotros": "trabajábamos",
+        "ellos": "trabajaban"
+      },
+      "Perfecto": {
+        "yo": "he trabajado",
+        "tú": "has trabajado",
+        "él/ella": "ha trabajado",
+        "nosotros": "hemos trabajado",
+        "ellos": "han trabajado"
+      },
+      "Futuro": {
+        "yo": "trabajaré",
+        "tú": "trabajarás",
+        "él/ella": "trabajará",
+        "nosotros": "trabajaremos",
+        "ellos": "trabajarán"
+      }
+    }
+  },
+  {
+    "infinitive": "beber",
+    "english": "to drink",
+    "isIrregular": false,
+    "forms": {
+      "Presente": {
+        "yo": "bebo",
+        "tú": "bebes",
+        "él/ella": "bebe",
+        "nosotros": "bebemos",
+        "ellos": "beben"
+      },
+      "Pretérito": {
+        "yo": "bebí",
+        "tú": "bebiste",
+        "él/ella": "bebió",
+        "nosotros": "bebimos",
+        "ellos": "bebieron"
+      },
+      "Imperfecto": {
+        "yo": "bebía",
+        "tú": "bebías",
+        "él/ella": "bebía",
+        "nosotros": "bebíamos",
+        "ellos": "bebían"
+      },
+      "Perfecto": {
+        "yo": "he bebido",
+        "tú": "has bebido",
+        "él/ella": "ha bebido",
+        "nosotros": "hemos bebido",
+        "ellos": "han bebido"
+      },
+      "Futuro": {
+        "yo": "beberé",
+        "tú": "beberás",
+        "él/ella": "beberá",
+        "nosotros": "beberemos",
+        "ellos": "beberán"
+      }
+    }
+  },
+  {
+    "infinitive": "escribir",
+    "english": "to write",
+    "isIrregular": false,
+    "forms": {
+      "Presente": {
+        "yo": "escribo",
+        "tú": "escribes",
+        "él/ella": "escribe",
+        "nosotros": "escribimos",
+        "ellos": "escriben"
+      },
+      "Pretérito": {
+        "yo": "escribí",
+        "tú": "escribiste",
+        "él/ella": "escribió",
+        "nosotros": "escribimos",
+        "ellos": "escribieron"
+      },
+      "Imperfecto": {
+        "yo": "escribía",
+        "tú": "escribías",
+        "él/ella": "escribía",
+        "nosotros": "escribíamos",
+        "ellos": "escribían"
+      },
+      "Perfecto": {
+        "yo": "he escrito",
+        "tú": "has escrito",
+        "él/ella": "ha escrito",
+        "nosotros": "hemos escrito",
+        "ellos": "han escrito"
+      },
+      "Futuro": {
+        "yo": "escribiré",
+        "tú": "escribirás",
+        "él/ella": "escribirá",
+        "nosotros": "escribiremos",
+        "ellos": "escribirán"
+      }
+    }
+  }
+]

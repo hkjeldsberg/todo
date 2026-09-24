@@ -1,0 +1,362 @@
+{
+  "pages": [
+    {
+      "page_id": "sb_apt_01",
+      "title_es": "El apartamento desplegable",
+      "title_en": "The Fold-Out Apartment",
+      "visual_layer": "pop_up_apartment",
+      "tasks": [
+        {
+          "id": "apt_toys",
+          "mechanic": "drag",
+          "prompt_text": "Pon los juguetes dentro de la caja de cartón.",
+          "prompt_en": "Put the toys inside the cardboard box.",
+          "draggable_id": "paper_toys",
+          "target_zone": "zone_inside_box",
+          "error_note": "You placed it fuera de la caja (outside the box). Drag it inside the lines.",
+          "success_note": "¡Muy bien! Los juguetes están dentro de la caja.",
+          "zone_notes": {
+            "zone_on_box": "That's encima de la caja (on top of the box). Dentro de = inside."
+          },
+          "build": null,
+          "tags": [
+            "dentro de",
+            "fuera de",
+            "encima de"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "apt_cat",
+          "mechanic": "flap",
+          "prompt_text": "El gato está debajo del sofá.",
+          "prompt_en": "The cat is under the sofa. Lift the right cover.",
+          "draggable_id": null,
+          "target_zone": "flap_under_sofa",
+          "error_note": "Look for the cover debajo del sofá (under the sofa).",
+          "success_note": "¡Ahí está! Debajo del sofá. (de + el = del)",
+          "zone_notes": {
+            "flap_on_sofa": "That flap is encima del sofá (on top of the sofa). Debajo de = under.",
+            "flap_behind_curtain": "That's detrás de la cortina (behind the curtain). Look debajo del sofá."
+          },
+          "build": null,
+          "tags": [
+            "debajo de",
+            "encima de",
+            "detrás de",
+            "del"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "apt_cat_label",
+          "mechanic": "build",
+          "prompt_text": "¿Hay o está? Describe al gato.",
+          "prompt_en": "Hay or está? Label the cat with the Dymo stickers.",
+          "draggable_id": null,
+          "target_zone": "label_under_sofa",
+          "error_note": "Almost. Say \"El gato está…\" (the cat we found) or \"Hay un gato…\" (there is a cat).",
+          "success_note": "Both work: El gato está… (a specific cat) · Hay un gato… (a cat exists there).",
+          "zone_notes": {},
+          "build": {
+            "template": "{0} {1} debajo del sofá.",
+            "tokens": [
+              "hay",
+              "está",
+              "el gato",
+              "un gato"
+            ],
+            "answers": [
+              [
+                "el gato",
+                "está"
+              ],
+              [
+                "hay",
+                "un gato"
+              ]
+            ]
+          },
+          "tags": [
+            "hay vs estar"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "apt_clothes",
+          "mechanic": "pick",
+          "prompt_text": "La ropa de la niña está en el piso de arriba.",
+          "prompt_en": "The girl's clothes are upstairs. Find them.",
+          "draggable_id": null,
+          "target_zone": "pick_clothes_upstairs",
+          "error_note": "Look arriba (upstairs). Switch to the top floor.",
+          "success_note": "¡Eso es! La ropa está arriba, en el piso de arriba.",
+          "zone_notes": {
+            "pick_laundry_downstairs": "That laundry is abajo (downstairs). Arriba = upstairs. Go up a floor!"
+          },
+          "build": null,
+          "tags": [
+            "arriba",
+            "abajo"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "apt_backpack",
+          "mechanic": "drag",
+          "prompt_text": "Pon la mochila encima de la cama.",
+          "prompt_en": "Put the backpack on top of the bed.",
+          "draggable_id": "paper_backpack",
+          "target_zone": "zone_on_bed",
+          "error_note": "Encima de la cama = on top of the bed. Drop it on the bed.",
+          "success_note": "¡Lista! La mochila está encima de la cama. (In Latin America you'll also hear arriba de la cama.)",
+          "zone_notes": {
+            "zone_under_bed": "That's debajo de la cama (under the bed). Encima de = on top of."
+          },
+          "build": null,
+          "tags": [
+            "encima de",
+            "debajo de",
+            "arriba de"
+          ],
+          "level": "A1"
+        }
+      ]
+    },
+    {
+      "page_id": "sb_plaza_02",
+      "title_es": "La plaza de las polaroids",
+      "title_en": "The Polaroid Plaza",
+      "visual_layer": "polaroid_plaza",
+      "tasks": [
+        {
+          "id": "plaza_fountain",
+          "mechanic": "drag",
+          "prompt_text": "La fuente está en medio de la plaza.",
+          "prompt_en": "The fountain is in the middle of the square.",
+          "draggable_id": "paper_fountain",
+          "target_zone": "zone_plaza_center",
+          "error_note": "En medio de = in the middle. Put it right in the center of the square.",
+          "success_note": "¡Perfecto! En medio de la plaza (también: en el centro de la plaza).",
+          "zone_notes": {
+            "zone_plaza_corner": "That's en la esquina de la plaza (in the corner). En medio de = in the middle."
+          },
+          "build": null,
+          "tags": [
+            "en medio de",
+            "en el centro de"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "plaza_chairs",
+          "mechanic": "drag",
+          "prompt_text": "Pon las sillas de papel alrededor de la mesa.",
+          "prompt_en": "Put the paper chairs around the table.",
+          "draggable_id": "paper_chairs",
+          "target_zone": "zone_around_table",
+          "error_note": "Alrededor de = around. Put each chair on one side of the table.",
+          "success_note": "¡Qué bonito! Las sillas están alrededor de la mesa.",
+          "zone_notes": {},
+          "build": null,
+          "tags": [
+            "alrededor de"
+          ],
+          "level": "A2"
+        },
+        {
+          "id": "plaza_chairs_label",
+          "mechanic": "build",
+          "prompt_text": "¿Hay o están? Describe la terraza.",
+          "prompt_en": "Hay or están? Label the terrace.",
+          "draggable_id": null,
+          "target_zone": "label_table",
+          "error_note": "Say \"Hay cuatro sillas…\" (there are four chairs) or \"Las sillas están…\" (the chairs are).",
+          "success_note": "Hay + a number · están + the specific chairs.",
+          "zone_notes": {},
+          "build": {
+            "template": "{0} {1} alrededor de la mesa.",
+            "tokens": [
+              "hay",
+              "está",
+              "están",
+              "las sillas",
+              "cuatro sillas"
+            ],
+            "answers": [
+              [
+                "hay",
+                "cuatro sillas"
+              ],
+              [
+                "las sillas",
+                "están"
+              ]
+            ]
+          },
+          "tags": [
+            "hay vs estar",
+            "agreement"
+          ],
+          "level": "A2"
+        },
+        {
+          "id": "plaza_kiosk",
+          "mechanic": "drag",
+          "prompt_text": "El quiosco está entre el banco y la panadería.",
+          "prompt_en": "The kiosk is between the bank and the bakery.",
+          "draggable_id": "paper_kiosk",
+          "target_zone": "zone_between_bank_bakery",
+          "error_note": "Entre A y B = between A and B. Find the gap between the two buildings.",
+          "success_note": "¡Exacto! El quiosco está entre el banco y la panadería.",
+          "zone_notes": {
+            "zone_next_to_bakery": "That's al lado de la panadería (next to it), but not entre. Entre A y B = between A and B.",
+            "zone_behind_bank": "That's detrás del banco (behind the bank). Look for the gap between the two."
+          },
+          "build": null,
+          "tags": [
+            "entre",
+            "al lado de",
+            "detrás de"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "plaza_bike",
+          "mechanic": "drag",
+          "prompt_text": "Pon la bicicleta junto a la fuente.",
+          "prompt_en": "Put the bicycle next to the fountain.",
+          "draggable_id": "paper_bike",
+          "target_zone": "zone_next_to_fountain",
+          "error_note": "Junto a = al lado de = right next to. Put it beside the fountain.",
+          "success_note": "¡Bien! Junto a la fuente = al lado de la fuente.",
+          "zone_notes": {
+            "zone_far_from_fountain": "That's lejos de la fuente (far from it). Junto a = right next to."
+          },
+          "build": null,
+          "tags": [
+            "junto a",
+            "al lado de"
+          ],
+          "level": "A2"
+        }
+      ]
+    },
+    {
+      "page_id": "sb_map_03",
+      "title_es": "El mapa del Botánico",
+      "title_en": "The Botánico Map",
+      "visual_layer": "botanico_map",
+      "tasks": [
+        {
+          "id": "map_pharmacy",
+          "mechanic": "pin",
+          "prompt_text": "La farmacia está enfrente del parque.",
+          "prompt_en": "The pharmacy is across from the park. Pin it.",
+          "draggable_id": null,
+          "target_zone": "pin_across_park",
+          "error_note": "Enfrente de = across the street, facing it.",
+          "success_note": "¡Sí! Enfrente del parque = across the street. (También: frente al parque.)",
+          "zone_notes": {
+            "pin_next_to_park": "That building is al lado del parque (same side of the street). Enfrente de = across the street, facing it.",
+            "pin_behind_park": "That's detrás del parque (behind it). Look across the street."
+          },
+          "build": null,
+          "tags": [
+            "enfrente de",
+            "frente a",
+            "al lado de"
+          ],
+          "level": "A2"
+        },
+        {
+          "id": "map_pharmacy_label",
+          "mechanic": "build",
+          "prompt_text": "de + el = ? Completa la etiqueta.",
+          "prompt_en": "Complete the label: de + el = ?",
+          "draggable_id": null,
+          "target_zone": "label_pharmacy",
+          "error_note": "Parque is masculine (el parque), so de + el parque → del parque.",
+          "success_note": "de + el = del · a + el = al. Always contract.",
+          "zone_notes": {},
+          "build": {
+            "template": "La farmacia está enfrente {0} parque.",
+            "tokens": [
+              "de el",
+              "del",
+              "de la"
+            ],
+            "answers": [
+              [
+                "del"
+              ]
+            ]
+          },
+          "tags": [
+            "del",
+            "contractions"
+          ],
+          "level": "A1"
+        },
+        {
+          "id": "map_taxi",
+          "mechanic": "pick",
+          "prompt_text": "El taxi está delante de la casa.",
+          "prompt_en": "The taxi is in front of the house. Find it.",
+          "draggable_id": null,
+          "target_zone": "pick_taxi_ahead",
+          "error_note": "Delante de = in front of: on the side the front door faces.",
+          "success_note": "¡Correcto! El taxi está delante de la casa.",
+          "zone_notes": {
+            "pick_taxi_behind": "That taxi is detrás de la casa (behind the house). Delante de = in front of."
+          },
+          "build": null,
+          "tags": [
+            "delante de",
+            "detrás de"
+          ],
+          "level": "A2"
+        },
+        {
+          "id": "map_home",
+          "mechanic": "pin",
+          "prompt_text": "Vivo cerca del centro, pero lejos de la autopista.",
+          "prompt_en": "I live near the center, but far from the highway. Pin my block.",
+          "draggable_id": null,
+          "target_zone": "pin_block_b",
+          "error_note": "Find the block that is cerca del centro and lejos de la autopista.",
+          "success_note": "¡Esa es mi casa! Cerca del centro, lejos de la autopista.",
+          "zone_notes": {
+            "pin_block_a": "That block is cerca del centro, but also cerca de la autopista (near the highway).",
+            "pin_block_c": "That block is lejos del centro (far from the center)."
+          },
+          "build": null,
+          "tags": [
+            "cerca de",
+            "lejos de"
+          ],
+          "level": "A2"
+        },
+        {
+          "id": "map_hotel",
+          "mechanic": "pick",
+          "prompt_text": "El hotel está al final de la calle.",
+          "prompt_en": "The hotel is at the end of the street.",
+          "draggable_id": null,
+          "target_zone": "pick_hotel_end",
+          "error_note": "Al final de = at the end of. Follow the street to its end.",
+          "success_note": "¡Eso! El hotel está al final de la calle.",
+          "zone_notes": {
+            "pick_hotel_middle": "That hotel is en medio de la calle (in the middle). Al final de = at the end."
+          },
+          "build": null,
+          "tags": [
+            "al final de",
+            "en medio de"
+          ],
+          "level": "A2"
+        }
+      ]
+    }
+  ]
+}

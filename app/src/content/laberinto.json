@@ -1,0 +1,314 @@
+[
+  {
+    "node_id": "tf_botanico_01",
+    "island_zone": "tenerife",
+    "seq": 1,
+    "ambient_prompt": "Ayer por la tarde, mientras yo caminaba por los senderos del jardín...",
+    "doors": [
+      { "text": "...empezaba a llover", "correct": false, "tense": "imperfect", "feedback": "The rain is a sudden interruption of your walk, not a background state. Interruptions take the indefinido." },
+      { "text": "...empezó a llover", "correct": true, "tense": "preterite", "feedback": "Mientras + imperfecto sets the stage; the rain bursts in as a completed event: empezó." },
+      { "text": "...empezo a llover", "correct": false, "tense": "trap", "feedback": "Trap! Without the accent, 'empezo' is not a Spanish form. The 3rd-person indefinido is 'empezó'." }
+    ],
+    "feedback_imperfect": "The rain is a sudden interruption of your walk, not a background state.",
+    "next_node_id": "tf_botanico_02"
+  },
+  {
+    "node_id": "tf_botanico_02",
+    "island_zone": "tenerife",
+    "seq": 2,
+    "ambient_prompt": "Leíamos los carteles de los dragos cuando, de repente, un loro...",
+    "doors": [
+      { "text": "...nos robaba el mapa", "correct": false, "tense": "imperfect", "feedback": "'De repente' signals a single, sudden action cutting into the reading. Use the indefinido: robó." },
+      { "text": "...nos robe el mapa", "correct": false, "tense": "trap", "feedback": "Trap! 'Robe' is present subjunctive. A past narrative event needs 'robó'." },
+      { "text": "...nos robó el mapa", "correct": true, "tense": "preterite", "feedback": "Background (leíamos) + trigger 'de repente' = a completed interruption: robó." }
+    ],
+    "feedback_imperfect": "'De repente' signals a single, sudden action cutting into the reading.",
+    "next_node_id": "tf_botanico_03"
+  },
+  {
+    "node_id": "tf_botanico_03",
+    "island_zone": "tenerife",
+    "seq": 3,
+    "ambient_prompt": "Cuando sonó su teléfono, el jardinero...",
+    "doors": [
+      { "text": "...regó las orquídeas", "correct": false, "tense": "preterite", "feedback": "The phone rang in the middle of something already happening. That ongoing background action takes the imperfecto: regaba." },
+      { "text": "...regaba las orquídeas", "correct": true, "tense": "imperfect", "feedback": "The watering was already in progress when the phone interrupted: regaba is the background." },
+      { "text": "...regaría las orquídeas", "correct": false, "tense": "trap", "feedback": "Trap! 'Regaría' is conditional (would water). Describe what was going on: regaba." }
+    ],
+    "feedback_imperfect": "The watering was already in progress when the phone interrupted.",
+    "next_node_id": "gc_dunas_01"
+  },
+  {
+    "node_id": "gc_dunas_01",
+    "island_zone": "gran_canaria",
+    "seq": 4,
+    "ambient_prompt": "El verano pasado, mi hermana y yo...",
+    "doors": [
+      { "text": "...fuimos a Maspalomas por primera vez", "correct": true, "tense": "preterite", "feedback": "'El verano pasado' + 'por primera vez' marks one finished trip. Ir in the indefinido: fuimos." },
+      { "text": "...íbamos a Maspalomas por primera vez", "correct": false, "tense": "imperfect", "feedback": "A 'first time' happens once. Iba/íbamos describe repeated or ongoing going, not a single trip." },
+      { "text": "...fueimos a Maspalomas por primera vez", "correct": false, "tense": "trap", "feedback": "Trap! Ir is fully irregular in the indefinido: fui, fuiste, fue, fuimos, fuisteis, fueron." }
+    ],
+    "feedback_imperfect": "A 'first time' happens once.",
+    "next_node_id": "gc_dunas_02"
+  },
+  {
+    "node_id": "gc_dunas_02",
+    "island_zone": "gran_canaria",
+    "seq": 5,
+    "ambient_prompt": "Desde lo alto de la duna, de repente, nosotros...",
+    "doors": [
+      { "text": "...veímos un camello", "correct": false, "tense": "trap", "feedback": "Trap! Ver drops the accent in the indefinido: vi, viste, vio, vimos, visteis, vieron." },
+      { "text": "...veíamos un camello", "correct": false, "tense": "imperfect", "feedback": "'De repente' introduces a sudden, completed perception. Use the indefinido: vimos." },
+      { "text": "...vimos un camello", "correct": true, "tense": "preterite", "feedback": "A sudden sighting is a single event: vimos. Note: no accent on the short forms of ver." }
+    ],
+    "feedback_imperfect": "'De repente' introduces a sudden, completed perception.",
+    "next_node_id": "gc_dunas_03"
+  },
+  {
+    "node_id": "gc_dunas_03",
+    "island_zone": "gran_canaria",
+    "seq": 6,
+    "ambient_prompt": "Cuando era niño, mi abuelo...",
+    "doors": [
+      { "text": "...tuvo una barca azul", "correct": false, "tense": "preterite", "feedback": "Childhood possession is a background description, not an event. Tener in the imperfecto: tenía." },
+      { "text": "...tenió una barca azul", "correct": false, "tense": "trap", "feedback": "Trap! 'Tenió' does not exist. Imperfecto: tenía. Indefinido: tuvo." },
+      { "text": "...tenía una barca azul", "correct": true, "tense": "imperfect", "feedback": "Descriptions of how things were (cuando era niño) take the imperfecto: tenía." }
+    ],
+    "feedback_imperfect": "Descriptions of how things were take the imperfecto.",
+    "next_node_id": "gc_dunas_04"
+  },
+  {
+    "node_id": "gc_dunas_04",
+    "island_zone": "gran_canaria",
+    "seq": 7,
+    "ambient_prompt": "La excursión a las dunas duró todo el día y...",
+    "doors": [
+      { "text": "...fue inolvidable", "correct": true, "tense": "preterite", "feedback": "A bounded experience (duró todo el día) judged as a whole takes the indefinido: fue." },
+      { "text": "...fué inolvidable", "correct": false, "tense": "trap", "feedback": "Trap! Monosyllables like fue, fui, vio, dio never carry an accent." },
+      { "text": "...era inolvidable", "correct": false, "tense": "imperfect", "feedback": "The trip is finished and summed up as one whole. Ser in the indefinido: fue." }
+    ],
+    "feedback_imperfect": "The trip is finished and summed up as one whole.",
+    "next_node_id": "lz_timanfaya_01"
+  },
+  {
+    "node_id": "lz_timanfaya_01",
+    "island_zone": "lanzarote",
+    "seq": 8,
+    "ambient_prompt": "Anoche, en la cena, por fin yo...",
+    "doors": [
+      { "text": "...sabía la verdad sobre el volcán", "correct": false, "tense": "imperfect", "feedback": "'Sabía' = I already knew (a state). 'Por fin' means the knowledge arrived at a moment: supe = I found out." },
+      { "text": "...supe la verdad sobre el volcán", "correct": true, "tense": "preterite", "feedback": "Saber changes meaning in the indefinido: supe = I found out / learned." },
+      { "text": "...sabí la verdad sobre el volcán", "correct": false, "tense": "trap", "feedback": "Trap! Saber has an irregular stem in the indefinido: supe, supiste, supo..." }
+    ],
+    "feedback_imperfect": "'Sabía' = I already knew. 'Supe' = I found out.",
+    "next_node_id": "lz_timanfaya_02"
+  },
+  {
+    "node_id": "lz_timanfaya_02",
+    "island_zone": "lanzarote",
+    "seq": 9,
+    "ambient_prompt": "En 2019, durante mi viaje a Timanfaya, yo...",
+    "doors": [
+      { "text": "...conozí a mi mejor amiga", "correct": false, "tense": "trap", "feedback": "Trap! Conocer is regular in the indefinido: conocí, conociste, conoció..." },
+      { "text": "...conocí a mi mejor amiga", "correct": true, "tense": "preterite", "feedback": "Conocer in the indefinido = to meet for the first time: conocí." },
+      { "text": "...conocía a mi mejor amiga", "correct": false, "tense": "imperfect", "feedback": "'Conocía' = I already knew her. A first meeting on a specific trip is 'conocí'." }
+    ],
+    "feedback_imperfect": "'Conocía' = I already knew her. A first meeting is 'conocí'.",
+    "next_node_id": "lz_timanfaya_03"
+  },
+  {
+    "node_id": "lz_timanfaya_03",
+    "island_zone": "lanzarote",
+    "seq": 10,
+    "ambient_prompt": "Intenté abrir la puerta del mirador tres veces, pero...",
+    "doors": [
+      { "text": "...no podía", "correct": false, "tense": "imperfect", "feedback": "The attempts are finished and counted (tres veces). The outcome is a completed failure: no pude = I tried and failed." },
+      { "text": "...no podí", "correct": false, "tense": "trap", "feedback": "Trap! Poder has an irregular stem in the indefinido: pude, pudiste, pudo..." },
+      { "text": "...no pude", "correct": true, "tense": "preterite", "feedback": "No pude = I tried and did not manage. The indefinido of poder reports the result." }
+    ],
+    "feedback_imperfect": "No pude = I tried and failed.",
+    "next_node_id": "lz_timanfaya_04"
+  },
+  {
+    "node_id": "lz_timanfaya_04",
+    "island_zone": "lanzarote",
+    "seq": 11,
+    "ambient_prompt": "Cuando éramos niños, todos...",
+    "doors": [
+      { "text": "...sabíamos que el suelo de Timanfaya quemaba", "correct": true, "tense": "imperfect", "feedback": "A known fact during childhood is an ongoing mental state: sabíamos." },
+      { "text": "...supimos que el suelo de Timanfaya quemaba", "correct": false, "tense": "preterite", "feedback": "'Supimos' means we found out at one moment. 'Cuando éramos niños' frames a lasting state: sabíamos." },
+      { "text": "...sabemos que el suelo de Timanfaya quemaba", "correct": false, "tense": "trap", "feedback": "Trap! 'Sabemos' is present tense; the frame is in the past." }
+    ],
+    "feedback_imperfect": "A known fact during childhood is an ongoing mental state.",
+    "next_node_id": "fv_viento_01"
+  },
+  {
+    "node_id": "fv_viento_01",
+    "island_zone": "fuerteventura",
+    "seq": 12,
+    "ambient_prompt": "Todos los veranos, mi familia...",
+    "doors": [
+      { "text": "...alquilaba una casa en Corralejo", "correct": true, "tense": "imperfect", "feedback": "'Todos los veranos' = a repeated habit. Habits take the imperfecto: alquilaba." },
+      { "text": "...alquilará una casa en Corralejo", "correct": false, "tense": "trap", "feedback": "Trap! 'Alquilará' is future tense." },
+      { "text": "...alquiló una casa en Corralejo", "correct": false, "tense": "preterite", "feedback": "'Todos los veranos' describes something that happened again and again, not once. Use alquilaba." }
+    ],
+    "feedback_imperfect": "'Todos los veranos' = a repeated habit.",
+    "next_node_id": "fv_viento_02"
+  },
+  {
+    "node_id": "fv_viento_02",
+    "island_zone": "fuerteventura",
+    "seq": 13,
+    "ambient_prompt": "Aquel verano, sin embargo, mi familia...",
+    "doors": [
+      { "text": "...alquilaba un barco en Corralejo", "correct": false, "tense": "imperfect", "feedback": "'Aquel verano, sin embargo' singles out one summer that broke the routine. One-time events take the indefinido: alquiló." },
+      { "text": "...alquiló un barco en Corralejo", "correct": true, "tense": "preterite", "feedback": "'Aquel verano' = one specific time, contrasting with the habit: alquiló." },
+      { "text": "...alquilaste un barco en Corralejo", "correct": false, "tense": "trap", "feedback": "Trap! 'Alquilaste' is tú. 'Mi familia' is third person singular: alquiló." }
+    ],
+    "feedback_imperfect": "'Aquel verano' singles out one summer.",
+    "next_node_id": "fv_viento_03"
+  },
+  {
+    "node_id": "fv_viento_03",
+    "island_zone": "fuerteventura",
+    "seq": 14,
+    "ambient_prompt": "De pequeña, cada domingo, yo...",
+    "doors": [
+      { "text": "...hice windsurf con mi padre", "correct": false, "tense": "preterite", "feedback": "'Cada domingo' marks a routine. Routines in the past take the imperfecto: hacía." },
+      { "text": "...hací windsurf con mi padre", "correct": false, "tense": "trap", "feedback": "Trap! Hacer in the imperfecto is regular: hacía, hacías, hacía..." },
+      { "text": "...hacía windsurf con mi padre", "correct": true, "tense": "imperfect", "feedback": "'De pequeña' + 'cada domingo' = childhood habit: hacía." }
+    ],
+    "feedback_imperfect": "'Cada domingo' marks a routine.",
+    "next_node_id": "fv_viento_04"
+  },
+  {
+    "node_id": "fv_viento_04",
+    "island_zone": "fuerteventura",
+    "seq": 15,
+    "ambient_prompt": "El 3 de agosto de 1998, en Sotavento, mi padre...",
+    "doors": [
+      { "text": "...ganó su única regata", "correct": true, "tense": "preterite", "feedback": "An exact date and 'única' = one historical event: ganó." },
+      { "text": "...ganaba su única regata", "correct": false, "tense": "imperfect", "feedback": "A specific date pins a single completed event. Use the indefinido: ganó." },
+      { "text": "...ganío su única regata", "correct": false, "tense": "trap", "feedback": "Trap! Ganar is a regular -ar verb: gané, ganaste, ganó." }
+    ],
+    "feedback_imperfect": "A specific date pins a single completed event.",
+    "next_node_id": "lp_caldera_01"
+  },
+  {
+    "node_id": "lp_caldera_01",
+    "island_zone": "la_palma",
+    "seq": 16,
+    "ambient_prompt": "Aquella noche en el Roque de los Muchachos, el cielo...",
+    "doors": [
+      { "text": "...fue claro, aparecía un meteoro y todos gritábamos", "correct": false, "tense": "imperfect", "feedback": "Flip it: the sky is the setting (imperfecto: era), the meteor and the shout are events in sequence (indefinido: apareció, gritamos)." },
+      { "text": "...era claro, apareció un meteoro y todos gritamos", "correct": true, "tense": "preterite", "feedback": "Setting (era) → action (apareció) → reaction (gritamos). Background in imperfecto, events in indefinido." },
+      { "text": "...era claro, aparecía un meteoro y todos gritamos", "correct": false, "tense": "trap", "feedback": "Trap! The meteor is the trigger event, not scenery: apareció." }
+    ],
+    "feedback_imperfect": "Setting in imperfecto, events in indefinido.",
+    "next_node_id": "lp_caldera_02"
+  },
+  {
+    "node_id": "lp_caldera_02",
+    "island_zone": "la_palma",
+    "seq": 17,
+    "ambient_prompt": "Mientras el astrónomo ajustaba el telescopio...",
+    "doors": [
+      { "text": "...se fue la luz y él soltó una carcajada", "correct": true, "tense": "preterite", "feedback": "Background (ajustaba) → interruption (se fue) → reaction (soltó). Both events are completed." },
+      { "text": "...se iba la luz y él soltaba una carcajada", "correct": false, "tense": "imperfect", "feedback": "The blackout and the laugh are single events that happen in order. Use the indefinido: se fue, soltó." },
+      { "text": "...se fue la luz y él soltaba una carcajada", "correct": false, "tense": "trap", "feedback": "Trap! The reaction is also a one-time event after the blackout: soltó." }
+    ],
+    "feedback_imperfect": "The blackout and the laugh are single events in order.",
+    "next_node_id": "lp_caldera_03"
+  },
+  {
+    "node_id": "lp_caldera_03",
+    "island_zone": "la_palma",
+    "seq": 18,
+    "ambient_prompt": "Hacía frío en la cumbre y nosotros...",
+    "doors": [
+      { "text": "...esperábamos el amanecer cuando veíamos el mar de nubes", "correct": false, "tense": "trap", "feedback": "Trap! The 'cuando' clause is the moment that breaks the waiting: vimos." },
+      { "text": "...esperamos el amanecer cuando veíamos el mar de nubes", "correct": false, "tense": "preterite", "feedback": "Reversed. The waiting is the ongoing background (esperábamos); seeing the sea of clouds is the event (vimos)." },
+      { "text": "...esperábamos el amanecer cuando vimos el mar de nubes", "correct": true, "tense": "imperfect", "feedback": "Weather (hacía) + ongoing action (esperábamos) set the scene; 'cuando vimos' is the event." }
+    ],
+    "feedback_imperfect": "Waiting is the background; seeing is the event.",
+    "next_node_id": "lg_garajonay_01"
+  },
+  {
+    "node_id": "lg_garajonay_01",
+    "island_zone": "la_gomera",
+    "seq": 19,
+    "ambient_prompt": "Me perdí en Garajonay. Un pastor me encontró, me dio agua y...",
+    "doors": [
+      { "text": "...me llevaba hasta el pueblo", "correct": false, "tense": "imperfect", "feedback": "The story is a chain of completed actions (encontró, dio...). The next link continues the chain: llevó." },
+      { "text": "...me llevó hasta el pueblo", "correct": true, "tense": "preterite", "feedback": "A sequence of completed actions moves the plot forward: encontró → dio → llevó." },
+      { "text": "...me llevo hasta el pueblo", "correct": false, "tense": "trap", "feedback": "Trap! Without the accent, 'llevo' is present tense (I carry)." }
+    ],
+    "feedback_imperfect": "A chain of completed actions continues in the indefinido.",
+    "next_node_id": "lg_garajonay_02"
+  },
+  {
+    "node_id": "lg_garajonay_02",
+    "island_zone": "la_gomera",
+    "seq": 20,
+    "ambient_prompt": "Mi abuela creció en una casa de piedra en el bosque. Ella...",
+    "doors": [
+      { "text": "...se levantava antes que el sol", "correct": false, "tense": "trap", "feedback": "Trap! The -ar imperfecto ending is spelled with b: levantaba." },
+      { "text": "...se levantó antes que el sol", "correct": false, "tense": "preterite", "feedback": "The story describes her life growing up, not one morning. Routine = imperfecto: se levantaba." },
+      { "text": "...se levantaba antes que el sol", "correct": true, "tense": "imperfect", "feedback": "No trigger word needed: 'growing up' frames a way of life, so the routine is imperfecto." }
+    ],
+    "feedback_imperfect": "Describing a way of life = imperfecto.",
+    "next_node_id": "lg_garajonay_03"
+  },
+  {
+    "node_id": "lg_garajonay_03",
+    "island_zone": "la_gomera",
+    "seq": 21,
+    "ambient_prompt": "Abrí la puerta del refugio. Dentro, el fuego...",
+    "doors": [
+      { "text": "...ardía y olía a laurel", "correct": true, "tense": "imperfect", "feedback": "After the action (abrí), the narrator describes the scene as found: ardía, olía." },
+      { "text": "...ardió y olió a laurel", "correct": false, "tense": "preterite", "feedback": "The fire was already burning when you walked in. What you find on arrival is description: ardía, olía." },
+      { "text": "...ardiaba y olía a laurel", "correct": false, "tense": "trap", "feedback": "Trap! Arder is an -er verb: ardía, not 'ardiaba'." }
+    ],
+    "feedback_imperfect": "The scene you find on arrival is description.",
+    "next_node_id": "eh_faro_01"
+  },
+  {
+    "node_id": "eh_faro_01",
+    "island_zone": "el_hierro",
+    "seq": 22,
+    "ambient_prompt": "Cuando llegamos al faro de Orchilla, el farero...",
+    "doors": [
+      { "text": "...dormía, así que lo despertamos", "correct": true, "tense": "imperfect", "feedback": "He was already asleep (background: dormía); waking him is the event (despertamos)." },
+      { "text": "...durmió, así que lo despertábamos", "correct": false, "tense": "preterite", "feedback": "Swapped: the sleeping is the state you found, the waking is the event." },
+      { "text": "...dormió, así que lo despertamos", "correct": false, "tense": "trap", "feedback": "Trap! Dormir changes stem in the 3rd person indefinido: durmió." }
+    ],
+    "feedback_imperfect": "The sleeping is background; the waking is the event.",
+    "next_node_id": "eh_faro_02"
+  },
+  {
+    "node_id": "eh_faro_02",
+    "island_zone": "el_hierro",
+    "seq": 23,
+    "ambient_prompt": "En octubre de 2011, bajo el mar de La Restinga, el volcán...",
+    "doors": [
+      { "text": "...entraba en erupción", "correct": false, "tense": "imperfect", "feedback": "A dated historical event is a completed action: entró." },
+      { "text": "...entró en erupción", "correct": true, "tense": "preterite", "feedback": "A specific historical moment = indefinido: entró." },
+      { "text": "...entrió en erupción", "correct": false, "tense": "trap", "feedback": "Trap! Entrar is regular -ar: entró." }
+    ],
+    "feedback_imperfect": "A dated historical event is a completed action.",
+    "next_node_id": "eh_faro_03"
+  },
+  {
+    "node_id": "eh_faro_03",
+    "island_zone": "el_hierro",
+    "seq": 24,
+    "ambient_prompt": "Mis primos no vinieron a la fiesta del Garoé porque...",
+    "doors": [
+      { "text": "...estubieron enfermos", "correct": false, "tense": "trap", "feedback": "Trap! Estar's indefinido stem is spelled with v: estuvieron." },
+      { "text": "...estaban enfermos", "correct": true, "tense": "imperfect", "feedback": "The illness is the background reason (a state at that time): estaban." },
+      { "text": "...estuvieron enfermos", "correct": false, "tense": "preterite", "feedback": "The reason behind an event is usually a background state: estaban enfermos." }
+    ],
+    "feedback_imperfect": "The reason behind an event is a background state.",
+    "next_node_id": null
+  }
+]

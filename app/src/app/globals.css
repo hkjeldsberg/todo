@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* Sticker book: warm shell, pasted cards, hard offset shadows, one hot pink. */
+:root {
+  --shell: #ffe9b8;
+  --page: #fff3d6;
+  --tab: #f2d59c;
+  --card: #ffffff;
+  --card-shadow: #f0e0bb;
+  --accent: #ff5fa2;
+  --accent-shadow: #e04a8b;
+  --ink: #3d2140;
+  --ink-shadow: #24132a;
+  --on-ink: #fff3d6;
+  --ai: #ffc3dd;
+  --muted: #8a7690;
+  --faint: #a0899f;
+  --handle: #dbc9d8;
+  --dash: #e4d3b3;
+  --dash-card: #f0e0bb;
+  --pill: #ffe9b8;
+  --pill-flat: #f2e3c2;
+  /* Selected chips: a deeper yellow, so ink stays unique to Save/primary. */
+  --pill-deep: #e6c583;
+}
+
+@theme inline {
+  --color-shell: var(--shell);
+  --color-page: var(--page);
+  --color-tab: var(--tab);
+  --color-card: var(--card);
+  --color-accent: var(--accent);
+  --color-ink: var(--ink);
+  --color-on-ink: var(--on-ink);
+  --color-ai: var(--ai);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-handle: var(--handle);
+  --color-dash: var(--dash);
+  --color-dash-card: var(--dash-card);
+  --color-pill: var(--pill);
+  --color-pill-flat: var(--pill-flat);
+  --color-pill-deep: var(--pill-deep);
+  --font-sans: var(--font-baloo), "Baloo 2", ui-rounded, system-ui, sans-serif;
+}
+
+/* Base rules must be layered: unlayered CSS outranks Tailwind's utility layer,
+   which would let `button { color: inherit }` silently beat `text-on-ink`. */
+@layer base {
+  html,
+  body {
+    background: var(--shell);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+  }
+
+  input,
+  select,
+  textarea,
+  button {
+    font-family: inherit;
+    color: inherit;
+  }
+
+  input::placeholder {
+    color: var(--faint);
+  }
+
+  /* Keyboard focus in the sticker palette instead of the browser's blue. */
+  :focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+  }
+}
+
+/* Every mark in the chrome is a text character. Baloo 2 carries none of the
+   Braille range, so the ⠿ drag handle falls back to a mono stack. Emoji fonts
+   stay out of the font stack entirely: they hijack plain marks like * and ?
+   into color emoji. */
+.glyph {
+  font-family: ui-monospace, Menlo, "DejaVu Sans", monospace;
+}
+
+/* Sticker press: the element drops into its own hard shadow instead of fading.
+   `--press` is the shadow depth the element carries. */
+.press {
+  --press: 6px;
+  transition:
+    transform 120ms ease-out,
+    box-shadow 120ms ease-out;
+}
+.press:active {
+  transform: translateY(var(--press));
+  box-shadow: none !important;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* The diary's save/review bar. Indeterminate: the server reports no progress,
+   so the stripe travels rather than pretending to fill. */
+@keyframes diary-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+.diary-progress {
+  animation: diary-progress 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* No card tilt and no press travel when motion is turned down. */
+  .sticker {
+    transform: none !important;
+  }
+  .press:active {
+    transform: none;
+  }
+
+  /* The travelling stripe becomes a static full bar rather than a frozen sliver. */
+  .diary-progress {
+    width: 100%;
+  }
+}

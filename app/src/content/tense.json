@@ -1,0 +1,1244 @@
+{
+  "rooms": [
+    {
+      "id": "cocina",
+      "order_index": 1,
+      "title": "La cocina de la abuela",
+      "subtitle": "Grandma's kitchen",
+      "focus": "Regular verbs: one clue per sentence",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000000101",
+          "order_index": 1,
+          "scene_object": "radio_vintage_01",
+          "sentence_pre": "Todas las mañanas, en la radio ",
+          "sentence_post": " boleros antiguos.",
+          "verb_base": "sonar",
+          "options": [
+            {
+              "form": "sonaban",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "sonaron",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Todas las mañanas\" (every morning) marks a habit. Habits and repeated actions in the past take the imperfect: sonaban.",
+          "translation": "Every morning, old boleros used to play on the radio.",
+          "anim_trigger": "anim_radio_music_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000102",
+          "order_index": 2,
+          "scene_object": "clock_wall_01",
+          "sentence_pre": "El viejo reloj de la pared siempre ",
+          "sentence_post": " cinco minutos de retraso.",
+          "verb_base": "marcar",
+          "options": [
+            {
+              "form": "marcaba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "marcó",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "This describes how the clock usually was, not one event. Descriptions and habits (\"siempre\") take the imperfect: marcaba.",
+          "translation": "The old wall clock was always five minutes slow.",
+          "anim_trigger": "anim_pendulum_swing_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000103",
+          "order_index": 3,
+          "scene_object": "lamp_kitchen_01",
+          "sentence_pre": "Por las noches, la lámpara ",
+          "sentence_post": " la cocina con una luz cálida.",
+          "verb_base": "iluminar",
+          "options": [
+            {
+              "form": "iluminaba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "iluminó",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Por las noches\" (at night, every night) sets a repeated background scene. Use the imperfect: iluminaba.",
+          "translation": "At night, the lamp lit the kitchen with a warm light.",
+          "anim_trigger": "anim_lamp_glow_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000104",
+          "order_index": 4,
+          "scene_object": "kettle_01",
+          "sentence_pre": "Mientras la abuela cocinaba, la tetera ",
+          "sentence_post": " a silbar de repente.",
+          "verb_base": "empezar",
+          "options": [
+            {
+              "form": "empezaba",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "empezó",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"De repente\" (suddenly) marks a single action that interrupts the background (\"cocinaba\"). Sudden, completed actions take the preterite: empezó.",
+          "translation": "While grandma was cooking, the kettle suddenly started to whistle.",
+          "anim_trigger": "anim_kettle_lid_pop_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000105",
+          "order_index": 5,
+          "scene_object": "plate_table_01",
+          "sentence_pre": "Entonces el gato saltó a la mesa y ",
+          "sentence_post": " un plato al suelo.",
+          "verb_base": "tirar",
+          "options": [
+            {
+              "form": "tiraba",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "tiró",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "This is a chain of completed events: first \"saltó\", then the next action. Events that move the story forward take the preterite: tiró.",
+          "translation": "Then the cat jumped onto the table and knocked a plate onto the floor.",
+          "anim_trigger": "anim_plate_fall_once"
+        }
+      ]
+    },
+    {
+      "id": "salon",
+      "order_index": 2,
+      "title": "El salón en invierno",
+      "subtitle": "The living room in winter",
+      "focus": "Common irregulars: hacer, poner, tener, venir, ser",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000000201",
+          "order_index": 1,
+          "scene_object": "window_snow_01",
+          "sentence_pre": "Era invierno y fuera ",
+          "sentence_post": " mucho frío.",
+          "verb_base": "hacer",
+          "options": [
+            {
+              "form": "hacía",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "hizo",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "Weather that sets the scene is background description, so it takes the imperfect: hacía. The preterite of hacer is irregular (hice, hizo), but it doesn't fit here.",
+          "translation": "It was winter and it was very cold outside.",
+          "anim_trigger": "anim_snow_fall_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000202",
+          "order_index": 2,
+          "scene_object": "photo_frame_01",
+          "sentence_pre": "En aquella foto, mis abuelos ",
+          "sentence_post": " muy jóvenes.",
+          "verb_base": "ser",
+          "options": [
+            {
+              "form": "eran",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "fueron",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "Describing how people looked or what they were like takes the imperfect. Ser is irregular in the imperfect: era, eras, era, éramos, erais, eran.",
+          "translation": "In that photo, my grandparents were very young.",
+          "anim_trigger": "anim_photo_shimmer_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000203",
+          "order_index": 3,
+          "scene_object": "piano_01",
+          "sentence_pre": "Cada tarde, mi hermana ",
+          "sentence_post": " que practicar el piano.",
+          "verb_base": "tener",
+          "options": [
+            {
+              "form": "tenía",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "tuvo",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Cada tarde\" (every afternoon) is a routine, so use the imperfect: tenía. Tuvo (irregular stem tuv-) is for a single completed event.",
+          "translation": "Every afternoon, my sister had to practise the piano.",
+          "anim_trigger": "anim_piano_keys_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000204",
+          "order_index": 4,
+          "scene_object": "fireplace_01",
+          "sentence_pre": "De repente, papá ",
+          "sentence_post": " más leña en la chimenea.",
+          "verb_base": "poner",
+          "options": [
+            {
+              "form": "ponía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "puso",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"De repente\" signals one sudden, completed action, so use the preterite. Poner has an irregular stem, pus-: puse, pusiste, puso.",
+          "translation": "Suddenly, Dad put more wood in the fireplace.",
+          "anim_trigger": "anim_fire_ignite_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000205",
+          "order_index": 5,
+          "scene_object": "door_01",
+          "sentence_pre": "Entonces ",
+          "sentence_post": " el tío Pepe con un regalo enorme.",
+          "verb_base": "venir",
+          "options": [
+            {
+              "form": "venía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "vino",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"Entonces\" (then) moves the story forward with a new event, so use the preterite. Venir has an irregular stem, vin-: vine, viniste, vino.",
+          "translation": "Then Uncle Pepe came with an enormous present.",
+          "anim_trigger": "anim_door_open_once"
+        }
+      ]
+    },
+    {
+      "id": "dormitorio",
+      "order_index": 3,
+      "title": "El dormitorio de la infancia",
+      "subtitle": "The childhood bedroom",
+      "focus": "Both tenses in one sentence, heavy irregulars: ser, ir, estar, caer",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000000301",
+          "order_index": 1,
+          "scene_object": "globe_01",
+          "sentence_pre": "Cuando yo ",
+          "sentence_post": " pequeño, soñaba con viajar por todo el mundo.",
+          "verb_base": "ser",
+          "options": [
+            {
+              "form": "era",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "fui",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Cuando era pequeño\" (when I was little) describes a stage of life, which is background. Use the imperfect: era. Careful: fui is the preterite of both ser and ir.",
+          "translation": "When I was little, I dreamed of travelling all over the world.",
+          "anim_trigger": "anim_globe_spin_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000302",
+          "order_index": 2,
+          "scene_object": "window_clouds_01",
+          "sentence_pre": "Cuando llegué a casa, el cielo ",
+          "sentence_post": " muy nublado.",
+          "verb_base": "estar",
+          "options": [
+            {
+              "form": "estaba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "estuvo",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Llegué\" is the event; the sky is the scene it happened in. States and descriptions take the imperfect: estaba. Estuvo (stem estuv-) would mean a closed period.",
+          "translation": "When I got home, the sky was very cloudy.",
+          "anim_trigger": "anim_clouds_drift_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000303",
+          "order_index": 3,
+          "scene_object": "phone_01",
+          "sentence_pre": "Ya me ",
+          "sentence_post": " a la cama cuando, de repente, sonó el teléfono.",
+          "verb_base": "ir",
+          "options": [
+            {
+              "form": "iba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "fui",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "An action already in progress that gets interrupted (\"sonó\") takes the imperfect. Ir is one of only three irregular imperfects: iba, ibas, iba (the others are ser and ver).",
+          "translation": "I was already going to bed when, suddenly, the phone rang.",
+          "anim_trigger": "anim_phone_ring_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000304",
+          "order_index": 4,
+          "scene_object": "bookshelf_01",
+          "sentence_pre": "Mientras yo dormía, un libro se ",
+          "sentence_post": " de la estantería.",
+          "verb_base": "caer",
+          "options": [
+            {
+              "form": "caía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "cayó",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"Dormía\" is the background; the book falling is the single event that interrupts it. Use the preterite. Caer changes i to y: cayó, cayeron.",
+          "translation": "While I was sleeping, a book fell off the shelf.",
+          "anim_trigger": "anim_book_fall_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000305",
+          "order_index": 5,
+          "scene_object": "vase_01",
+          "sentence_pre": "Esa mañana ",
+          "sentence_post": " al mercado y compré flores frescas.",
+          "verb_base": "ir",
+          "options": [
+            {
+              "form": "iba",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "fui",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"Esa mañana\" (that morning) points to one specific occasion, followed by another completed action (\"compré\"). Use the preterite: fui. It is the same form as ser's preterite, so context tells you which verb it is.",
+          "translation": "That morning I went to the market and bought fresh flowers.",
+          "anim_trigger": "anim_flowers_bloom_once"
+        }
+      ]
+    },
+    {
+      "id": "cafeteria",
+      "order_index": 4,
+      "title": "La cafetería de la esquina",
+      "subtitle": "The corner café",
+      "focus": "Stem-changing verbs: servir, dormir, pedir, sentir",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000000401",
+          "order_index": 1,
+          "scene_object": "espresso_machine_01",
+          "sentence_pre": "Cada mañana, el camarero ",
+          "sentence_post": " café a los mismos clientes.",
+          "verb_base": "servir",
+          "options": [
+            {
+              "form": "servía",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "sirvió",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Cada mañana\" marks a routine, so use the imperfect: servía. Good news: stem-changing verbs are regular in the imperfect. The e→i change only appears in the preterite (sirvió).",
+          "translation": "Every morning, the waiter served coffee to the same customers.",
+          "anim_trigger": "anim_espresso_steam_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000402",
+          "order_index": 2,
+          "scene_object": "window_rain_01",
+          "sentence_pre": "Afuera ",
+          "sentence_post": " y la gente corría con paraguas.",
+          "verb_base": "llover",
+          "options": [
+            {
+              "form": "llovía",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "llovió",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "Weather as the background of a scene takes the imperfect: llovía. \"Corría\" is background too; nothing has happened yet.",
+          "translation": "Outside it was raining and people were running with umbrellas.",
+          "anim_trigger": "anim_rain_fall_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000403",
+          "order_index": 3,
+          "scene_object": "dog_01",
+          "sentence_pre": "Mientras hablábamos, el perro del dueño ",
+          "sentence_post": " bajo la mesa.",
+          "verb_base": "dormir",
+          "options": [
+            {
+              "form": "dormía",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "durmió",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Mientras hablábamos\" sets up a background, and the sleeping dog is part of it: dormía. Dormir changes o→u only in the preterite (durmió).",
+          "translation": "While we were talking, the owner's dog was sleeping under the table.",
+          "anim_trigger": "anim_dog_sleep_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000404",
+          "order_index": 4,
+          "scene_object": "cups_table_01",
+          "sentence_pre": "Esa tarde, mi amiga ",
+          "sentence_post": " un chocolate con churros.",
+          "verb_base": "pedir",
+          "options": [
+            {
+              "form": "pedía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "pidió",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"Esa tarde\" (that afternoon) is one specific occasion, and ordering is a single completed action: pidió. Pedir changes e→i in the third person preterite: pidió, pidieron.",
+          "translation": "That afternoon, my friend ordered hot chocolate with churros.",
+          "anim_trigger": "anim_cups_serve_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000405",
+          "order_index": 5,
+          "scene_object": "oven_01",
+          "sentence_pre": "De repente, mi amiga ",
+          "sentence_post": " un olor a pan recién hecho.",
+          "verb_base": "sentir",
+          "options": [
+            {
+              "form": "sentía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "sintió",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"De repente\" marks a sudden, one-time perception: sintió. Sentir changes e→i in the third person preterite (sintió, sintieron) but is regular in the imperfect (sentía).",
+          "translation": "Suddenly, my friend noticed the smell of freshly baked bread.",
+          "anim_trigger": "anim_oven_bread_once"
+        }
+      ]
+    },
+    {
+      "id": "estacion",
+      "order_index": 5,
+      "title": "La estación de tren",
+      "subtitle": "The train station",
+      "focus": "Irregular stems with -j- and -uv-: decir, andar, traer",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000000501",
+          "order_index": 1,
+          "scene_object": "clock_station_01",
+          "sentence_pre": "El reloj de la estación siempre ",
+          "sentence_post": " cinco minutos adelantado.",
+          "verb_base": "ir",
+          "options": [
+            {
+              "form": "iba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "fue",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "This describes how the clock usually was, not an event: iba. (\"Ir adelantado\" means a clock is fast.) Ir is irregular in the imperfect: iba, ibas, iba.",
+          "translation": "The station clock was always five minutes fast.",
+          "anim_trigger": "anim_pendulum_swing_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000502",
+          "order_index": 2,
+          "scene_object": "speaker_01",
+          "sentence_pre": "Cada cinco minutos, una voz ",
+          "sentence_post": " lo mismo por el altavoz.",
+          "verb_base": "decir",
+          "options": [
+            {
+              "form": "decía",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "dijo",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Cada cinco minutos\" is a repeated action, so use the imperfect: decía. Decir is regular in the imperfect, but its preterite has a -j- stem: dije, dijo, dijeron.",
+          "translation": "Every five minutes, a voice said the same thing over the loudspeaker.",
+          "anim_trigger": "anim_speaker_announce_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000503",
+          "order_index": 3,
+          "scene_object": "pigeon_01",
+          "sentence_pre": "Mientras esperábamos, una paloma ",
+          "sentence_post": " de un lado a otro del andén.",
+          "verb_base": "andar",
+          "options": [
+            {
+              "form": "andaba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "anduvo",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "Two things going on at the same time in the background (\"mientras esperábamos\") both take the imperfect: andaba. Andar's preterite is irregular, with a -uv- stem: anduve, anduvo.",
+          "translation": "While we were waiting, a pigeon was walking up and down the platform.",
+          "anim_trigger": "anim_pigeon_walk_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000504",
+          "order_index": 4,
+          "scene_object": "train_01",
+          "sentence_pre": "Por fin, a las ocho en punto, el tren ",
+          "sentence_post": " a la estación.",
+          "verb_base": "llegar",
+          "options": [
+            {
+              "form": "llegaba",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "llegó",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"Por fin\" and an exact time (\"a las ocho en punto\") mark one completed event: llegó.",
+          "translation": "Finally, at exactly eight o'clock, the train arrived at the station.",
+          "anim_trigger": "anim_train_arrive_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000505",
+          "order_index": 5,
+          "scene_object": "suitcase_01",
+          "sentence_pre": "Mi tía bajó del tren y me ",
+          "sentence_post": " una maleta llena de regalos.",
+          "verb_base": "traer",
+          "options": [
+            {
+              "form": "traía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "trajo",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "This is a chain of events (bajó, then the next action), so use the preterite: trajo. Traer has a -j- stem in the preterite: traje, trajo, trajeron (not \"trajieron\").",
+          "translation": "My aunt got off the train and brought me a suitcase full of presents.",
+          "anim_trigger": "anim_suitcase_open_once"
+        }
+      ]
+    },
+    {
+      "id": "aula",
+      "order_index": 6,
+      "title": "El aula de quinto",
+      "subtitle": "The fifth-grade classroom",
+      "focus": "Verbs that change meaning: saber, conocer, querer, poder",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000000601",
+          "order_index": 1,
+          "scene_object": "globe_01",
+          "sentence_pre": "De niña, ",
+          "sentence_post": " todas las capitales de Europa de memoria.",
+          "verb_base": "saber",
+          "options": [
+            {
+              "form": "sabía",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "supe",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "Knowing something over time is a state, so use the imperfect: sabía (I knew). In the preterite, supe means \"I found out\", which is a different meaning.",
+          "translation": "As a girl, I knew all the capitals of Europe by heart.",
+          "anim_trigger": "anim_globe_spin_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000602",
+          "order_index": 2,
+          "scene_object": "chalkboard_01",
+          "sentence_pre": "Ese día ",
+          "sentence_post": " la verdad: la profesora se jubilaba.",
+          "verb_base": "saber",
+          "options": [
+            {
+              "form": "sabía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "supe",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "Here saber means \"to find out\", a moment of discovery. That meaning only exists in the preterite: supe. Sabía would mean \"I already knew\".",
+          "translation": "That day I found out the truth: the teacher was retiring.",
+          "anim_trigger": "anim_chalk_write_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000603",
+          "order_index": 3,
+          "scene_object": "door_01",
+          "sentence_pre": "En septiembre ",
+          "sentence_post": " a Lucía, la chica nueva de la clase.",
+          "verb_base": "conocer",
+          "options": [
+            {
+              "form": "conocía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "conocí",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "Meeting someone for the first time is an event: conocí (I met). Conocía would mean \"I already knew her\".",
+          "translation": "In September I met Lucía, the new girl in class.",
+          "anim_trigger": "anim_door_open_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000604",
+          "order_index": 4,
+          "scene_object": "clock_wall_01",
+          "sentence_pre": "Siempre ",
+          "sentence_post": " salir al recreo antes de tiempo, pero la profesora no nos dejaba.",
+          "verb_base": "querer",
+          "options": [
+            {
+              "form": "queríamos",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "quisimos",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "An ongoing wish is a state: queríamos (we wanted). In the preterite, quisimos suggests we actually tried, and \"no quisimos\" means \"we refused\".",
+          "translation": "We always wanted to go out for break early, but the teacher wouldn't let us.",
+          "anim_trigger": "anim_pendulum_swing_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000605",
+          "order_index": 5,
+          "scene_object": "trophy_01",
+          "sentence_pre": "Después de mucho estudiar, por fin ",
+          "sentence_post": " aprobar el examen de matemáticas.",
+          "verb_base": "poder",
+          "options": [
+            {
+              "form": "podía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "pude",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"Por fin\" marks a result. In the preterite, poder means \"managed to\": pude aprobar. Podía only means \"I was able to\", with no sign that it actually happened.",
+          "translation": "After a lot of studying, I finally managed to pass the maths exam.",
+          "anim_trigger": "anim_trophy_rise_once"
+        }
+      ]
+    },
+    {
+      "id": "taller",
+      "order_index": 7,
+      "title": "El taller del abuelo",
+      "subtitle": "Grandpa's workshop",
+      "focus": "Irregulars in both tenses: poner, dar, ver, hacer",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000000701",
+          "order_index": 1,
+          "scene_object": "radio_vintage_01",
+          "sentence_pre": "Mientras trabajaba, el abuelo siempre ",
+          "sentence_post": " la radio.",
+          "verb_base": "poner",
+          "options": [
+            {
+              "form": "ponía",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "puso",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Siempre\" plus \"mientras trabajaba\" describes a habit, so use the imperfect: ponía. Poner is regular in the imperfect but irregular in the preterite (puse, puso).",
+          "translation": "While he worked, Grandpa always put the radio on.",
+          "anim_trigger": "anim_radio_music_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000702",
+          "order_index": 2,
+          "scene_object": "lamp_workshop_01",
+          "sentence_pre": "La vieja lámpara ",
+          "sentence_post": " una luz amarilla sobre la mesa de trabajo.",
+          "verb_base": "dar",
+          "options": [
+            {
+              "form": "daba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "dio",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "Describing what a place was like is background, so use the imperfect: daba. Dar's preterite is irregular and has no accent: di, dio.",
+          "translation": "The old lamp gave off a yellow light over the workbench.",
+          "anim_trigger": "anim_lamp_glow_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000703",
+          "order_index": 3,
+          "scene_object": "window_sea_01",
+          "sentence_pre": "Desde la ventana del taller ",
+          "sentence_post": " el mar.",
+          "verb_base": "ver",
+          "options": [
+            {
+              "form": "veíamos",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "vimos",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "What you could see from a place is a description: veíamos. Ver is one of only three irregular imperfects (it keeps the e: veía), along with ser and ir.",
+          "translation": "From the workshop window we could see the sea.",
+          "anim_trigger": "anim_sea_waves_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000704",
+          "order_index": 4,
+          "scene_object": "toy_boat_01",
+          "sentence_pre": "En una sola tarde, el abuelo ",
+          "sentence_post": " un barco de madera para mí.",
+          "verb_base": "hacer",
+          "options": [
+            {
+              "form": "hacía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "hizo",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"En una sola tarde\" (in a single afternoon) presents the job as finished, so use the preterite: hizo. Watch the spelling: hice, but hizo (c→z).",
+          "translation": "In a single afternoon, Grandpa made me a wooden boat.",
+          "anim_trigger": "anim_boat_build_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000705",
+          "order_index": 5,
+          "scene_object": "toolbox_01",
+          "sentence_pre": "Al final del verano, el abuelo me ",
+          "sentence_post": " su vieja caja de herramientas.",
+          "verb_base": "dar",
+          "options": [
+            {
+              "form": "daba",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "dio",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"Al final del verano\" points to one moment when something happened: dio. In the preterite, dar takes -er/-ir endings and no accent: di, diste, dio.",
+          "translation": "At the end of the summer, Grandpa gave me his old toolbox.",
+          "anim_trigger": "anim_toolbox_open_once"
+        }
+      ]
+    },
+    {
+      "id": "tormenta",
+      "order_index": 8,
+      "title": "La noche de la tormenta",
+      "subtitle": "The night of the storm",
+      "focus": "Telling a story: setting the scene vs. what happened",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000000801",
+          "order_index": 1,
+          "scene_object": "window_storm_01",
+          "sentence_pre": "Era de noche, ",
+          "sentence_post": " muchísimo y hacía viento.",
+          "verb_base": "llover",
+          "options": [
+            {
+              "form": "llovía",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "llovió",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Era de noche\" and \"hacía viento\" set the scene. The rain is part of that scene: llovía.",
+          "translation": "It was night, it was pouring and it was windy.",
+          "anim_trigger": "anim_storm_rain_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000802",
+          "order_index": 2,
+          "scene_object": "rocking_chair_01",
+          "sentence_pre": "Mi abuela ",
+          "sentence_post": " tranquila en su mecedora.",
+          "verb_base": "estar",
+          "options": [
+            {
+              "form": "estaba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "estuvo",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "Describing where someone was and how they felt is background: estaba. Estuvo would present it as a closed, finished period.",
+          "translation": "My grandmother was sitting calmly in her rocking chair.",
+          "anim_trigger": "anim_chair_rock_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000803",
+          "order_index": 3,
+          "scene_object": "candle_01",
+          "sentence_pre": "De repente, se ",
+          "sentence_post": " la luz y encendimos una vela.",
+          "verb_base": "irse",
+          "options": [
+            {
+              "form": "iba",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "fue",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"De repente\" marks the event that breaks into the scene. \"Irse la luz\" means the power going out: se fue. It's the preterite of ir, which has the same form as ser's.",
+          "translation": "Suddenly, the power went out and we lit a candle.",
+          "anim_trigger": "anim_candle_light_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000804",
+          "order_index": 4,
+          "scene_object": "door_01",
+          "sentence_pre": "A medianoche, ",
+          "sentence_post": " un ruido y la puerta se abrió sola.",
+          "verb_base": "oír",
+          "options": [
+            {
+              "form": "oíamos",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "oímos",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"A medianoche\" pins the event to one moment, so use the preterite: oímos. In the third person, oír changes i to y: oyó, oyeron.",
+          "translation": "At midnight we heard a noise and the door opened by itself.",
+          "anim_trigger": "anim_door_open_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000805",
+          "order_index": 5,
+          "scene_object": "clock_wall_01",
+          "sentence_pre": "Mientras esperábamos a que volviera la luz, el viejo reloj ",
+          "sentence_post": " las horas.",
+          "verb_base": "dar",
+          "options": [
+            {
+              "form": "daba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "dio",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Mientras esperábamos\" is background, and the clock striking hour after hour is too: daba.",
+          "translation": "While we waited for the power to come back, the old clock struck the hours.",
+          "anim_trigger": "anim_pendulum_swing_loop"
+        }
+      ]
+    },
+    {
+      "id": "fiesta",
+      "order_index": 9,
+      "title": "La fiesta de cumpleaños",
+      "subtitle": "The birthday party",
+      "focus": "Había vs. hubo, plus plural forms: venir, poner",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000000901",
+          "order_index": 1,
+          "scene_object": "balloons_01",
+          "sentence_pre": "En el salón ",
+          "sentence_post": " globos de todos los colores.",
+          "verb_base": "haber",
+          "options": [
+            {
+              "form": "había",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "hubo",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "To describe what was in a place, use había (there was / there were). In this meaning, haber stays singular even before plural nouns.",
+          "translation": "In the living room there were balloons of every colour.",
+          "anim_trigger": "anim_balloons_float_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000902",
+          "order_index": 2,
+          "scene_object": "radio_vintage_01",
+          "sentence_pre": "Mientras comíamos, ",
+          "sentence_post": " música de los años setenta.",
+          "verb_base": "sonar",
+          "options": [
+            {
+              "form": "sonaba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "sonó",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "Background music during another activity (\"mientras comíamos\") takes the imperfect: sonaba.",
+          "translation": "While we were eating, seventies music was playing.",
+          "anim_trigger": "anim_radio_music_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000903",
+          "order_index": 3,
+          "scene_object": "door_01",
+          "sentence_pre": "A las seis ",
+          "sentence_post": " mis primos con un regalo enorme.",
+          "verb_base": "venir",
+          "options": [
+            {
+              "form": "venían",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "vinieron",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "An exact time (\"a las seis\") marks an arrival, which is an event: vinieron. Venir's preterite stem is vin-: vine, vino, vinieron.",
+          "translation": "At six o'clock my cousins came with an enormous present.",
+          "anim_trigger": "anim_door_open_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000904",
+          "order_index": 4,
+          "scene_object": "cake_01",
+          "sentence_pre": "Luego mi madre ",
+          "sentence_post": " la tarta en la mesa y todos cantamos.",
+          "verb_base": "poner",
+          "options": [
+            {
+              "form": "ponía",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "puso",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"Luego\" (then) moves the story forward: puso. Poner has an irregular stem, pus-, and no accents: puse, puso.",
+          "translation": "Then my mother put the cake on the table and we all sang.",
+          "anim_trigger": "anim_cake_arrive_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000905",
+          "order_index": 5,
+          "scene_object": "window_fireworks_01",
+          "sentence_pre": "A medianoche ",
+          "sentence_post": " fuegos artificiales y todos salimos al jardín.",
+          "verb_base": "haber",
+          "options": [
+            {
+              "form": "había",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "hubo",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "Here haber means that something happened (an event), not that something was there. For events, use the preterite: hubo.",
+          "translation": "At midnight there were fireworks and we all went out into the garden.",
+          "anim_trigger": "anim_fireworks_burst_once"
+        }
+      ]
+    },
+    {
+      "id": "despedida",
+      "order_index": 10,
+      "title": "La despedida",
+      "subtitle": "The farewell",
+      "focus": "Everything together: closed periods, ir a + infinitive, habits and events",
+      "puzzles": [
+        {
+          "id": "00000000-0000-4000-8000-000000001001",
+          "order_index": 1,
+          "scene_object": "boxes_01",
+          "sentence_pre": "Mis padres ",
+          "sentence_post": " en esta casa durante treinta años.",
+          "verb_base": "vivir",
+          "options": [
+            {
+              "form": "vivían",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "vivieron",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "Even a long time counts as one closed block when its length is given and it's over (\"durante treinta años\"), so use the preterite: vivieron.",
+          "translation": "My parents lived in this house for thirty years.",
+          "anim_trigger": "anim_boxes_stack_once"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000001002",
+          "order_index": 2,
+          "scene_object": "phone_01",
+          "sentence_pre": "Todos los domingos, mi madre me ",
+          "sentence_post": " por teléfono.",
+          "verb_base": "llamar",
+          "options": [
+            {
+              "form": "llamaba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "llamó",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Todos los domingos\" (every Sunday) is a routine: llamaba.",
+          "translation": "Every Sunday, my mother used to call me on the phone.",
+          "anim_trigger": "anim_phone_ring_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000001003",
+          "order_index": 3,
+          "scene_object": "photo_frame_01",
+          "sentence_pre": "En esa foto, nosotros ",
+          "sentence_post": " en el jardín y hacía sol.",
+          "verb_base": "estar",
+          "options": [
+            {
+              "form": "estábamos",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "estuvimos",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "A photo shows a scene, not an event: estábamos. Note the accent: estábamos.",
+          "translation": "In that photo, we were in the garden and it was sunny.",
+          "anim_trigger": "anim_photo_shimmer_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000001004",
+          "order_index": 4,
+          "scene_object": "clock_wall_01",
+          "sentence_pre": "",
+          "sentence_post": " a salir de casa cuando llegó el camión de la mudanza.",
+          "verb_base": "ir",
+          "options": [
+            {
+              "form": "Iba",
+              "type": "imperfect",
+              "correct": true
+            },
+            {
+              "form": "Fui",
+              "type": "preterite",
+              "correct": false
+            }
+          ],
+          "rule_feedback": "\"Iba a\" + infinitive means \"was going to / was about to\". It's a plan that gets interrupted (\"llegó\"), so use the imperfect.",
+          "translation": "I was about to leave the house when the removal van arrived.",
+          "anim_trigger": "anim_pendulum_swing_loop"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000001005",
+          "order_index": 5,
+          "scene_object": "door_01",
+          "sentence_pre": "Al final, mi padre ",
+          "sentence_post": " la puerta por última vez.",
+          "verb_base": "cerrar",
+          "options": [
+            {
+              "form": "cerraba",
+              "type": "imperfect",
+              "correct": false
+            },
+            {
+              "form": "cerró",
+              "type": "preterite",
+              "correct": true
+            }
+          ],
+          "rule_feedback": "\"Por última vez\" (for the last time) marks a single, final action: cerró.",
+          "translation": "In the end, my father closed the door for the last time.",
+          "anim_trigger": "anim_door_close_once"
+        }
+      ]
+    }
+  ]
+}
