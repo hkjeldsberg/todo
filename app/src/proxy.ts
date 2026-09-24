@@ -19,6 +19,6 @@ export const config = {
   // Everything except the login route, the app icons, and Next's static assets.
   // The icons must stay public: the browser fetches them for the login page too.
   matcher: [
-    "/((?!login|icon.png|apple-icon.png|manifest.webmanifest|_next/static|_next/image|favicon.ico).*)",
+    "/((?!login|icon.svg|apple-icon.png|manifest.webmanifest|_next/static|_next/image|favicon.ico).*)",
   ],
 };

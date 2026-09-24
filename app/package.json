@@ -16,7 +16,8 @@
     "laberinto:seed": "node scripts/laberinto-seed-sql.mjs",
     "laberinto:playtest": "node scripts/laberinto-playtest.mjs",
     "donde:seed": "node scripts/donde-seed-sql.mjs",
-    "donde:playtest": "node scripts/donde-playtest.mjs"
+    "donde:playtest": "node scripts/donde-playtest.mjs",
+    "icons": "node scripts/gen-icons.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
