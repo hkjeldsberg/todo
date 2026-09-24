@@ -44,8 +44,8 @@ next-env.d.ts
 /.next-*/
 /.playtest/
 
-/Spanyard/*
-/memo
-/tense
-/ellaberinto
-/donde
+Spanyard
+memo
+tense
+ellaberinto
+donde
