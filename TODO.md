@@ -1,10 +1,6 @@
 # IN PROGRESS (MANUAL - USER)
-- Supabase SQL editor: run `app/supabase/seed/donde.sql` (updates 3 Dónde task notes for the 3D version; same 15 tasks)
-- Decide on deploy: which Vercel team/project for `todo` (I'll deploy with the Vercel CLI once you say go)
-- Try the games on a real phone (only tested headless)
 
 # IN PROGRESS (CLAUDE)
-- P9 deploy, waiting on the go-ahead (progress: app/tasks/todo.md)
 
 # DONE
 - Implemented PRD P1–P8 in `app/` (2026-09-24): shell + memo design system, Frases/Gramática/Diario ported to schema `todo`, unified Repaso (Leitner: words, phrases, conjugation incl. Imperfecto, game mistakes), Hoy, game framework, Diorama + Laberinto ports, Dónde 3D papercraft rebuild. tsc/eslint clean, 151 tests, build ok. Playtest data removed from DB.
@@ -15,3 +11,7 @@
 - PRD approved by user (2026-09-24)
 - Read IDEA.md and produce a PRD.md that you can later read and implement (2026-09-24)
   - Decisions: same Supabase project + schema `todo` (copy, old schemas kept), single-user password gate, keep comic 3D look for Diorama/Laberinto with memo chrome, unified SRS, games start fresh, name "todo", Vercel
+- Supabase SQL editor: run `app/supabase/seed/donde.sql` (updates 3 Dónde task notes for the 3D version; same 15 tasks)
+- Decide on deploy: which Vercel team/project for `todo` (I'll deploy with the Vercel CLI once you say go)
+- Try the games on a real phone (only tested headless)
+- P9 deploy, waiting on the go-ahead (progress: app/tasks/todo.md)
