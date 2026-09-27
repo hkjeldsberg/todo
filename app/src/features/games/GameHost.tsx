@@ -22,6 +22,7 @@ const GAMES: Record<string, ComponentType<GameProps>> = {
   laberinto: dynamic(() => import("./laberinto/Game"), { ssr: false, loading: Loading }),
   opuestos: dynamic(() => import("./opuestos/Game"), { ssr: false, loading: Loading }),
   was: dynamic(() => import("./was/Game"), { ssr: false, loading: Loading }),
+  cuentos: dynamic(() => import("./cuentos/Game"), { ssr: false, loading: Loading }),
 };
 
 export default function GameHost({

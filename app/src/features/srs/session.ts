@@ -2,6 +2,8 @@ import "server-only";
 import { db, fetchAll } from "@/lib/db";
 import { currentUserId } from "@/lib/user";
 import { GAME_SERVERS } from "@/features/games/server-registry";
+import { TENSE_LABEL } from "@/features/games/cuentos/lib/text";
+import type { Tense as StoryTense } from "@/features/games/cuentos/lib/schema";
 import { sentenceForForm, sentenceForWord, within } from "./ai";
 import { clozeAnswerOf, tokenize } from "./text";
 import {
@@ -53,6 +55,7 @@ const KIND_LABEL: Record<ReviewKind, string> = {
   phrase: "Frase",
   conjugation: "Conjugar",
   game_item: "Juego",
+  story: "Cuento",
 };
 
 // ── queue ────────────────────────────────────────────────────────────────────
@@ -284,6 +287,46 @@ async function conjugationCard(
 
 // ── games ────────────────────────────────────────────────────────────────────
 
+// ── cuentos (words saved from stories) ───────────────────────────────────────
+
+/** A saved story word, shown as a typed cloze of its sentence in the story. */
+async function storyCards(items: ItemRow[]): Promise<Map<string, SessionCard>> {
+  const out = new Map<string, SessionCard>();
+  const ids = items.map((item) => item.ref.slice("story:".length));
+  if (ids.length === 0) return out;
+  const { data, error } = await db()
+    .from("story_cards")
+    .select("id, answer, cloze, sentence_es, sentence_en, lemma, tense, translation, distractors")
+    .in("id", ids);
+  if (error) throw new Error(error.message);
+  const byId = new Map((data ?? []).map((row) => [row.id as string, row]));
+  for (const item of items) {
+    const card = byId.get(item.ref.slice("story:".length));
+    if (!card) continue;
+    const tense = card.tense ? TENSE_LABEL[card.tense as StoryTense] ?? card.tense : null;
+    out.set(item.ref, {
+      key: item.ref,
+      kind: "story",
+      ref: item.ref,
+      source: item.source,
+      box: item.box,
+      isNew: false,
+      label: tense ? `${KIND_LABEL.story} · ${tense}` : KIND_LABEL.story,
+      view: "cloze",
+      word: card.answer,
+      meaning: card.lemma ? `${card.translation} — ${card.lemma}` : card.translation,
+      pos: tense,
+      sentence: {
+        spanish: card.sentence_es,
+        english: card.sentence_en,
+        cloze: card.cloze as string,
+      },
+      options: shuffle([card.answer as string, ...((card.distractors as string[]) ?? []).slice(0, 3)]),
+    });
+  }
+  return out;
+}
+
 async function gameCards(items: ItemRow[]): Promise<Map<string, SessionCard>> {
   const out = new Map<string, SessionCard>();
   const bySlug = new Map<string, ItemRow[]>();
@@ -345,6 +388,7 @@ export async function buildSession(options: {
 
   const phrases = await phraseCards(due.filter((item) => item.kind === "phrase"));
   const games = await gameCards(due.filter((item) => item.kind === "game_item"));
+  const stories = await storyCards(due.filter((item) => item.kind === "story"));
 
   let wordIndex = 0;
   const viewFor = (): "cloze" | "scramble" =>
@@ -363,6 +407,8 @@ export async function buildSession(options: {
           return toWordCard({ ...item, isNew: false });
         case "phrase":
           return phrases.get(item.ref) ?? null;
+        case "story":
+          return stories.get(item.ref) ?? null;
         case "game_item":
           return games.get(item.ref) ?? null;
         case "conjugation": {
@@ -430,7 +476,7 @@ export async function reviewStats(): Promise<ReviewStats> {
   ]);
   if (wordsError) throw new Error(wordsError.message);
 
-  const dueByKind: Record<ReviewKind, number> = { word: 0, phrase: 0, conjugation: 0, game_item: 0 };
+  const dueByKind: Record<ReviewKind, number> = { word: 0, phrase: 0, conjugation: 0, game_item: 0, story: 0 };
   const wordBoxes = [0, 0, 0, 0, 0, 0];
   let seenWords = 0;
   for (const item of items) {

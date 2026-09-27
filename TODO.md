@@ -1,8 +1,10 @@
 # IN PROGRESS (MANUAL - USER)
-- Supabase SQL editor: run `app/supabase/migrations/0004_opuestos.sql`, then `app/supabase/seed/opuestos.sql` (El Rayo Modificador words + levels; the game uses its bundled copy until then)
-- Supabase SQL editor: run `app/supabase/migrations/0005_was.sql`, then `app/supabase/seed/was.sql` (El Cómic Dinámico panels; the game uses its bundled copy until then)
+- Supabase SQL editor: run `app/supabase/migrations/0006_cuentos.sql` (stories, saved words, new Repaso card type). Tell Claude when done → it verifies generate → save → Repaso end to end
 
 # IN PROGRESS (CLAUDE)
+- Read PRD_STORY.md and implement as a game in the todo app. Use claude ai as AI model (since we also have credentials for this)
+  - [x] built as `/juegos/cuentos` (reader, Claude generation, tense toolbar, hover/tap cards, save to Repaso); tsc/eslint clean, 320 tests, build ok, reader playtest ok
+  - [ ] end-to-end check after 0006 is applied
 
 # DONE
 - El Cómic Dinámico (`/juegos/was`, port of ../was, PRD in ../was/PRD.md) (2026-09-27): comic look kept, table `todo.was_panels`, wrong drops → Repaso fill-the-blank cards, progress saved, linked from Gramática. tsc/eslint clean, 309 tests, build ok, playtest ok at 390×844 + 1440×900.
@@ -19,3 +21,5 @@
 - Decide on deploy: which Vercel team/project for `todo` (I'll deploy with the Vercel CLI once you say go)
 - Try the games on a real phone (only tested headless)
 - P9 deploy, waiting on the go-ahead (progress: app/tasks/todo.md)
+- Supabase SQL editor: run `app/supabase/migrations/0004_opuestos.sql`, then `app/supabase/seed/opuestos.sql` (El Rayo Modificador words + levels; the game uses its bundled copy until then)
+- Supabase SQL editor: run `app/supabase/migrations/0005_was.sql`, then `app/supabase/seed/was.sql` (El Cómic Dinámico panels; the game uses its bundled copy until then)

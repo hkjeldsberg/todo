@@ -1,18 +1,19 @@
 import type { ChoiceCard } from "./card";
 
-export type ReviewKind = "word" | "phrase" | "conjugation" | "game_item";
+export type ReviewKind = "word" | "phrase" | "conjugation" | "game_item" | "story";
 
 /** Which slice of the queue a session draws from. */
-export type SessionFilter = "all" | "words" | "phrases" | "conjugar" | "games";
+export type SessionFilter = "all" | "words" | "phrases" | "conjugar" | "games" | "cuentos";
 /** How word cards are shown. */
 export type WordMode = "mixed" | "cloze" | "scramble";
 
 export const FILTER_KINDS: Record<SessionFilter, ReviewKind[]> = {
-  all: ["word", "phrase", "conjugation", "game_item"],
+  all: ["word", "phrase", "conjugation", "game_item", "story"],
   words: ["word"],
   phrases: ["phrase"],
   conjugar: ["conjugation"],
   games: ["game_item"],
+  cuentos: ["story"],
 };
 
 export type Sentence = { spanish: string; english: string; cloze: string };

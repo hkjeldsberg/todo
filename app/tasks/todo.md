@@ -59,3 +59,14 @@ Decisions (user, 2026-09-27): table in schema `todo` (not `was`), comic style th
   /juegos card + Gramática links (fue-estaba-estuve, pasado, preterito-cambia) clicked through. 0005 + seed tested on a
   throwaway local Postgres: idempotent, DB-only page survives re-seed, verb/type checks reject bad rows.
   Not verified: live DB content/progress/Repaso cards for `was` (needs 0005 applied), real phone.
+
+## Cuentos — Spanyard Smart Reader (../PRD_STORY.md), 2026-09-27
+- [x] migration 0006_cuentos.sql: todo.stories, todo.story_cards, srs kind 'story', cleanup trigger, games row
+- [x] lib: zod story schema (nodes → sentences → tokens), cloze builder, integrity repair, prompt
+- [x] generation: Claude (ANTHROPIC_MODEL) streamed + zodOutputFormat structured output → validate → insert
+- [x] reader: narrative blocks + dialogue bubbles, tense toolbar (pretérito blue, imperfecto orange, subjuntivo green, reflexivos purple)
+- [x] tooltips: lemma/tense/translation, reflexive grouping, subjunctive trigger highlight, Shift = sentence translation, tap on mobile
+- [ ] save token → story_cards (code done; verify once 0006 is applied) + srs_items(kind story) → Repaso cloze card; saved badge
+- [x] Repaso: 'story' kind in sessions, stats, filter chip
+- [x] bundled sample story, 11 tests, 2 real generations (131 s / 113 s), reader playtest 16/16 at 390×844 + 1440×900
+- [ ] USER: run 0006_cuentos.sql → then end-to-end: generate in the app, save a word, review it in Repaso

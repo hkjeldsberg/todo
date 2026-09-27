@@ -6,6 +6,9 @@ import { GAME_SERVERS } from "@/features/games/server-registry";
 import { loadGameProgress } from "@/features/games/progress";
 
 /** Full-screen game: no section nav. Content and progress load per request. */
+/** Cuentos writes a story with Claude in a Server Action on this page (1–3 min). */
+export const maxDuration = 300;
+
 export default async function GamePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const manifest = gameBySlug(slug);

@@ -1,0 +1,1224 @@
+{
+ "stories": [
+  {
+   "id": "muestra-guachinche",
+   "title": "Una comida en un guachinche",
+   "topic": "Una comida en un guachinche de Tenerife con amigos",
+   "level": "A2",
+   "targets": [
+    "preterite",
+    "imperfect",
+    "subjunctive",
+    "reflexive"
+   ],
+   "createdAt": "2026-09-27T00:00:00.000Z",
+   "content": {
+    "title": "Una comida en un guachinche",
+    "nodes": [
+     {
+      "type": "narrative",
+      "sentences": [
+       {
+        "tokens": [
+         {
+          "text": "El",
+          "translation": "The",
+          "lemma": "el"
+         },
+         {
+          "text": "sábado",
+          "translation": "Saturday",
+          "lemma": "sábado"
+         },
+         {
+          "text": "pasado,",
+          "translation": "last",
+          "lemma": "pasado"
+         },
+         {
+          "text": "Marta",
+          "translation": "Marta"
+         },
+         {
+          "text": "y",
+          "translation": "and",
+          "lemma": "y"
+         },
+         {
+          "text": "sus",
+          "translation": "her",
+          "lemma": "su"
+         },
+         {
+          "text": "amigos",
+          "translation": "friends",
+          "lemma": "amigo"
+         },
+         {
+          "text": "se",
+          "translation": "",
+          "reflexive_id": "r1",
+          "group_translation": "got up"
+         },
+         {
+          "text": "levantaron",
+          "translation": "got up",
+          "lemma": "levantarse",
+          "tense": "preterite",
+          "reflexive_id": "r1",
+          "group_translation": "got up"
+         },
+         {
+          "text": "temprano",
+          "translation": "early",
+          "lemma": "temprano"
+         },
+         {
+          "text": "para",
+          "translation": "to",
+          "lemma": "para"
+         },
+         {
+          "text": "ir",
+          "translation": "go",
+          "lemma": "ir",
+          "tense": "infinitive"
+         },
+         {
+          "text": "a",
+          "translation": "to",
+          "lemma": "a"
+         },
+         {
+          "text": "un",
+          "translation": "a",
+          "lemma": "un"
+         },
+         {
+          "text": "guachinche",
+          "translation": "guachinche",
+          "lemma": "guachinche"
+         },
+         {
+          "text": "en",
+          "translation": "in",
+          "lemma": "en"
+         },
+         {
+          "text": "Tenerife.",
+          "translation": "Tenerife"
+         }
+        ],
+        "translation": "Last Saturday, Marta and her friends got up early to go to a guachinche in Tenerife."
+       },
+       {
+        "tokens": [
+         {
+          "text": "El",
+          "translation": "The",
+          "lemma": "el"
+         },
+         {
+          "text": "guachinche",
+          "translation": "guachinche",
+          "lemma": "guachinche"
+         },
+         {
+          "text": "estaba",
+          "translation": "was",
+          "lemma": "estar",
+          "tense": "imperfect"
+         },
+         {
+          "text": "cerca",
+          "translation": "near",
+          "lemma": "cerca"
+         },
+         {
+          "text": "de",
+          "translation": "of",
+          "lemma": "de"
+         },
+         {
+          "text": "un",
+          "translation": "a",
+          "lemma": "un"
+         },
+         {
+          "text": "pueblo",
+          "translation": "town",
+          "lemma": "pueblo"
+         },
+         {
+          "text": "pequeño",
+          "translation": "small",
+          "lemma": "pequeño"
+         },
+         {
+          "text": "y",
+          "translation": "and",
+          "lemma": "y"
+         },
+         {
+          "text": "tenía",
+          "translation": "had",
+          "lemma": "tener",
+          "tense": "imperfect"
+         },
+         {
+          "text": "un",
+          "translation": "a",
+          "lemma": "un"
+         },
+         {
+          "text": "jardín",
+          "translation": "garden",
+          "lemma": "jardín"
+         },
+         {
+          "text": "con",
+          "translation": "with",
+          "lemma": "con"
+         },
+         {
+          "text": "vistas",
+          "translation": "views",
+          "lemma": "vista"
+         },
+         {
+          "text": "al",
+          "translation": "to the",
+          "lemma": "al"
+         },
+         {
+          "text": "mar.",
+          "translation": "sea",
+          "lemma": "mar"
+         }
+        ],
+        "translation": "The guachinche was near a small town and had a garden with views of the sea."
+       },
+       {
+        "tokens": [
+         {
+          "text": "Todos",
+          "translation": "Everyone",
+          "lemma": "todo"
+         },
+         {
+          "text": "se",
+          "translation": "",
+          "reflexive_id": "r2",
+          "group_translation": "showered"
+         },
+         {
+          "text": "ducharon",
+          "translation": "showered",
+          "lemma": "ducharse",
+          "tense": "preterite",
+          "reflexive_id": "r2",
+          "group_translation": "showered"
+         },
+         {
+          "text": "rápido",
+          "translation": "quickly",
+          "lemma": "rápido"
+         },
+         {
+          "text": "y",
+          "translation": "and",
+          "lemma": "y"
+         },
+         {
+          "text": "se",
+          "translation": "",
+          "reflexive_id": "r3",
+          "group_translation": "got dressed"
+         },
+         {
+          "text": "vistieron",
+          "translation": "got dressed",
+          "lemma": "vestirse",
+          "tense": "preterite",
+          "reflexive_id": "r3",
+          "group_translation": "got dressed"
+         },
+         {
+          "text": "con",
+          "translation": "in",
+          "lemma": "con"
+         },
+         {
+          "text": "ropa",
+          "translation": "clothes",
+          "lemma": "ropa"
+         },
+         {
+          "text": "cómoda.",
+          "translation": "comfortable",
+          "lemma": "cómodo"
+         }
+        ],
+        "translation": "Everyone showered quickly and got dressed in comfortable clothes."
+       }
+      ]
+     },
+     {
+      "type": "dialogue",
+      "sentences": [
+       {
+        "tokens": [
+         {
+          "text": "Espero",
+          "translation": "I hope",
+          "lemma": "esperar",
+          "tense": "present",
+          "trigger_id": "s1"
+         },
+         {
+          "text": "que",
+          "translation": "that",
+          "lemma": "que"
+         },
+         {
+          "text": "haya",
+          "translation": "there is",
+          "lemma": "haber",
+          "tense": "subjunctive",
+          "triggered_by": "s1"
+         },
+         {
+          "text": "vino",
+          "translation": "wine",
+          "lemma": "vino"
+         },
+         {
+          "text": "tinto",
+          "translation": "red",
+          "lemma": "tinto"
+         },
+         {
+          "text": "de",
+          "translation": "of",
+          "lemma": "de"
+         },
+         {
+          "text": "la",
+          "translation": "the",
+          "lemma": "la"
+         },
+         {
+          "text": "casa.",
+          "translation": "house",
+          "lemma": "casa"
+         }
+        ],
+        "translation": "I hope there is house red wine."
+       },
+       {
+        "tokens": [
+         {
+          "text": "Quiero",
+          "translation": "I want",
+          "lemma": "querer",
+          "tense": "present",
+          "trigger_id": "s2"
+         },
+         {
+          "text": "que",
+          "translation": "that",
+          "lemma": "que"
+         },
+         {
+          "text": "probemos",
+          "translation": "we try",
+          "lemma": "probar",
+          "tense": "subjunctive",
+          "triggered_by": "s2"
+         },
+         {
+          "text": "el",
+          "translation": "the",
+          "lemma": "el"
+         },
+         {
+          "text": "conejo",
+          "translation": "rabbit",
+          "lemma": "conejo"
+         },
+         {
+          "text": "en",
+          "translation": "in",
+          "lemma": "en"
+         },
+         {
+          "text": "salmorejo.",
+          "translation": "salmorejo sauce",
+          "lemma": "salmorejo"
+         }
+        ],
+        "translation": "I want us to try the rabbit in salmorejo sauce."
+       }
+      ],
+      "speaker": "Marta"
+     },
+     {
+      "type": "narrative",
+      "sentences": [
+       {
+        "tokens": [
+         {
+          "text": "Cuando",
+          "translation": "When",
+          "lemma": "cuando"
+         },
+         {
+          "text": "llegaron,",
+          "translation": "they arrived",
+          "lemma": "llegar",
+          "tense": "preterite"
+         },
+         {
+          "text": "el",
+          "translation": "the",
+          "lemma": "el"
+         },
+         {
+          "text": "dueño",
+          "translation": "owner",
+          "lemma": "dueño"
+         },
+         {
+          "text": "los",
+          "translation": "them",
+          "lemma": "los"
+         },
+         {
+          "text": "saludó",
+          "translation": "greeted",
+          "lemma": "saludar",
+          "tense": "preterite"
+         },
+         {
+          "text": "con",
+          "translation": "with",
+          "lemma": "con"
+         },
+         {
+          "text": "una",
+          "translation": "a",
+          "lemma": "un"
+         },
+         {
+          "text": "sonrisa.",
+          "translation": "smile",
+          "lemma": "sonrisa"
+         }
+        ],
+        "translation": "When they arrived, the owner greeted them with a smile."
+       },
+       {
+        "tokens": [
+         {
+          "text": "El",
+          "translation": "The",
+          "lemma": "el"
+         },
+         {
+          "text": "lugar",
+          "translation": "place",
+          "lemma": "lugar"
+         },
+         {
+          "text": "olía",
+          "translation": "smelled",
+          "lemma": "oler",
+          "tense": "imperfect"
+         },
+         {
+          "text": "a",
+          "translation": "of",
+          "lemma": "a"
+         },
+         {
+          "text": "papas",
+          "translation": "potatoes",
+          "lemma": "papa"
+         },
+         {
+          "text": "arrugadas",
+          "translation": "wrinkled",
+          "lemma": "arrugado"
+         },
+         {
+          "text": "y",
+          "translation": "and",
+          "lemma": "y"
+         },
+         {
+          "text": "a",
+          "translation": "of",
+          "lemma": "a"
+         },
+         {
+          "text": "carne",
+          "translation": "meat",
+          "lemma": "carne"
+         },
+         {
+          "text": "asada.",
+          "translation": "grilled",
+          "lemma": "asado"
+         }
+        ],
+        "translation": "The place smelled of wrinkled potatoes and grilled meat."
+       }
+      ]
+     },
+     {
+      "type": "dialogue",
+      "sentences": [
+       {
+        "tokens": [
+         {
+          "text": "Es",
+          "translation": "It's",
+          "lemma": "ser",
+          "tense": "present"
+         },
+         {
+          "text": "mejor",
+          "translation": "better",
+          "lemma": "mejor",
+          "trigger_id": "s3"
+         },
+         {
+          "text": "que",
+          "translation": "that",
+          "lemma": "que"
+         },
+         {
+          "text": "pidamos",
+          "translation": "we order",
+          "lemma": "pedir",
+          "tense": "subjunctive",
+          "triggered_by": "s3"
+         },
+         {
+          "text": "varios",
+          "translation": "several",
+          "lemma": "varios"
+         },
+         {
+          "text": "platos",
+          "translation": "dishes",
+          "lemma": "plato"
+         },
+         {
+          "text": "para",
+          "translation": "to",
+          "lemma": "para"
+         },
+         {
+          "text": "compartir.",
+          "translation": "share",
+          "lemma": "compartir",
+          "tense": "infinitive"
+         }
+        ],
+        "translation": "It's better that we order several dishes to share."
+       },
+       {
+        "tokens": [
+         {
+          "text": "Cuando",
+          "translation": "When",
+          "lemma": "cuando",
+          "trigger_id": "s4"
+         },
+         {
+          "text": "nos",
+          "translation": "",
+          "reflexive_id": "r4",
+          "group_translation": "sit down"
+         },
+         {
+          "text": "sentemos,",
+          "translation": "sit down",
+          "lemma": "sentarse",
+          "tense": "subjunctive",
+          "reflexive_id": "r4",
+          "group_translation": "sit down",
+          "triggered_by": "s4"
+         },
+         {
+          "text": "pediré",
+          "translation": "I will order",
+          "lemma": "pedir",
+          "tense": "future"
+         },
+         {
+          "text": "el",
+          "translation": "the",
+          "lemma": "el"
+         },
+         {
+          "text": "pescado.",
+          "translation": "fish",
+          "lemma": "pescado"
+         }
+        ],
+        "translation": "When we sit down, I will order the fish."
+       }
+      ],
+      "speaker": "Carlos"
+     },
+     {
+      "type": "narrative",
+      "sentences": [
+       {
+        "tokens": [
+         {
+          "text": "Se",
+          "translation": "",
+          "reflexive_id": "r5",
+          "group_translation": "sat down"
+         },
+         {
+          "text": "sentaron",
+          "translation": "sat down",
+          "lemma": "sentarse",
+          "tense": "preterite",
+          "reflexive_id": "r5",
+          "group_translation": "sat down"
+         },
+         {
+          "text": "en",
+          "translation": "at",
+          "lemma": "en"
+         },
+         {
+          "text": "una",
+          "translation": "a",
+          "lemma": "un"
+         },
+         {
+          "text": "mesa",
+          "translation": "table",
+          "lemma": "mesa"
+         },
+         {
+          "text": "de",
+          "translation": "of",
+          "lemma": "de"
+         },
+         {
+          "text": "madera",
+          "translation": "wood",
+          "lemma": "madera"
+         },
+         {
+          "text": "bajo",
+          "translation": "under",
+          "lemma": "bajo"
+         },
+         {
+          "text": "un",
+          "translation": "a",
+          "lemma": "un"
+         },
+         {
+          "text": "árbol.",
+          "translation": "tree",
+          "lemma": "árbol"
+         }
+        ],
+        "translation": "They sat down at a wooden table under a tree."
+       },
+       {
+        "tokens": [
+         {
+          "text": "Antes,",
+          "translation": "Before",
+          "lemma": "antes"
+         },
+         {
+          "text": "ellos",
+          "translation": "they",
+          "lemma": "ellos"
+         },
+         {
+          "text": "siempre",
+          "translation": "always",
+          "lemma": "siempre"
+         },
+         {
+          "text": "comían",
+          "translation": "used to eat",
+          "lemma": "comer",
+          "tense": "imperfect"
+         },
+         {
+          "text": "allí",
+          "translation": "there",
+          "lemma": "allí"
+         },
+         {
+          "text": "los",
+          "translation": "the",
+          "lemma": "el"
+         },
+         {
+          "text": "domingos,",
+          "translation": "Sundays",
+          "lemma": "domingo"
+         },
+         {
+          "text": "pero",
+          "translation": "but",
+          "lemma": "pero"
+         },
+         {
+          "text": "esta",
+          "translation": "this",
+          "lemma": "este"
+         },
+         {
+          "text": "vez",
+          "translation": "time",
+          "lemma": "vez"
+         },
+         {
+          "text": "fueron",
+          "translation": "they went",
+          "lemma": "ir",
+          "tense": "preterite"
+         },
+         {
+          "text": "un",
+          "translation": "a",
+          "lemma": "un"
+         },
+         {
+          "text": "sábado.",
+          "translation": "Saturday",
+          "lemma": "sábado"
+         }
+        ],
+        "translation": "Before, they always used to eat there on Sundays, but this time they went on a Saturday."
+       }
+      ]
+     },
+     {
+      "type": "dialogue",
+      "sentences": [
+       {
+        "tokens": [
+         {
+          "text": "Ojalá",
+          "translation": "I hope",
+          "lemma": "ojalá",
+          "trigger_id": "s5"
+         },
+         {
+          "text": "que",
+          "translation": "that",
+          "lemma": "que"
+         },
+         {
+          "text": "volvamos",
+          "translation": "we come back",
+          "lemma": "volver",
+          "tense": "subjunctive",
+          "triggered_by": "s5"
+         },
+         {
+          "text": "pronto",
+          "translation": "soon",
+          "lemma": "pronto"
+         },
+         {
+          "text": "a",
+          "translation": "to",
+          "lemma": "a"
+         },
+         {
+          "text": "este",
+          "translation": "this",
+          "lemma": "este"
+         },
+         {
+          "text": "lugar.",
+          "translation": "place",
+          "lemma": "lugar"
+         }
+        ],
+        "translation": "I hope we come back soon to this place."
+       },
+       {
+        "tokens": [
+         {
+          "text": "Quiero",
+          "translation": "I want",
+          "lemma": "querer",
+          "tense": "present"
+         },
+         {
+          "text": "quedarme",
+          "translation": "to stay",
+          "lemma": "quedarse",
+          "tense": "infinitive"
+         },
+         {
+          "text": "aquí",
+          "translation": "here",
+          "lemma": "aquí"
+         },
+         {
+          "text": "toda",
+          "translation": "all",
+          "lemma": "todo"
+         },
+         {
+          "text": "la",
+          "translation": "the",
+          "lemma": "la"
+         },
+         {
+          "text": "tarde.",
+          "translation": "afternoon",
+          "lemma": "tarde"
+         }
+        ],
+        "translation": "I want to stay here all afternoon."
+       }
+      ],
+      "speaker": "Marta"
+     },
+     {
+      "type": "narrative",
+      "sentences": [
+       {
+        "tokens": [
+         {
+          "text": "El",
+          "translation": "The",
+          "lemma": "el"
+         },
+         {
+          "text": "mesero",
+          "translation": "waiter",
+          "lemma": "mesero"
+         },
+         {
+          "text": "trajo",
+          "translation": "brought",
+          "lemma": "traer",
+          "tense": "preterite"
+         },
+         {
+          "text": "pan,",
+          "translation": "bread",
+          "lemma": "pan"
+         },
+         {
+          "text": "mojo",
+          "translation": "mojo sauce",
+          "lemma": "mojo"
+         },
+         {
+          "text": "y",
+          "translation": "and",
+          "lemma": "y"
+         },
+         {
+          "text": "queso",
+          "translation": "cheese",
+          "lemma": "queso"
+         },
+         {
+          "text": "asado.",
+          "translation": "grilled",
+          "lemma": "asado"
+         }
+        ],
+        "translation": "The waiter brought bread, mojo sauce, and grilled cheese."
+       },
+       {
+        "tokens": [
+         {
+          "text": "Todos",
+          "translation": "Everyone",
+          "lemma": "todo"
+         },
+         {
+          "text": "comieron",
+          "translation": "ate",
+          "lemma": "comer",
+          "tense": "preterite"
+         },
+         {
+          "text": "mucho",
+          "translation": "a lot",
+          "lemma": "mucho"
+         },
+         {
+          "text": "y",
+          "translation": "and",
+          "lemma": "y"
+         },
+         {
+          "text": "hablaron",
+          "translation": "talked",
+          "lemma": "hablar",
+          "tense": "preterite"
+         },
+         {
+          "text": "durante",
+          "translation": "for",
+          "lemma": "durante"
+         },
+         {
+          "text": "horas.",
+          "translation": "hours",
+          "lemma": "hora"
+         }
+        ],
+        "translation": "Everyone ate a lot and talked for hours."
+       },
+       {
+        "tokens": [
+         {
+          "text": "Mientras",
+          "translation": "While",
+          "lemma": "mientras"
+         },
+         {
+          "text": "comían,",
+          "translation": "were eating",
+          "lemma": "comer",
+          "tense": "imperfect"
+         },
+         {
+          "text": "se",
+          "translation": "",
+          "reflexive_id": "r6",
+          "group_translation": "realized"
+         },
+         {
+          "text": "dieron",
+          "translation": "realized",
+          "lemma": "dar",
+          "tense": "preterite",
+          "reflexive_id": "r6",
+          "group_translation": "realized"
+         },
+         {
+          "text": "cuenta",
+          "translation": "realized",
+          "lemma": "cuenta"
+         },
+         {
+          "text": "de",
+          "translation": "that",
+          "lemma": "de"
+         },
+         {
+          "text": "que",
+          "translation": "that",
+          "lemma": "que"
+         },
+         {
+          "text": "el",
+          "translation": "the",
+          "lemma": "el"
+         },
+         {
+          "text": "sol",
+          "translation": "sun",
+          "lemma": "sol"
+         },
+         {
+          "text": "se",
+          "translation": "",
+          "reflexive_id": "r7",
+          "group_translation": "was setting"
+         },
+         {
+          "text": "ponía",
+          "translation": "was setting",
+          "lemma": "ponerse",
+          "tense": "imperfect",
+          "reflexive_id": "r7",
+          "group_translation": "was setting"
+         },
+         {
+          "text": "sobre",
+          "translation": "over",
+          "lemma": "sobre"
+         },
+         {
+          "text": "el",
+          "translation": "the",
+          "lemma": "el"
+         },
+         {
+          "text": "mar.",
+          "translation": "sea",
+          "lemma": "mar"
+         }
+        ],
+        "translation": "While they were eating, they realized that the sun was setting over the sea."
+       }
+      ]
+     },
+     {
+      "type": "dialogue",
+      "sentences": [
+       {
+        "tokens": [
+         {
+          "text": "Espero",
+          "translation": "I hope",
+          "lemma": "esperar",
+          "tense": "present",
+          "trigger_id": "s6"
+         },
+         {
+          "text": "que",
+          "translation": "that",
+          "lemma": "que"
+         },
+         {
+          "text": "hagamos",
+          "translation": "we do",
+          "lemma": "hacer",
+          "tense": "subjunctive",
+          "triggered_by": "s6"
+         },
+         {
+          "text": "esto",
+          "translation": "this",
+          "lemma": "esto"
+         },
+         {
+          "text": "otra",
+          "translation": "another",
+          "lemma": "otro"
+         },
+         {
+          "text": "vez",
+          "translation": "time",
+          "lemma": "vez"
+         },
+         {
+          "text": "el",
+          "translation": "the",
+          "lemma": "el"
+         },
+         {
+          "text": "próximo",
+          "translation": "next",
+          "lemma": "próximo"
+         },
+         {
+          "text": "mes.",
+          "translation": "month",
+          "lemma": "mes"
+         }
+        ],
+        "translation": "I hope we do this again next month."
+       }
+      ],
+      "speaker": "Carlos"
+     },
+     {
+      "type": "narrative",
+      "sentences": [
+       {
+        "tokens": [
+         {
+          "text": "Al",
+          "translation": "At the",
+          "lemma": "al"
+         },
+         {
+          "text": "final,",
+          "translation": "end",
+          "lemma": "final"
+         },
+         {
+          "text": "pagaron",
+          "translation": "paid",
+          "lemma": "pagar",
+          "tense": "preterite"
+         },
+         {
+          "text": "la",
+          "translation": "the",
+          "lemma": "la"
+         },
+         {
+          "text": "cuenta",
+          "translation": "bill",
+          "lemma": "cuenta"
+         },
+         {
+          "text": "entre",
+          "translation": "among",
+          "lemma": "entre"
+         },
+         {
+          "text": "todos",
+          "translation": "everyone",
+          "lemma": "todo"
+         },
+         {
+          "text": "y",
+          "translation": "and",
+          "lemma": "y"
+         },
+         {
+          "text": "se",
+          "translation": "",
+          "reflexive_id": "r8",
+          "group_translation": "said goodbye"
+         },
+         {
+          "text": "despidieron",
+          "translation": "said goodbye",
+          "lemma": "despedirse",
+          "tense": "preterite",
+          "reflexive_id": "r8",
+          "group_translation": "said goodbye"
+         },
+         {
+          "text": "del",
+          "translation": "from the",
+          "lemma": "del"
+         },
+         {
+          "text": "dueño.",
+          "translation": "owner",
+          "lemma": "dueño"
+         }
+        ],
+        "translation": "In the end, they paid the bill together and said goodbye to the owner."
+       },
+       {
+        "tokens": [
+         {
+          "text": "Se",
+          "translation": "",
+          "reflexive_id": "r9",
+          "group_translation": "stayed"
+         },
+         {
+          "text": "quedaron",
+          "translation": "stayed",
+          "lemma": "quedarse",
+          "tense": "preterite",
+          "reflexive_id": "r9",
+          "group_translation": "stayed"
+         },
+         {
+          "text": "un",
+          "translation": "a",
+          "lemma": "un"
+         },
+         {
+          "text": "rato",
+          "translation": "while",
+          "lemma": "rato"
+         },
+         {
+          "text": "más",
+          "translation": "longer",
+          "lemma": "más"
+         },
+         {
+          "text": "viendo",
+          "translation": "watching",
+          "lemma": "ver",
+          "tense": "gerund"
+         },
+         {
+          "text": "el",
+          "translation": "the",
+          "lemma": "el"
+         },
+         {
+          "text": "atardecer",
+          "translation": "sunset",
+          "lemma": "atardecer"
+         },
+         {
+          "text": "antes",
+          "translation": "before",
+          "lemma": "antes"
+         },
+         {
+          "text": "de",
+          "translation": "of",
+          "lemma": "de"
+         },
+         {
+          "text": "irse.",
+          "translation": "leaving",
+          "lemma": "irse",
+          "tense": "infinitive"
+         }
+        ],
+        "translation": "They stayed a while longer watching the sunset before leaving."
+       },
+       {
+        "tokens": [
+         {
+          "text": "Esa",
+          "translation": "That",
+          "lemma": "ese"
+         },
+         {
+          "text": "noche,",
+          "translation": "night",
+          "lemma": "noche"
+         },
+         {
+          "text": "se",
+          "translation": "",
+          "reflexive_id": "r10",
+          "group_translation": "went to bed"
+         },
+         {
+          "text": "acostaron",
+          "translation": "went to bed",
+          "lemma": "acostarse",
+          "tense": "preterite",
+          "reflexive_id": "r10",
+          "group_translation": "went to bed"
+         },
+         {
+          "text": "felices",
+          "translation": "happy",
+          "lemma": "feliz"
+         },
+         {
+          "text": "y",
+          "translation": "and",
+          "lemma": "y"
+         },
+         {
+          "text": "cansados.",
+          "translation": "tired",
+          "lemma": "cansado"
+         }
+        ],
+        "translation": "That night, they went to bed happy and tired."
+       }
+      ]
+     }
+    ]
+   }
+  }
+ ]
+}

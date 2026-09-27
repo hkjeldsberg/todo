@@ -7,7 +7,7 @@ import SessionRunner from "@/features/srs/ui/SessionRunner";
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Sesión · todo" };
 
-const FILTERS: SessionFilter[] = ["all", "words", "phrases", "conjugar", "games"];
+const FILTERS: SessionFilter[] = ["all", "words", "phrases", "conjugar", "games", "cuentos"];
 const MODES: WordMode[] = ["mixed", "cloze", "scramble"];
 const TITLES: Record<SessionFilter, string> = {
   all: "Daily review",
@@ -15,6 +15,7 @@ const TITLES: Record<SessionFilter, string> = {
   phrases: "Phrases",
   conjugar: "Conjugations",
   games: "Game mistakes",
+  cuentos: "Words from stories",
 };
 
 export default async function SessionPage({

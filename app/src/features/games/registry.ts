@@ -51,6 +51,15 @@ export const GAMES: GameManifest[] = [
     level: "A2",
     tone: "accent",
   },
+  {
+    slug: "cuentos",
+    title: "Cuentos",
+    subtitle: "Smart reader · stories by Claude",
+    blurb: "Read short stories written for you. Hover any word for its meaning and tense, and save verbs to Repaso.",
+    skills: ["reading", "past-tenses"],
+    level: "A2",
+    tone: "ink",
+  },
 ];
 
 export function gameBySlug(slug: string): GameManifest | undefined {
