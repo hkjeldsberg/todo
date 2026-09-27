@@ -4,6 +4,7 @@ import donde from "./donde/server";
 import laberinto from "./laberinto/server";
 import opuestos from "./opuestos/server";
 import tense from "./tense/server";
+import was from "./was/server";
 
 /** slug → server module (content loader + review-card builder). */
 export const GAME_SERVERS: Record<string, GameServerModule<unknown>> = {
@@ -11,4 +12,5 @@ export const GAME_SERVERS: Record<string, GameServerModule<unknown>> = {
   tense: tense as GameServerModule<unknown>,
   laberinto: laberinto as GameServerModule<unknown>,
   opuestos: opuestos as GameServerModule<unknown>,
+  was: was as GameServerModule<unknown>,
 };

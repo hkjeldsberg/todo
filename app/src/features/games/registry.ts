@@ -42,6 +42,15 @@ export const GAMES: GameManifest[] = [
     level: "A2",
     tone: "light",
   },
+  {
+    slug: "was",
+    title: "El Cómic Dinámico",
+    subtitle: "era · estaba · fue · estuve",
+    blurb: "Drop the right \"was\" into each comic panel and watch the sketch burst into colour.",
+    skills: ["past-tenses"],
+    level: "A2",
+    tone: "accent",
+  },
 ];
 
 export function gameBySlug(slug: string): GameManifest | undefined {

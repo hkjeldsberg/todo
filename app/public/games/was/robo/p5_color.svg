@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="2.2" fill="#3a0b3a" opacity=".35"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#6a2c91"/>
+  <circle cx="400" cy="320" r="330" fill="#8e44ad"/>
+  <rect width="800" height="600" fill="url(#dots)"/>
+  <!-- emphasis rays -->
+  <g stroke="#b86ad6" stroke-width="10" stroke-linecap="round" opacity=".8">
+    <path d="M60 40l110 90M740 40l-110 90M30 300h110M770 300H660M80 560l100-80M720 560l-100-80"/>
+  </g>
+  <g stroke="#0b0b12" stroke-linejoin="round" stroke-linecap="round">
+    <!-- shoulders / uniform -->
+    <path d="M170 600c10-90 90-130 230-130s220 40 230 130z" fill="#1f3c75" stroke-width="11"/>
+    <path d="M400 470l-50 130h100z" fill="#e9eef5" stroke-width="7"/>
+    <path d="M400 490l-15 110h30z" fill="#0b0b12" stroke-width="3"/>
+    <path d="M250 520l40 10-10 30-40-8zM550 520l-40 10 10 30 40-8z" fill="#f4d35e" stroke-width="5"/>
+    <!-- face -->
+    <path d="M290 280c0-90 50-140 110-140s110 50 110 140c0 110-50 180-110 180s-110-70-110-180z" fill="#f1c7a0" stroke-width="11"/>
+    <path d="M290 280c0 110 50 180 110 180c-40-20-70-90-70-180z" fill="#d9a57b" stroke-width="0"/>
+    <!-- eyes, brows -->
+    <path d="M335 265l45 10M465 265l-45 10" stroke-width="9"/>
+    <ellipse cx="358" cy="298" rx="12" ry="9" fill="#0b0b12"/><ellipse cx="442" cy="298" rx="12" ry="9" fill="#0b0b12"/>
+    <!-- mustache + smirk -->
+    <path d="M340 370c20-25 45-20 60-8c15-12 40-17 60 8c-20 5-40 0-60-10c-20 10-40 15-60 10z" fill="#3a2a1e" stroke-width="6"/>
+    <path d="M370 405c20 12 45 10 65-6" stroke-width="6" fill="none"/>
+    <path d="M400 310l-10 40h20" stroke-width="5" fill="none"/>
+    <!-- police cap -->
+    <path d="M280 205c20-80 220-80 240 0z" fill="#1f3c75" stroke-width="10"/>
+    <path d="M270 205h260l-20 30H290z" fill="#0b0b12" stroke-width="6"/>
+    <path d="M385 150l15-15 15 15-15 25z" fill="#f4d35e" stroke-width="5"/>
+    <!-- mask pulled up in hand -->
+    <path d="M520 150c60-30 120-10 140 30c-20 20-80 30-140 20z" fill="#0b0b12" stroke-width="8"/>
+    <ellipse cx="590" cy="170" rx="16" ry="8" fill="#6a2c91" stroke-width="3"/>
+    <path d="M620 180c20 10 40 40 30 80c-10 25-40 30-55 10c-10-15-5-50 5-70z" fill="#f1c7a0" stroke-width="8"/>
+    <path d="M610 230l35 5M605 250l35 5" stroke-width="4"/>
+  </g>
+  <!-- shock marks -->
+  <g stroke="#ffe14d" stroke-width="9" stroke-linecap="round">
+    <path d="M220 170l-40-40M200 230h-50M240 120l-20-50"/>
+  </g>
+</svg>

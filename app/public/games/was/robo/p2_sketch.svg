@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+  <filter id="sketch" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" result="wobble"/>
+    <feColorMatrix in="wobble" type="saturate" values="0"/>
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0.6" intercept="0.4"/>
+      <feFuncG type="linear" slope="0.6" intercept="0.4"/>
+      <feFuncB type="linear" slope="0.6" intercept="0.38"/>
+    </feComponentTransfer>
+  </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#f4f1ea"/>
+  <g filter="url(#sketch)">
+  <defs>
+    <pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="2" fill="#2b1b0a" opacity=".35"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#5b6470"/>
+  <rect width="800" height="600" fill="url(#dots)"/>
+  <!-- wall panels -->
+  <g stroke="#0b0b12" stroke-width="5" fill="#6f7985">
+    <rect x="20" y="20" width="160" height="560"/><rect x="620" y="20" width="160" height="560"/>
+  </g>
+  <rect y="500" width="800" height="100" fill="#3a3f48" stroke="#0b0b12" stroke-width="7"/>
+  <!-- gold glow from inside -->
+  <path d="M430 110L800 0v600L430 490z" fill="#ffcf3f" opacity=".9"/>
+  <path d="M430 150L700 60v480L430 450z" fill="#ffe58a"/>
+  <!-- vault frame -->
+  <circle cx="400" cy="300" r="215" fill="#2c3036" stroke="#0b0b12" stroke-width="11"/>
+  <circle cx="400" cy="300" r="190" fill="#15171b"/>
+  <!-- inner gold -->
+  <path d="M430 118a190 190 0 0 1 0 364z" fill="#ffd23f"/>
+  <g fill="#e2a91c" stroke="#0b0b12" stroke-width="4">
+    <path d="M470 380h90l-12-30h-66z"/><path d="M480 350h70l-10-28h-50z"/><path d="M500 322h40l-8-24h-24z"/>
+  </g>
+  <!-- door, swung ajar (ellipse = perspective) -->
+  <g stroke="#0b0b12" stroke-linejoin="round">
+    <ellipse cx="330" cy="300" rx="120" ry="195" fill="#9aa4b0" stroke-width="12"/>
+    <path d="M330 105a120 195 0 0 0 0 390a90 195 0 0 1 0-390z" fill="#77818d" stroke-width="0"/>
+    <ellipse cx="330" cy="300" rx="85" ry="140" fill="none" stroke-width="5"/>
+    <!-- wheel -->
+    <ellipse cx="335" cy="300" rx="40" ry="62" fill="#c9d1da" stroke-width="7"/>
+    <path d="M335 230v140M295 300h80M307 255l56 90M363 255l-56 90" stroke-width="8" stroke-linecap="round"/>
+    <ellipse cx="335" cy="300" rx="12" ry="18" fill="#f4d35e" stroke-width="5"/>
+  </g>
+  <!-- bolts -->
+  <g fill="#d9dee4" stroke="#0b0b12" stroke-width="4">
+    <circle cx="245" cy="180" r="9"/><circle cx="222" cy="300" r="9"/><circle cx="245" cy="420" r="9"/>
+    <circle cx="420" cy="180" r="9"/><circle cx="440" cy="300" r="9"/><circle cx="420" cy="420" r="9"/>
+  </g>
+  <!-- light spill on floor -->
+  <path d="M430 500l370-10v110H470z" fill="#ffd23f" opacity=".7"/>
+</g>
+</svg>

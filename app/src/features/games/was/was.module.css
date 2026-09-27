@@ -1,0 +1,35 @@
+/* El Cómic Dinámico keeps its own comic look (not memo's sticker palette).
+   Colours are scoped to the game root and used as Tailwind vars: bg-(--c-pop). */
+.root {
+  --c-ink: #0b0b12;
+  --c-paper: #f4efe3;
+  --c-pop: #ffd23f;
+  --c-alarm: #d7263d;
+  --c-caption: #fff4c2;
+
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  background-color: var(--c-paper);
+  background-image: radial-gradient(rgb(11 11 18 / 0.08) 1px, transparent 1.2px);
+  background-size: 14px 14px;
+  color: var(--c-ink);
+  font-family: var(--was-body), "Comic Neue", ui-rounded, sans-serif;
+  font-weight: 400;
+}
+
+.root :focus-visible {
+  outline: 3px solid var(--c-alarm);
+  outline-offset: 3px;
+}
+
+.display {
+  font-family: var(--was-display), Impact, "Arial Black", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+/* Zig-zag frame for action panels. Applied to an ink layer and an inset art layer. */
+.jagged {
+  clip-path: polygon(0% 0%, 8.33% 2.2%, 16.67% 0%, 25% 2.2%, 33.33% 0%, 41.67% 2.2%, 50% 0%, 58.33% 2.2%, 66.67% 0%, 75% 2.2%, 83.33% 0%, 91.67% 2.2%, 100% 0%, 97.8% 8.33%, 100% 16.67%, 97.8% 25%, 100% 33.33%, 97.8% 41.67%, 100% 50%, 97.8% 58.33%, 100% 66.67%, 97.8% 75%, 100% 83.33%, 97.8% 91.67%, 100% 100%, 91.67% 97.8%, 83.33% 100%, 75% 97.8%, 66.67% 100%, 58.33% 97.8%, 50% 100%, 41.67% 97.8%, 33.33% 100%, 25% 97.8%, 16.67% 100%, 8.33% 97.8%, 0% 100%, 2.2% 91.67%, 0% 83.33%, 2.2% 75%, 0% 66.67%, 2.2% 58.33%, 0% 50%, 2.2% 41.67%, 0% 33.33%, 2.2% 25%, 0% 16.67%, 2.2% 8.33%);
+}

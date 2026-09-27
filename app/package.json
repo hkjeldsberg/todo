@@ -19,7 +19,10 @@
     "donde:playtest": "node scripts/donde-playtest.mjs",
     "icons": "node scripts/gen-icons.mjs",
     "opuestos:seed": "node scripts/opuestos-seed-sql.mjs",
-    "opuestos:playtest": "node scripts/opuestos-playtest.mjs"
+    "opuestos:playtest": "node scripts/opuestos-playtest.mjs",
+    "was:seed": "node scripts/was-seed-sql.mjs",
+    "was:sketches": "node scripts/was-sketches.mjs",
+    "was:playtest": "node scripts/was-playtest.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",

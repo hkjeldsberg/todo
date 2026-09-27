@@ -1,6 +1,6 @@
-- [ ] Opposites (size,w eight, shape, touch, temperature, condition,judgement, pace , not adjectives )
+- [x] Opposites (size,w eight, shape, touch, temperature, condition,judgement, pace , not adjectives )
 - [x] Where things are (location phrases)
-- [ ] Fue vs estaba vs estuve vs era
+- [x] Fue vs estaba vs estuve vs era
 - [ ] Gustar
 - [ ] Joining sentences
 - [ ] Ya, ya no, todavia

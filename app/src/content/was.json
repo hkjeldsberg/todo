@@ -1,0 +1,64 @@
+{
+  "panels": [
+    {
+      "id": "robo_1",
+      "page_id": "el_robo_01",
+      "panel_order": 1,
+      "panel_type": "establishing",
+      "sentence_pre": "",
+      "sentence_post": " una noche oscura y lluviosa en Madrid.",
+      "correct_verb": "era",
+      "rule_feedback": "Setting the scene? Time of day and the backdrop of a story use *era*.",
+      "asset_sketch": "/games/was/robo/p1_sketch.svg",
+      "asset_color": "/games/was/robo/p1_color.svg"
+    },
+    {
+      "id": "robo_2",
+      "page_id": "el_robo_01",
+      "panel_order": 2,
+      "panel_type": "establishing",
+      "sentence_pre": "La puerta de la bóveda ",
+      "sentence_post": " abierta.",
+      "correct_verb": "estaba",
+      "rule_feedback": "Being open is a temporary condition, not a trait. Use *estaba* for states and locations.",
+      "asset_sketch": "/games/was/robo/p2_sketch.svg",
+      "asset_color": "/games/was/robo/p2_color.svg"
+    },
+    {
+      "id": "robo_3",
+      "page_id": "el_robo_01",
+      "panel_order": 3,
+      "panel_type": "action",
+      "sentence_pre": "El robo ",
+      "sentence_post": " increíblemente rápido.",
+      "correct_verb": "fue",
+      "rule_feedback": "The robbery is a finished event, summed up as a whole. Completed events take *fue*.",
+      "asset_sketch": "/games/was/robo/p3_sketch.svg",
+      "asset_color": "/games/was/robo/p3_color.svg"
+    },
+    {
+      "id": "robo_4",
+      "page_id": "el_robo_01",
+      "panel_order": 4,
+      "panel_type": "action",
+      "sentence_pre": "Yo ",
+      "sentence_post": " atado en la silla por dos horas.",
+      "correct_verb": "estuve",
+      "rule_feedback": "\"Por dos horas\" closes the state with a fixed duration. A bounded temporary state takes *estuve*.",
+      "asset_sketch": "/games/was/robo/p4_sketch.svg",
+      "asset_color": "/games/was/robo/p4_color.svg"
+    },
+    {
+      "id": "robo_5",
+      "page_id": "el_robo_01",
+      "panel_order": 5,
+      "panel_type": "establishing",
+      "sentence_pre": "El ladrón ",
+      "sentence_post": " el jefe de policía.",
+      "correct_verb": "era",
+      "rule_feedback": "Identity is an inherent characteristic: who the thief was all along. Use *era*.",
+      "asset_sketch": "/games/was/robo/p5_sketch.svg",
+      "asset_color": "/games/was/robo/p5_color.svg"
+    }
+  ]
+}

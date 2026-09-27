@@ -1,9 +1,11 @@
 # IN PROGRESS (MANUAL - USER)
 - Supabase SQL editor: run `app/supabase/migrations/0004_opuestos.sql`, then `app/supabase/seed/opuestos.sql` (El Rayo Modificador words + levels; the game uses its bundled copy until then)
+- Supabase SQL editor: run `app/supabase/migrations/0005_was.sql`, then `app/supabase/seed/was.sql` (El Cómic Dinámico panels; the game uses its bundled copy until then)
 
 # IN PROGRESS (CLAUDE)
 
 # DONE
+- El Cómic Dinámico (`/juegos/was`, port of ../was, PRD in ../was/PRD.md) (2026-09-27): comic look kept, table `todo.was_panels`, wrong drops → Repaso fill-the-blank cards, progress saved, linked from Gramática. tsc/eslint clean, 309 tests, build ok, playtest ok at 390×844 + 1440×900.
 - El Rayo Modificador (`/juegos/opuestos`, PRD_OPPOSITES.md) (2026-09-24): 3D Rapier physics sandbox, 15 opposite pairs (incl. abrir/cerrar, encender/apagar, subir/bajar), 11 levels with multiple solutions, radial word menu, wrong words → Repaso "¿Cuál es el contrario de…?" cards. All 11 levels won at 390×844 + 1440×900; whole app: tsc/eslint clean, 288 tests, build ok.
 - Implemented PRD P1–P8 in `app/` (2026-09-24): shell + memo design system, Frases/Gramática/Diario ported to schema `todo`, unified Repaso (Leitner: words, phrases, conjugation incl. Imperfecto, game mistakes), Hoy, game framework, Diorama + Laberinto ports, Dónde 3D papercraft rebuild. tsc/eslint clean, 151 tests, build ok. Playtest data removed from DB.
 - USER: ran 0003 + seed/verbs.sql. Verified: todo.verbs has 25 verbs; deleting a phrase now removes its Repaso card (2026-09-24)

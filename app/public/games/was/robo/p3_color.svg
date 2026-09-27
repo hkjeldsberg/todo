@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#d7263d"/>
+  <!-- speed lines -->
+  <g stroke="#0b0b12" stroke-width="6" stroke-linecap="round">
+    <path d="M0 80h260"/><path d="M40 160h200"/><path d="M0 250h180"/><path d="M60 360h160"/><path d="M0 450h220"/><path d="M30 540h250"/>
+    <path d="M560 60h240"/><path d="M600 520h200"/>
+  </g>
+  <!-- burst -->
+  <path d="M470 300l70-150 10 110 110-120-40 140 150-30-120 90 130 60-150-10 60 130-110-80-10 150-60-130-80 120 10-150-130 60 100-100-140-40 150-20-80-120 120 70z" fill="#ffe14d" stroke="#0b0b12" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M470 300l40-80 10 60 60-60-20 70 80-10-60 40 70 30-80 0 30 60-60-40-10 70-30-60-40 50 10-70-70 20 50-50-60-30 80-10-40-60 60 40z" fill="#fff" stroke="#0b0b12" stroke-width="5" stroke-linejoin="round"/>
+  <!-- fleeing silhouette -->
+  <g fill="#0b0b12" stroke="#0b0b12" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="215" cy="215" r="34"/>
+    <path d="M200 250l-40 110 30 10 50-100z" stroke-width="8"/>
+    <path d="M170 360l-70 60 20 25 80-55z"/>
+    <path d="M185 365l30 90 30-8-25-95z"/>
+    <path d="M205 270l-70-30-10 25 75 35z"/>
+    <path d="M215 275l70 20 5-28-70-22z"/>
+    <!-- sack -->
+    <path d="M280 250c60-10 100 40 80 90c-20 40-90 30-100-20c-5-30 5-60 20-70z" fill="#8a5a2b" stroke-width="8"/>
+  </g>
+  <path d="M300 280c15 5 30 15 35 35" stroke="#5e3b17" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <text x="340" y="160" transform="rotate(-8 400 120)" fill="#fff" stroke="#0b0b12" stroke-width="5" paint-order="stroke" font-family="Impact, 'Arial Black', sans-serif" font-size="92" font-weight="900">¡ZAS!</text>
+</svg>

@@ -37,8 +37,25 @@
 ## P9 Deploy (vercel CLI)
 - [ ] needs user go-ahead + Vercel team/project
 
+## P10 El Cómic Dinámico (`/juegos/was`, port of ../../was)
+Decisions (user, 2026-09-27): table in schema `todo` (not `was`), comic style throughout the game, `../../was` stays as reference, link from Gramática.
+- [x] content: `src/content/was.json` (El Robo, text ids `robo_1..5`), zod shaping, art in `public/games/was/robo/` + sketch script
+- [x] migration `0005_was.sql` (`todo.was_panels`, RLS, service_role, `todo.games` row) + `scripts/was-seed-sql.mjs` → `supabase/seed/was.sql`
+- [x] `features/games/was/`: server.ts (Supabase → bundled fallback), review card (fill the blank, 4 verbs), progress (solved panels + pages)
+- [x] Game.tsx: cover (rules + pages) → comic page; drag + tap-to-place, snap, color reveal, tooltip; recordAttempt per drop, saveProgress, restore solved panels
+- [x] register: registry (skill past-tenses → Gramática links), GameHost, server-registry, package.json scripts
+- [x] tests (content, server, review/progress) + `was:playtest` (390×844 + 1440×900)
+- [x] verify: typecheck, lint, vitest, build, playtest; clean playtest rows if DB is written
+- [ ] USER: run `supabase/migrations/0005_was.sql`, then `supabase/seed/was.sql` (bundled copy is used until then)
+
 ## Review
 - Whole project: tsc clean, eslint clean, vitest 151/151, `next build` ok.
 - Prod build: every route redirects to /login without a session, even with AUTH_DISABLED=1.
 - Live DB: legacy copy verified (db:verify), phrase CRUD + review marks + phrase delete trigger, review sessions, conjugation drill with Claude sentences.
 - Games verified by headless playtests only (SwiftShader), not on a real phone/GPU.
+- P10 El Cómic Dinámico (2026-09-27): tsc/eslint clean, vitest 309/309 (21 new), `next build` ok.
+  `was:playtest` 390×844 (tap-to-place) + 1440×900 (mouse drag): wrong verb → tooltip + back to bank, 5/5 → ¡Caso cerrado!,
+  Otra vez resets, cover shows completed. Ran with Supabase env blanked, so nothing was written to the live DB.
+  /juegos card + Gramática links (fue-estaba-estuve, pasado, preterito-cambia) clicked through. 0005 + seed tested on a
+  throwaway local Postgres: idempotent, DB-only page survives re-seed, verb/type checks reject bad rows.
+  Not verified: live DB content/progress/Repaso cards for `was` (needs 0005 applied), real phone.

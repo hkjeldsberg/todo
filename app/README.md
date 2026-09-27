@@ -23,7 +23,7 @@ Claude · React Three Fiber for the games. Visual system: memo's **Sticker Tabs*
 
 1. Supabase SQL editor, in order: `supabase/migrations/0001_todo_schema.sql`,
    `0002_copy_legacy.sql` (copies the old apps' data; ends with a row-count table),
-   `0003_phrase_review_cleanup.sql`, then `supabase/seed/*.sql` (verbs + game content).
+   `0003_phrase_review_cleanup.sql`, `0004_opuestos.sql`, `0005_was.sql`, then `supabase/seed/*.sql` (verbs + game content).
 2. Settings → API → Exposed schemas: add `todo`.
 3. `.env.local` from `.env.example`.
 4. `npm run dev` → http://localhost:3000. `npm run db:verify` compares legacy vs `todo` rows.
@@ -64,8 +64,11 @@ Every Server Action calls `requireSession()`. `AUTH_DISABLED=1` skips the gate u
 npm run dev | build | lint | typecheck | test
 npm run db:seed-sql   # verbs.json → supabase/seed/verbs.sql
 npm run db:verify     # legacy vs todo row counts + spot checks
-npm run <game>:seed   # src/content/<game>.json → supabase/seed/<game>.sql  (game = donde | tense | laberinto)
+npm run <game>:seed   # src/content/<game>.json → supabase/seed/<game>.sql  (game = donde | tense | laberinto | opuestos | was)
 npm run <game>:playtest  # headless play-through; needs a dev server with AUTH_DISABLED=1
+npm run was:sketches   # public/games/was/**/pN_color.svg → grayscale pN_sketch.svg
+# El Cómic Dinámico pages can also be added as rows in todo.was_panels (no redeploy);
+# was:seed only upserts the JSON's rows and never deletes DB-only pages.
 ```
 
 Playtests write real progress/attempts to the database; clear `todo.game_progress`,

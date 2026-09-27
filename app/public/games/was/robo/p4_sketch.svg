@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+  <filter id="sketch" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" result="wobble"/>
+    <feColorMatrix in="wobble" type="saturate" values="0"/>
+    <feComponentTransfer>
+      <feFuncR type="linear" slope="0.6" intercept="0.4"/>
+      <feFuncG type="linear" slope="0.6" intercept="0.4"/>
+      <feFuncB type="linear" slope="0.6" intercept="0.38"/>
+    </feComponentTransfer>
+  </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="#f4f1ea"/>
+  <g filter="url(#sketch)">
+  <defs>
+    <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1.8" fill="#3b2a12" opacity=".35"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="#f2b84b"/>
+  <rect x="0" y="0" width="330" height="600" fill="#d9962c"/>
+  <rect width="800" height="600" fill="url(#dots)"/>
+  <rect y="480" width="800" height="120" fill="#6b4a2b" stroke="#0b0b12" stroke-width="7"/>
+  <!-- clock -->
+  <g stroke="#0b0b12" stroke-linecap="round">
+    <circle cx="610" cy="160" r="95" fill="#fdf6e3" stroke-width="10"/>
+    <path d="M610 160a95 95 0 0 1 0-0z"/>
+    <path d="M610 80v18M610 222v18M530 160h18M672 160h18" stroke-width="6"/>
+    <path d="M610 160v-58" stroke-width="9"/>
+    <path d="M610 160l48 28" stroke-width="7"/>
+    <circle cx="610" cy="160" r="8" fill="#0b0b12"/>
+    <path d="M500 90l-25-18M720 90l25-18M490 240l-22 10" stroke-width="6"/>
+  </g>
+  <!-- chair -->
+  <g stroke="#0b0b12" stroke-linejoin="round" stroke-width="8">
+    <path d="M160 170h40v320h-40z" fill="#8b5a2b"/>
+    <path d="M160 360h240v35H160z" fill="#a86d34"/>
+    <path d="M370 395h30v95h-30zM175 395h30v95h-30z" fill="#8b5a2b"/>
+  </g>
+  <!-- guard -->
+  <g stroke="#0b0b12" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M210 230c0-30 30-45 70-45s75 15 75 45v135H210z" fill="#2f5aa8" stroke-width="9"/>
+    <path d="M210 250v115h35V240z" fill="#234585" stroke-width="0"/>
+    <path d="M300 360h70l30 120h-40l-20-70h-40z" fill="#23407a" stroke-width="8"/>
+    <path d="M360 480h50v20h-60z" fill="#0b0b12" stroke-width="5"/>
+    <!-- head looking right at clock -->
+    <circle cx="290" cy="140" r="48" fill="#f1c7a0" stroke-width="8"/>
+    <path d="M250 150a48 48 0 0 0 40 38v-38z" fill="#d9a57b" stroke-width="0"/>
+    <path d="M240 115c10-35 90-40 104-2z" fill="#1f3c75" stroke-width="7"/>
+    <path d="M300 113h60l-10 12h-50z" fill="#0b0b12" stroke-width="4"/>
+    <circle cx="289" cy="94" r="7" fill="#f4d35e" stroke-width="3"/>
+    <circle cx="315" cy="140" r="5" fill="#0b0b12"/><path d="M305 125l18-4" stroke-width="4"/>
+    <path d="M310 170c8 4 16 4 22 0" stroke-width="4" fill="none"/>
+    <!-- sweat drop -->
+    <path d="M262 110c-6 10-8 16-2 20c6-4 4-10 2-20z" fill="#8fd3ff" stroke-width="3"/>
+  </g>
+  <!-- ropes -->
+  <g stroke="#e8d7a8" stroke-width="12" stroke-linecap="round" fill="none">
+    <path d="M150 250c60 20 150 20 215 0"/><path d="M150 300c60 20 150 20 215 0"/>
+  </g>
+  <g stroke="#0b0b12" stroke-width="3" fill="none">
+    <path d="M150 243c60 20 150 20 215 0M150 257c60 20 150 20 215 0M150 293c60 20 150 20 215 0M150 307c60 20 150 20 215 0"/>
+  </g>
+</g>
+</svg>
