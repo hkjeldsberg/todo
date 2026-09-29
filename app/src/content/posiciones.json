@@ -1,0 +1,2061 @@
+{
+  "expressions": [
+    {
+      "id": "en",
+      "es": "en",
+      "forms": [
+        "en"
+      ],
+      "bare": null,
+      "en": "in / on / at",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "The most general: en la mesa (on), en la caja (in), en el jardín (at).",
+      "sort": 1
+    },
+    {
+      "id": "sobre",
+      "es": "sobre",
+      "forms": [
+        "sobre"
+      ],
+      "bare": null,
+      "en": "on",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Touching the top surface.",
+      "sort": 2
+    },
+    {
+      "id": "encima_de",
+      "es": "encima de",
+      "forms": [
+        "encima de"
+      ],
+      "bare": "encima",
+      "en": "on top of",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Stresses 'on top'. Without an object: está encima.",
+      "sort": 3
+    },
+    {
+      "id": "debajo_de",
+      "es": "debajo de",
+      "forms": [
+        "debajo de"
+      ],
+      "bare": "debajo",
+      "en": "under",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 4
+    },
+    {
+      "id": "dentro_de",
+      "es": "dentro de",
+      "forms": [
+        "dentro de"
+      ],
+      "bare": "dentro",
+      "en": "inside",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 5
+    },
+    {
+      "id": "fuera_de",
+      "es": "fuera de",
+      "forms": [
+        "fuera de"
+      ],
+      "bare": "fuera",
+      "en": "outside",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 6
+    },
+    {
+      "id": "delante_de",
+      "es": "delante de",
+      "forms": [
+        "delante de"
+      ],
+      "bare": "delante",
+      "en": "in front of",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Relative to the reference's front, or to where you look from.",
+      "sort": 7
+    },
+    {
+      "id": "detras_de",
+      "es": "detrás de",
+      "forms": [
+        "detrás de"
+      ],
+      "bare": "detrás",
+      "en": "behind",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 8
+    },
+    {
+      "id": "al_lado_de",
+      "es": "al lado de",
+      "forms": [
+        "al lado de"
+      ],
+      "bare": "al lado",
+      "en": "next to",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 9
+    },
+    {
+      "id": "cerca_de",
+      "es": "cerca de",
+      "forms": [
+        "cerca de"
+      ],
+      "bare": "cerca",
+      "en": "near",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 10
+    },
+    {
+      "id": "lejos_de",
+      "es": "lejos de",
+      "forms": [
+        "lejos de"
+      ],
+      "bare": "lejos",
+      "en": "far from",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 11
+    },
+    {
+      "id": "entre",
+      "es": "entre",
+      "forms": [
+        "entre"
+      ],
+      "bare": null,
+      "en": "between … and …",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 2,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Two references joined by y: entre el árbol y el muro. With pronouns: entre tú y yo.",
+      "sort": 12
+    },
+    {
+      "id": "a_la_derecha_de",
+      "es": "a la derecha de",
+      "forms": [
+        "a la derecha de"
+      ],
+      "bare": "a la derecha",
+      "en": "to the right of",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "From where you are looking (the camera).",
+      "sort": 13
+    },
+    {
+      "id": "a_la_izquierda_de",
+      "es": "a la izquierda de",
+      "forms": [
+        "a la izquierda de"
+      ],
+      "bare": "a la izquierda",
+      "en": "to the left of",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "From where you are looking (the camera).",
+      "sort": 14
+    },
+    {
+      "id": "aqui",
+      "es": "aquí",
+      "forms": [
+        "aquí"
+      ],
+      "bare": "aquí",
+      "en": "here (near me)",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 15
+    },
+    {
+      "id": "ahi",
+      "es": "ahí",
+      "forms": [
+        "ahí"
+      ],
+      "bare": "ahí",
+      "en": "there (near you)",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 16
+    },
+    {
+      "id": "alli",
+      "es": "allí",
+      "forms": [
+        "allí"
+      ],
+      "bare": "allí",
+      "en": "over there",
+      "level": "A1",
+      "category": "core",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 17
+    },
+    {
+      "id": "enfrente_de",
+      "es": "enfrente de",
+      "forms": [
+        "enfrente de",
+        "en frente de"
+      ],
+      "bare": "enfrente",
+      "en": "opposite / facing",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Across from, often with a gap or path between.",
+      "sort": 18
+    },
+    {
+      "id": "frente_a",
+      "es": "frente a",
+      "forms": [
+        "frente a"
+      ],
+      "bare": null,
+      "en": "facing",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 19
+    },
+    {
+      "id": "junto_a",
+      "es": "junto a",
+      "forms": [
+        "junto a"
+      ],
+      "bare": null,
+      "en": "beside",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 20
+    },
+    {
+      "id": "en_medio_de",
+      "es": "en medio de",
+      "forms": [
+        "en medio de"
+      ],
+      "bare": "en medio",
+      "en": "in the middle of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 21
+    },
+    {
+      "id": "en_el_centro_de",
+      "es": "en el centro de",
+      "forms": [
+        "en el centro de"
+      ],
+      "bare": "en el centro",
+      "en": "in the centre of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 22
+    },
+    {
+      "id": "alrededor_de",
+      "es": "alrededor de",
+      "forms": [
+        "alrededor de"
+      ],
+      "bare": "alrededor",
+      "en": "around",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 23
+    },
+    {
+      "id": "al_fondo_de",
+      "es": "al fondo de",
+      "forms": [
+        "al fondo de"
+      ],
+      "bare": "al fondo",
+      "en": "at the back / far end of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 24
+    },
+    {
+      "id": "al_final_de",
+      "es": "al final de",
+      "forms": [
+        "al final de"
+      ],
+      "bare": "al final",
+      "en": "at the end of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 25
+    },
+    {
+      "id": "al_principio_de",
+      "es": "al principio de",
+      "forms": [
+        "al principio de",
+        "al comienzo de"
+      ],
+      "bare": "al principio",
+      "en": "at the beginning of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 26
+    },
+    {
+      "id": "en_la_esquina_de",
+      "es": "en la esquina de",
+      "forms": [
+        "en la esquina de"
+      ],
+      "bare": "en la esquina",
+      "en": "on the corner of (outside corner)",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Outside corner, e.g. of a street or a building. Inside a room: en el rincón.",
+      "sort": 27
+    },
+    {
+      "id": "en_el_rincon_de",
+      "es": "en el rincón de",
+      "forms": [
+        "en el rincón de"
+      ],
+      "bare": "en el rincón",
+      "en": "in the corner of (inside corner)",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Inside corner of a room or walled space.",
+      "sort": 28
+    },
+    {
+      "id": "arriba",
+      "es": "arriba",
+      "forms": [
+        "arriba",
+        "en el piso de arriba"
+      ],
+      "bare": "arriba",
+      "en": "upstairs / above",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Adverb: no de.",
+      "sort": 29
+    },
+    {
+      "id": "abajo",
+      "es": "abajo",
+      "forms": [
+        "abajo",
+        "en el piso de abajo"
+      ],
+      "bare": "abajo",
+      "en": "downstairs / below",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Adverb: no de.",
+      "sort": 30
+    },
+    {
+      "id": "en_la_parte_de_arriba_de",
+      "es": "en la parte de arriba de",
+      "forms": [
+        "en la parte de arriba de",
+        "en la parte superior de"
+      ],
+      "bare": null,
+      "en": "in the top part of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 31
+    },
+    {
+      "id": "en_la_parte_de_abajo_de",
+      "es": "en la parte de abajo de",
+      "forms": [
+        "en la parte de abajo de",
+        "en la parte inferior de"
+      ],
+      "bare": null,
+      "en": "in the bottom part of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 32
+    },
+    {
+      "id": "al_otro_lado_de",
+      "es": "al otro lado de",
+      "forms": [
+        "al otro lado de",
+        "del otro lado de"
+      ],
+      "bare": "al otro lado",
+      "en": "on the other side of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 33
+    },
+    {
+      "id": "pegado_a",
+      "es": "pegado a",
+      "forms": [
+        "pegado a"
+      ],
+      "bare": null,
+      "en": "right up against",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": true,
+      "notes": "Agrees with the thing located: pegado / pegada / pegados / pegadas.",
+      "sort": 34
+    },
+    {
+      "id": "apoyado_en",
+      "es": "apoyado en",
+      "forms": [
+        "apoyado en",
+        "apoyado contra"
+      ],
+      "bare": null,
+      "en": "leaning on / against",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": true,
+      "notes": "Agrees: apoyado / apoyada / apoyados / apoyadas.",
+      "sort": 35
+    },
+    {
+      "id": "colgado_de",
+      "es": "colgado de",
+      "forms": [
+        "colgado de",
+        "colgado en"
+      ],
+      "bare": null,
+      "en": "hanging from",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": true,
+      "notes": "Agrees: colgado / colgada / colgados / colgadas.",
+      "sort": 36
+    },
+    {
+      "id": "en_el_borde_de",
+      "es": "en el borde de",
+      "forms": [
+        "en el borde de",
+        "al borde de"
+      ],
+      "bare": "en el borde",
+      "en": "on the edge of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 37
+    },
+    {
+      "id": "en_la_orilla_de",
+      "es": "en la orilla de",
+      "forms": [
+        "en la orilla de"
+      ],
+      "bare": "en la orilla",
+      "en": "on the bank / shore of",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 38
+    },
+    {
+      "id": "a_mano_derecha",
+      "es": "a mano derecha",
+      "forms": [
+        "a mano derecha"
+      ],
+      "bare": "a mano derecha",
+      "en": "on the right-hand side",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 39
+    },
+    {
+      "id": "a_mano_izquierda",
+      "es": "a mano izquierda",
+      "forms": [
+        "a mano izquierda"
+      ],
+      "bare": "a mano izquierda",
+      "en": "on the left-hand side",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 40
+    },
+    {
+      "id": "en_la_planta_baja",
+      "es": "en la planta baja",
+      "forms": [
+        "en la planta baja"
+      ],
+      "bare": "en la planta baja",
+      "en": "on the ground floor",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 41
+    },
+    {
+      "id": "en_el_primer_piso",
+      "es": "en el primer piso",
+      "forms": [
+        "en el primer piso",
+        "en la primera planta"
+      ],
+      "bare": "en el primer piso",
+      "en": "on the first floor",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 42
+    },
+    {
+      "id": "en_el_sotano",
+      "es": "en el sótano",
+      "forms": [
+        "en el sótano"
+      ],
+      "bare": "en el sótano",
+      "en": "in the basement",
+      "level": "A2",
+      "category": "building",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 43
+    },
+    {
+      "id": "bajo",
+      "es": "bajo",
+      "forms": [
+        "bajo"
+      ],
+      "bare": null,
+      "en": "under (formal)",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 44
+    },
+    {
+      "id": "tras",
+      "es": "tras",
+      "forms": [
+        "tras"
+      ],
+      "bare": null,
+      "en": "behind (literary)",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 45
+    },
+    {
+      "id": "en_torno_a",
+      "es": "en torno a",
+      "forms": [
+        "en torno a"
+      ],
+      "bare": null,
+      "en": "around (formal)",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 46
+    },
+    {
+      "id": "por_encima_de",
+      "es": "por encima de",
+      "forms": [
+        "por encima de"
+      ],
+      "bare": "por encima",
+      "en": "above / over (not touching)",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 47
+    },
+    {
+      "id": "por_debajo_de",
+      "es": "por debajo de",
+      "forms": [
+        "por debajo de"
+      ],
+      "bare": "por debajo",
+      "en": "below / underneath (not touching)",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 48
+    },
+    {
+      "id": "por_delante_de",
+      "es": "por delante de",
+      "forms": [
+        "por delante de"
+      ],
+      "bare": "por delante",
+      "en": "out in front of",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 49
+    },
+    {
+      "id": "por_detras_de",
+      "es": "por detrás de",
+      "forms": [
+        "por detrás de"
+      ],
+      "bare": "por detrás",
+      "en": "round the back of",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 50
+    },
+    {
+      "id": "a_lo_largo_de",
+      "es": "a lo largo de",
+      "forms": [
+        "a lo largo de"
+      ],
+      "bare": null,
+      "en": "along",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 51
+    },
+    {
+      "id": "a_traves_de",
+      "es": "a través de",
+      "forms": [
+        "a través de"
+      ],
+      "bare": null,
+      "en": "through",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 52
+    },
+    {
+      "id": "mas_alla_de",
+      "es": "más allá de",
+      "forms": [
+        "más allá de"
+      ],
+      "bare": "más allá",
+      "en": "beyond",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 53
+    },
+    {
+      "id": "de_cara_a",
+      "es": "de cara a",
+      "forms": [
+        "de cara a"
+      ],
+      "bare": null,
+      "en": "facing towards",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 54
+    },
+    {
+      "id": "en_diagonal_a",
+      "es": "en diagonal a",
+      "forms": [
+        "en diagonal a"
+      ],
+      "bare": null,
+      "en": "diagonally from",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 55
+    },
+    {
+      "id": "al_pie_de",
+      "es": "al pie de",
+      "forms": [
+        "al pie de"
+      ],
+      "bare": null,
+      "en": "at the foot of",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 56
+    },
+    {
+      "id": "en_lo_alto_de",
+      "es": "en lo alto de",
+      "forms": [
+        "en lo alto de"
+      ],
+      "bare": "en lo alto",
+      "en": "at the top of / high up on",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 57
+    },
+    {
+      "id": "en_la_cima_de",
+      "es": "en la cima de",
+      "forms": [
+        "en la cima de"
+      ],
+      "bare": null,
+      "en": "on the summit of",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 58
+    },
+    {
+      "id": "en_la_punta_de",
+      "es": "en la punta de",
+      "forms": [
+        "en la punta de"
+      ],
+      "bare": null,
+      "en": "on the tip / end of",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 59
+    },
+    {
+      "id": "en_el_interior_de",
+      "es": "en el interior de",
+      "forms": [
+        "en el interior de"
+      ],
+      "bare": "en el interior",
+      "en": "inside (formal)",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 60
+    },
+    {
+      "id": "en_el_exterior_de",
+      "es": "en el exterior de",
+      "forms": [
+        "en el exterior de"
+      ],
+      "bare": "en el exterior",
+      "en": "outside (formal)",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 61
+    },
+    {
+      "id": "a_orillas_de",
+      "es": "a orillas de",
+      "forms": [
+        "a orillas de"
+      ],
+      "bare": null,
+      "en": "on the shores of",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 62
+    },
+    {
+      "id": "a_medio_camino_entre",
+      "es": "a medio camino entre",
+      "forms": [
+        "a medio camino entre",
+        "a mitad de camino entre"
+      ],
+      "bare": null,
+      "en": "halfway between",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 2,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 63
+    },
+    {
+      "id": "a_distancia_de",
+      "es": "a dos metros de",
+      "forms": [
+        "a dos metros de",
+        "a un metro de",
+        "a tres metros de",
+        "a pocos metros de",
+        "a unos pasos de"
+      ],
+      "bare": null,
+      "en": "(two metres) from",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Any distance: a dos metros de, a unos pasos de.",
+      "sort": 64
+    },
+    {
+      "id": "boca_abajo",
+      "es": "boca abajo",
+      "forms": [
+        "boca abajo"
+      ],
+      "bare": "boca abajo",
+      "en": "face down / upside down",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 65
+    },
+    {
+      "id": "boca_arriba",
+      "es": "boca arriba",
+      "forms": [
+        "boca arriba"
+      ],
+      "bare": "boca arriba",
+      "en": "face up",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 66
+    },
+    {
+      "id": "al_reves",
+      "es": "al revés",
+      "forms": [
+        "al revés"
+      ],
+      "bare": "al revés",
+      "en": "upside down / back to front",
+      "level": "B1",
+      "category": "fluency",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 67
+    },
+    {
+      "id": "en_la_esquina_con",
+      "es": "en la esquina de",
+      "forms": [
+        "en la esquina de"
+      ],
+      "bare": null,
+      "en": "on the corner of … and …",
+      "level": "B1",
+      "category": "street",
+      "needs_reference": true,
+      "ref_count": 2,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "Two streets: en la esquina de la calle Mayor con la calle del Pino.",
+      "sort": 68
+    },
+    {
+      "id": "a_la_vuelta_de_la_esquina",
+      "es": "a la vuelta de la esquina",
+      "forms": [
+        "a la vuelta de la esquina"
+      ],
+      "bare": "a la vuelta de la esquina",
+      "en": "just around the corner",
+      "level": "B1",
+      "category": "street",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 69
+    },
+    {
+      "id": "al_final_de_la_calle",
+      "es": "al final de la calle",
+      "forms": [
+        "al final de la calle"
+      ],
+      "bare": "al final de la calle",
+      "en": "at the end of the street",
+      "level": "A2",
+      "category": "street",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 70
+    },
+    {
+      "id": "en_la_acera_de_enfrente",
+      "es": "en la acera de enfrente",
+      "forms": [
+        "en la acera de enfrente"
+      ],
+      "bare": "en la acera de enfrente",
+      "en": "on the pavement opposite",
+      "level": "B1",
+      "category": "street",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 71
+    },
+    {
+      "id": "cruzando_la_calle",
+      "es": "cruzando la calle",
+      "forms": [
+        "cruzando la calle"
+      ],
+      "bare": "cruzando la calle",
+      "en": "across the street",
+      "level": "A2",
+      "category": "street",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 72
+    },
+    {
+      "id": "a_manzanas_de",
+      "es": "a dos manzanas de",
+      "forms": [
+        "a dos manzanas de",
+        "a una manzana de",
+        "a tres manzanas de"
+      ],
+      "bare": null,
+      "en": "(two) blocks from",
+      "level": "B1",
+      "category": "street",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": "es-ES",
+      "standard": null,
+      "agrees": false,
+      "notes": null,
+      "sort": 73
+    },
+    {
+      "id": "a_cuadras_de",
+      "es": "a dos cuadras de",
+      "forms": [
+        "a dos cuadras de",
+        "a una cuadra de",
+        "a tres cuadras de"
+      ],
+      "bare": null,
+      "en": "(two) blocks from",
+      "level": "B1",
+      "category": "street",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": "es-419",
+      "standard": "a_manzanas_de",
+      "agrees": false,
+      "notes": null,
+      "sort": 74
+    },
+    {
+      "id": "todo_recto",
+      "es": "todo recto",
+      "forms": [
+        "todo recto",
+        "todo derecho"
+      ],
+      "bare": "todo recto",
+      "en": "straight ahead",
+      "level": "A2",
+      "category": "street",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": null,
+      "standard": null,
+      "agrees": false,
+      "notes": "todo derecho is the usual form in Latin America.",
+      "sort": 75
+    },
+    {
+      "id": "arriba_de",
+      "es": "arriba de",
+      "forms": [
+        "arriba de"
+      ],
+      "bare": null,
+      "en": "on top of",
+      "level": "A2",
+      "category": "regional",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": "es-419",
+      "standard": "encima_de",
+      "agrees": false,
+      "notes": null,
+      "sort": 76
+    },
+    {
+      "id": "abajo_de",
+      "es": "abajo de",
+      "forms": [
+        "abajo de"
+      ],
+      "bare": null,
+      "en": "under",
+      "level": "A2",
+      "category": "regional",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": "es-419",
+      "standard": "debajo_de",
+      "agrees": false,
+      "notes": null,
+      "sort": 77
+    },
+    {
+      "id": "adentro_de",
+      "es": "adentro de",
+      "forms": [
+        "adentro de"
+      ],
+      "bare": "adentro",
+      "en": "inside",
+      "level": "A2",
+      "category": "regional",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": "es-419",
+      "standard": "dentro_de",
+      "agrees": false,
+      "notes": null,
+      "sort": 78
+    },
+    {
+      "id": "afuera_de",
+      "es": "afuera de",
+      "forms": [
+        "afuera de"
+      ],
+      "bare": "afuera",
+      "en": "outside",
+      "level": "A2",
+      "category": "regional",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": "es-419",
+      "standard": "fuera_de",
+      "agrees": false,
+      "notes": null,
+      "sort": 79
+    },
+    {
+      "id": "atras_de",
+      "es": "atrás de",
+      "forms": [
+        "atrás de"
+      ],
+      "bare": "atrás",
+      "en": "behind",
+      "level": "A2",
+      "category": "regional",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": "es-419",
+      "standard": "detras_de",
+      "agrees": false,
+      "notes": null,
+      "sort": 80
+    },
+    {
+      "id": "aca",
+      "es": "acá",
+      "forms": [
+        "acá"
+      ],
+      "bare": "acá",
+      "en": "here",
+      "level": "A2",
+      "category": "regional",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": "es-419",
+      "standard": "aqui",
+      "agrees": false,
+      "notes": "Also common in the Canaries.",
+      "sort": 81
+    },
+    {
+      "id": "alla",
+      "es": "allá",
+      "forms": [
+        "allá"
+      ],
+      "bare": "allá",
+      "en": "over there",
+      "level": "A2",
+      "category": "regional",
+      "needs_reference": false,
+      "ref_count": 0,
+      "region": "es-419",
+      "standard": "alli",
+      "agrees": false,
+      "notes": "Also common in the Canaries.",
+      "sort": 82
+    },
+    {
+      "id": "entre_medias_de",
+      "es": "entre medias de",
+      "forms": [
+        "entre medias de"
+      ],
+      "bare": null,
+      "en": "in between",
+      "level": "B1",
+      "category": "regional",
+      "needs_reference": true,
+      "ref_count": 1,
+      "region": "es-ES",
+      "standard": "en_medio_de",
+      "agrees": false,
+      "notes": null,
+      "sort": 83
+    }
+  ],
+  "subject": {
+    "es": "el gnomo",
+    "gender": "m",
+    "number": "sg",
+    "en": "the gnome",
+    "aliases": [
+      "el duende",
+      "el enano",
+      "el gnomito"
+    ]
+  },
+  "scenes": [
+    {
+      "id": "jardin",
+      "sort": 1,
+      "title_es": "El Jardín",
+      "title_en": "The Garden",
+      "visual_layer": "jardin",
+      "objects": [
+        {
+          "id": "jardin",
+          "es": "el jardín",
+          "gender": "m",
+          "number": "sg",
+          "en": "the garden",
+          "aliases": []
+        },
+        {
+          "id": "seto",
+          "es": "el seto",
+          "gender": "m",
+          "number": "sg",
+          "en": "the hedge",
+          "aliases": [
+            "el arbusto",
+            "el matorral"
+          ]
+        },
+        {
+          "id": "estatua",
+          "es": "la estatua",
+          "gender": "f",
+          "number": "sg",
+          "en": "the statue",
+          "aliases": []
+        },
+        {
+          "id": "jarron",
+          "es": "el jarrón",
+          "gender": "m",
+          "number": "sg",
+          "en": "the urn",
+          "aliases": [
+            "la maceta",
+            "el tiesto"
+          ]
+        },
+        {
+          "id": "banco",
+          "es": "el banco",
+          "gender": "m",
+          "number": "sg",
+          "en": "the bench",
+          "aliases": []
+        },
+        {
+          "id": "arbol",
+          "es": "el árbol",
+          "gender": "m",
+          "number": "sg",
+          "en": "the tree",
+          "aliases": []
+        },
+        {
+          "id": "cofre",
+          "es": "el cofre",
+          "gender": "m",
+          "number": "sg",
+          "en": "the chest",
+          "aliases": [
+            "el baúl"
+          ]
+        },
+        {
+          "id": "flores",
+          "es": "las flores",
+          "gender": "f",
+          "number": "pl",
+          "en": "the flowers",
+          "aliases": [
+            "el parterre",
+            "el macizo de flores"
+          ]
+        },
+        {
+          "id": "verja",
+          "es": "la verja",
+          "gender": "f",
+          "number": "sg",
+          "en": "the gate",
+          "aliases": [
+            "la puerta",
+            "la cancela"
+          ]
+        }
+      ],
+      "facts": [],
+      "targets": [
+        "j_seto",
+        "j_jarron",
+        "j_banco",
+        "j_estatua",
+        "j_entre",
+        "j_arbol",
+        "j_fuera"
+      ]
+    },
+    {
+      "id": "mercado",
+      "sort": 2,
+      "title_es": "El Mercado",
+      "title_en": "The Market",
+      "visual_layer": "mercado",
+      "objects": [
+        {
+          "id": "plaza",
+          "es": "la plaza",
+          "gender": "f",
+          "number": "sg",
+          "en": "the square",
+          "aliases": [
+            "el mercado"
+          ]
+        },
+        {
+          "id": "fuente",
+          "es": "la fuente",
+          "gender": "f",
+          "number": "sg",
+          "en": "the fountain",
+          "aliases": []
+        },
+        {
+          "id": "pozo",
+          "es": "el pozo",
+          "gender": "m",
+          "number": "sg",
+          "en": "the well",
+          "aliases": []
+        },
+        {
+          "id": "puesto",
+          "es": "el puesto de fruta",
+          "gender": "m",
+          "number": "sg",
+          "en": "the fruit stall",
+          "aliases": [
+            "el puesto",
+            "el puesto de frutas"
+          ]
+        },
+        {
+          "id": "farola",
+          "es": "la farola",
+          "gender": "f",
+          "number": "sg",
+          "en": "the street lamp",
+          "aliases": []
+        },
+        {
+          "id": "caja",
+          "es": "la caja",
+          "gender": "f",
+          "number": "sg",
+          "en": "the crate",
+          "aliases": [
+            "el cajón"
+          ]
+        },
+        {
+          "id": "carro",
+          "es": "el carro",
+          "gender": "m",
+          "number": "sg",
+          "en": "the cart",
+          "aliases": [
+            "la carreta",
+            "el carrito"
+          ]
+        },
+        {
+          "id": "calle_mayor",
+          "es": "la calle Mayor",
+          "gender": "f",
+          "number": "sg",
+          "en": "Main Street",
+          "aliases": []
+        },
+        {
+          "id": "calle_pozo",
+          "es": "la calle del Pozo",
+          "gender": "f",
+          "number": "sg",
+          "en": "Well Street",
+          "aliases": []
+        }
+      ],
+      "facts": [
+        {
+          "target": "m_centro",
+          "expression": "alrededor_de",
+          "refs": [
+            "fuente"
+          ]
+        },
+        {
+          "target": "m_centro",
+          "expression": "en_torno_a",
+          "refs": [
+            "fuente"
+          ]
+        },
+        {
+          "target": "m_centro",
+          "expression": "en_el_centro_de",
+          "refs": [
+            "plaza"
+          ]
+        },
+        {
+          "target": "m_centro",
+          "expression": "en_medio_de",
+          "refs": [
+            "plaza"
+          ]
+        },
+        {
+          "target": "m_centro",
+          "expression": "cerca_de",
+          "refs": [
+            "fuente"
+          ]
+        },
+        {
+          "target": "m_centro",
+          "expression": "junto_a",
+          "refs": [
+            "fuente"
+          ]
+        },
+        {
+          "target": "m_centro",
+          "expression": "al_lado_de",
+          "refs": [
+            "fuente"
+          ]
+        },
+        {
+          "target": "m_centro",
+          "expression": "en_el_centro_de",
+          "refs": []
+        },
+        {
+          "target": "m_centro",
+          "expression": "en_medio_de",
+          "refs": []
+        },
+        {
+          "target": "m_esquina",
+          "expression": "en_la_esquina_con",
+          "refs": [
+            "calle_mayor",
+            "calle_pozo"
+          ]
+        },
+        {
+          "target": "m_esquina",
+          "expression": "en_la_esquina_de",
+          "refs": [
+            "calle_mayor"
+          ]
+        },
+        {
+          "target": "m_esquina",
+          "expression": "en_la_esquina_de",
+          "refs": [
+            "calle_pozo"
+          ]
+        },
+        {
+          "target": "m_esquina",
+          "expression": "al_final_de",
+          "refs": [
+            "calle_mayor"
+          ]
+        },
+        {
+          "target": "m_esquina",
+          "expression": "al_final_de_la_calle",
+          "refs": []
+        },
+        {
+          "target": "m_farola",
+          "expression": "en_lo_alto_de",
+          "refs": [
+            "farola"
+          ]
+        }
+      ],
+      "targets": [
+        "m_centro",
+        "m_pozo",
+        "m_entre",
+        "m_puesto",
+        "m_enfrente",
+        "m_esquina",
+        "m_farola"
+      ]
+    },
+    {
+      "id": "cementerio",
+      "sort": 3,
+      "title_es": "El Cementerio",
+      "title_en": "The Graveyard",
+      "visual_layer": "cementerio",
+      "objects": [
+        {
+          "id": "cementerio",
+          "es": "el cementerio",
+          "gender": "m",
+          "number": "sg",
+          "en": "the graveyard",
+          "aliases": []
+        },
+        {
+          "id": "lapida_grande",
+          "es": "la lápida grande",
+          "gender": "f",
+          "number": "sg",
+          "en": "the big gravestone",
+          "aliases": [
+            "la tumba grande"
+          ]
+        },
+        {
+          "id": "lapida_pequena",
+          "es": "la lápida pequeña",
+          "gender": "f",
+          "number": "sg",
+          "en": "the small gravestone",
+          "aliases": [
+            "la tumba pequeña"
+          ]
+        },
+        {
+          "id": "lapida_rota",
+          "es": "la lápida rota",
+          "gender": "f",
+          "number": "sg",
+          "en": "the broken gravestone",
+          "aliases": [
+            "la tumba rota"
+          ]
+        },
+        {
+          "id": "lapidas",
+          "es": "las lápidas",
+          "gender": "f",
+          "number": "pl",
+          "en": "the gravestones",
+          "aliases": [
+            "las tumbas"
+          ]
+        },
+        {
+          "id": "valla",
+          "es": "la valla",
+          "gender": "f",
+          "number": "sg",
+          "en": "the fence",
+          "aliases": [
+            "la reja"
+          ]
+        },
+        {
+          "id": "arbol_seco",
+          "es": "el árbol seco",
+          "gender": "m",
+          "number": "sg",
+          "en": "the dead tree",
+          "aliases": [
+            "el árbol"
+          ]
+        },
+        {
+          "id": "mausoleo",
+          "es": "el mausoleo",
+          "gender": "m",
+          "number": "sg",
+          "en": "the mausoleum",
+          "aliases": [
+            "la cripta",
+            "el panteón"
+          ]
+        },
+        {
+          "id": "ataud",
+          "es": "el ataúd",
+          "gender": "m",
+          "number": "sg",
+          "en": "the coffin",
+          "aliases": []
+        }
+      ],
+      "facts": [
+        {
+          "target": "c_mausoleo",
+          "expression": "en_el_sotano",
+          "refs": []
+        },
+        {
+          "target": "c_mausoleo",
+          "expression": "abajo",
+          "refs": []
+        },
+        {
+          "target": "c_mausoleo",
+          "expression": "en_el_sotano",
+          "refs": [
+            "mausoleo"
+          ]
+        }
+      ],
+      "targets": [
+        "c_apoyado",
+        "c_valla",
+        "c_rincon",
+        "c_ataud",
+        "c_mausoleo",
+        "c_entre"
+      ]
+    },
+    {
+      "id": "laberinto",
+      "sort": 4,
+      "title_es": "El Laberinto",
+      "title_en": "The Hedge Maze",
+      "visual_layer": "laberinto",
+      "objects": [
+        {
+          "id": "laberinto",
+          "es": "el laberinto",
+          "gender": "m",
+          "number": "sg",
+          "en": "the maze",
+          "aliases": []
+        },
+        {
+          "id": "seto_largo",
+          "es": "el seto",
+          "gender": "m",
+          "number": "sg",
+          "en": "the hedge",
+          "aliases": [
+            "el muro de setos",
+            "el muro"
+          ]
+        },
+        {
+          "id": "reja",
+          "es": "la reja",
+          "gender": "f",
+          "number": "sg",
+          "en": "the iron gate",
+          "aliases": [
+            "la puerta",
+            "la verja"
+          ]
+        },
+        {
+          "id": "torre",
+          "es": "la torre",
+          "gender": "f",
+          "number": "sg",
+          "en": "the tower",
+          "aliases": []
+        },
+        {
+          "id": "colina",
+          "es": "la colina",
+          "gender": "f",
+          "number": "sg",
+          "en": "the hill",
+          "aliases": []
+        },
+        {
+          "id": "estanque",
+          "es": "el estanque",
+          "gender": "m",
+          "number": "sg",
+          "en": "the pond",
+          "aliases": []
+        },
+        {
+          "id": "camino",
+          "es": "el camino",
+          "gender": "m",
+          "number": "sg",
+          "en": "the path",
+          "aliases": [
+            "el sendero",
+            "el pasillo"
+          ]
+        }
+      ],
+      "facts": [
+        {
+          "target": "l_torre_alto",
+          "expression": "en_la_punta_de",
+          "refs": [
+            "torre"
+          ]
+        },
+        {
+          "target": "l_camino",
+          "expression": "a_lo_largo_de",
+          "refs": [
+            "camino"
+          ]
+        }
+      ],
+      "targets": [
+        "l_reja",
+        "l_torre_alto",
+        "l_torre_pie",
+        "l_colina",
+        "l_mas_alla",
+        "l_orilla",
+        "l_camino"
+      ]
+    }
+  ]
+}

@@ -60,6 +60,15 @@ export const GAMES: GameManifest[] = [
     level: "A2",
     tone: "ink",
   },
+  {
+    slug: "posiciones",
+    title: "El Laberinto del Gnomo",
+    subtitle: "Say where the gnome is hiding",
+    blurb: "A gnome hides in garden rooms. Tell him where he is — detrás del matorral, al pie de la torre — in as many ways as you can.",
+    skills: ["location"],
+    level: "A2",
+    tone: "light",
+  },
 ];
 
 export function gameBySlug(slug: string): GameManifest | undefined {

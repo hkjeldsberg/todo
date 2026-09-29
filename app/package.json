@@ -23,7 +23,9 @@
     "was:seed": "node scripts/was-seed-sql.mjs",
     "was:sketches": "node scripts/was-sketches.mjs",
     "was:playtest": "node scripts/was-playtest.mjs",
-    "cuentos:playtest": "node scripts/cuentos-playtest.mjs"
+    "cuentos:playtest": "node scripts/cuentos-playtest.mjs",
+    "posiciones:seed": "node scripts/posiciones-seed-sql.mjs",
+    "posiciones:playtest": "node scripts/posiciones-playtest.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",
