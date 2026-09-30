@@ -1,10 +1,10 @@
 # IN PROGRESS (MANUAL - USER)
-- Supabase SQL editor: run `app/supabase/migrations/0007_posiciones.sql`, then `app/supabase/seed/posiciones.sql` (El Laberinto del Gnomo; the game uses its bundled copy until then)
-- Try El Laberinto del Gnomo on a real phone: the mic (Web Speech) and the on-screen keyboard couldn't be tested headless
+- Supabase SQL editor: run `app/supabase/migrations/0008_pasado.sql`, then `app/supabase/seed/verbs.sql` (adds dar + ver), then `app/supabase/seed/pasado.sql` (El Candado del Tiempo; drills fall back to the bundled copy, but Leitner progress is only saved once 0008 is in)
 
 # IN PROGRESS (CLAUDE)
 
 # DONE
+- El Candado del Tiempo (`/juegos/pasado`, PRD_PAST.md) (2026-09-30): Tense Lock cloze (lock pretérito/imperfecto, then type; accent keys), Syntax Scrambler word blocks from box 4, per-verb Leitner (5 boxes, 1/3/7/14/30 days, miss → box 1 + re-asked in session), Irregular Matrix drawer (bottom sheet / right slide-over, amber roots), 88 drills over 22 verbs, misses → Repaso. Reuses existing `todo.verbs` (PRD's uuid table would clash); new `todo.past_drills` + `todo.past_progress`. tsc/eslint clean, 1063 tests, build ok, playtest 390×844 + 1440×900.
 - El Laberinto del Gnomo updates (2026-09-30): suggestions always listed under the input (per dungeon, no toggle; typed 15 / from suggestion 5), LatAm voice default, rotation removed (one fixed view), map redrawn as original 16-bit top-down pixel art in the style of img/gnomo_style.png (2D canvas, pixel gnome with walk cycle and all hiding poses). 1038 tests, build ok, playtest all 4 dungeons at 390×844 + 1440×900.
 - El Laberinto del Gnomo (`/juegos/posiciones`, PRD_PLACEMENT.md) (2026-09-29): 4 top-down dungeons (Jardín A1, Mercado A2, Cementerio A2, Laberinto B1, 27 hiding spots), offline parser + grid relation engine (left/right/front/behind follow the camera), "Mostrar sugerencias" toggle (free, 5 vs 15 pts), hold-to-talk voice (es-ES / es-419), Claude Haiku fallback parser, 83-expression album (65 reachable in these rooms), missed/wrong positions → Repaso. Played all 4 dungeons at 390×844 + 1440×900; whole app: tsc/eslint clean, 1032 tests, build ok.
 - El Cómic Dinámico (`/juegos/was`, port of ../was, PRD in ../was/PRD.md) (2026-09-27): comic look kept, table `todo.was_panels`, wrong drops → Repaso fill-the-blank cards, progress saved, linked from Gramática. tsc/eslint clean, 309 tests, build ok, playtest ok at 390×844 + 1440×900.
@@ -27,3 +27,5 @@
   - [x] built as `/juegos/cuentos` (reader, Claude generation, tense toolbar, hover/tap cards, save to Repaso); tsc/eslint clean, 320 tests, build ok, reader playtest ok
   - [x] end-to-end check after 0006 is applied
 - Supabase SQL editor: run `app/supabase/migrations/0006_cuentos.sql` (stories, saved words, new Repaso card type). Tell Claude when done → it verifies generate → save → Repaso end to end
+- Supabase SQL editor: run `app/supabase/migrations/0007_posiciones.sql`, then `app/supabase/seed/posiciones.sql` (El Laberinto del Gnomo; the game uses its bundled copy until then)
+- Try El Laberinto del Gnomo on a real phone: the mic (Web Speech) and the on-screen keyboard couldn't be tested headless

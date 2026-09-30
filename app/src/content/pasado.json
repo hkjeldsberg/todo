@@ -1,0 +1,796 @@
+{
+  "drills": [
+    {
+      "id": "ser_1",
+      "infinitive": "ser",
+      "person": "él/ella",
+      "sentence_template": "Anoche la fiesta {verb} increíble.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night the party was incredible."
+    },
+    {
+      "id": "ser_2",
+      "infinitive": "ser",
+      "person": "yo",
+      "sentence_template": "De niño, yo {verb} muy tímido.",
+      "correct_tense": "imperfect",
+      "trigger_word": "De niño",
+      "english_translation": "As a child, I was very shy."
+    },
+    {
+      "id": "ser_3",
+      "infinitive": "ser",
+      "person": "él/ella",
+      "sentence_template": "La boda {verb} el sábado pasado.",
+      "correct_tense": "preterite",
+      "trigger_word": "el sábado pasado",
+      "english_translation": "The wedding was last Saturday."
+    },
+    {
+      "id": "ser_4",
+      "infinitive": "ser",
+      "person": "ellos",
+      "sentence_template": "Mis abuelos siempre {verb} muy amables con todos.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "My grandparents were always very kind to everyone."
+    },
+    {
+      "id": "ir_1",
+      "infinitive": "ir",
+      "person": "nosotros",
+      "sentence_template": "Ayer nosotros {verb} al cine.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday we went to the cinema."
+    },
+    {
+      "id": "ir_2",
+      "infinitive": "ir",
+      "person": "él/ella",
+      "sentence_template": "Todos los veranos, mi familia {verb} a la playa.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Todos los veranos",
+      "english_translation": "Every summer, my family used to go to the beach."
+    },
+    {
+      "id": "ir_3",
+      "infinitive": "ir",
+      "person": "tú",
+      "sentence_template": "El lunes pasado tú {verb} al médico.",
+      "correct_tense": "preterite",
+      "trigger_word": "El lunes pasado",
+      "english_translation": "Last Monday you went to the doctor."
+    },
+    {
+      "id": "ir_4",
+      "infinitive": "ir",
+      "person": "yo",
+      "sentence_template": "Cada mañana yo {verb} al colegio en bicicleta.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Cada mañana",
+      "english_translation": "Every morning I used to ride my bike to school."
+    },
+    {
+      "id": "dar_1",
+      "infinitive": "dar",
+      "person": "él/ella",
+      "sentence_template": "Anoche mi hermano me {verb} una sorpresa.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night my brother gave me a surprise."
+    },
+    {
+      "id": "dar_2",
+      "infinitive": "dar",
+      "person": "ellos",
+      "sentence_template": "Los domingos, mis padres nos {verb} dinero para dulces.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Los domingos",
+      "english_translation": "On Sundays, my parents used to give us money for sweets."
+    },
+    {
+      "id": "dar_3",
+      "infinitive": "dar",
+      "person": "yo",
+      "sentence_template": "El año pasado yo {verb} una charla en la universidad.",
+      "correct_tense": "preterite",
+      "trigger_word": "El año pasado",
+      "english_translation": "Last year I gave a talk at the university."
+    },
+    {
+      "id": "dar_4",
+      "infinitive": "dar",
+      "person": "nosotros",
+      "sentence_template": "De pequeños, nosotros siempre {verb} de comer a los patos.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "As kids, we always fed the ducks."
+    },
+    {
+      "id": "ver_1",
+      "infinitive": "ver",
+      "person": "yo",
+      "sentence_template": "Ayer yo {verb} a tu hermana en el mercado.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday I saw your sister at the market."
+    },
+    {
+      "id": "ver_2",
+      "infinitive": "ver",
+      "person": "yo",
+      "sentence_template": "De pequeño, yo {verb} dibujos animados cada tarde.",
+      "correct_tense": "imperfect",
+      "trigger_word": "cada tarde",
+      "english_translation": "As a kid, I watched cartoons every afternoon."
+    },
+    {
+      "id": "ver_3",
+      "infinitive": "ver",
+      "person": "ellos",
+      "sentence_template": "Anoche ellos {verb} una película de terror.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night they watched a horror film."
+    },
+    {
+      "id": "ver_4",
+      "infinitive": "ver",
+      "person": "él/ella",
+      "sentence_template": "Mi abuela {verb} las noticias todas las noches.",
+      "correct_tense": "imperfect",
+      "trigger_word": "todas las noches",
+      "english_translation": "My grandmother watched the news every night."
+    },
+    {
+      "id": "hacer_1",
+      "infinitive": "hacer",
+      "person": "nosotros",
+      "sentence_template": "El sábado pasado nosotros {verb} una paella enorme.",
+      "correct_tense": "preterite",
+      "trigger_word": "El sábado pasado",
+      "english_translation": "Last Saturday we made a huge paella."
+    },
+    {
+      "id": "hacer_2",
+      "infinitive": "hacer",
+      "person": "él/ella",
+      "sentence_template": "Mi padre siempre {verb} la cena los viernes.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "My father always made dinner on Fridays."
+    },
+    {
+      "id": "hacer_3",
+      "infinitive": "hacer",
+      "person": "tú",
+      "sentence_template": "¿Qué {verb} tú anoche?",
+      "correct_tense": "preterite",
+      "trigger_word": "anoche",
+      "english_translation": "What did you do last night?"
+    },
+    {
+      "id": "hacer_4",
+      "infinitive": "hacer",
+      "person": "nosotros",
+      "sentence_template": "De niños, mis primos y yo {verb} castillos de arena cada verano.",
+      "correct_tense": "imperfect",
+      "trigger_word": "cada verano",
+      "english_translation": "As kids, my cousins and I built sandcastles every summer."
+    },
+    {
+      "id": "tener_1",
+      "infinitive": "tener",
+      "person": "yo",
+      "sentence_template": "Ayer yo {verb} un examen muy difícil.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday I had a very hard exam."
+    },
+    {
+      "id": "tener_2",
+      "infinitive": "tener",
+      "person": "él/ella",
+      "sentence_template": "De joven, mi abuelo {verb} un perro enorme.",
+      "correct_tense": "imperfect",
+      "trigger_word": "De joven",
+      "english_translation": "When he was young, my grandfather had a huge dog."
+    },
+    {
+      "id": "tener_3",
+      "infinitive": "tener",
+      "person": "ellos",
+      "sentence_template": "La semana pasada ellos {verb} un accidente de coche.",
+      "correct_tense": "preterite",
+      "trigger_word": "La semana pasada",
+      "english_translation": "Last week they had a car accident."
+    },
+    {
+      "id": "tener_4",
+      "infinitive": "tener",
+      "person": "tú",
+      "sentence_template": "De pequeña, tú {verb} miedo a la oscuridad.",
+      "correct_tense": "imperfect",
+      "trigger_word": "De pequeña",
+      "english_translation": "As a little girl, you were afraid of the dark."
+    },
+    {
+      "id": "estar_1",
+      "infinitive": "estar",
+      "person": "nosotros",
+      "sentence_template": "El verano pasado nosotros {verb} dos semanas en México.",
+      "correct_tense": "preterite",
+      "trigger_word": "El verano pasado",
+      "english_translation": "Last summer we spent two weeks in Mexico."
+    },
+    {
+      "id": "estar_2",
+      "infinitive": "estar",
+      "person": "ellos",
+      "sentence_template": "Mientras ella cocinaba, los niños {verb} en el jardín.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Mientras",
+      "english_translation": "While she was cooking, the children were in the garden."
+    },
+    {
+      "id": "estar_3",
+      "infinitive": "estar",
+      "person": "tú",
+      "sentence_template": "Ayer tú {verb} enfermo todo el día.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday you were sick all day."
+    },
+    {
+      "id": "estar_4",
+      "infinitive": "estar",
+      "person": "él/ella",
+      "sentence_template": "Normalmente, la tienda {verb} cerrada los lunes.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Normalmente",
+      "english_translation": "The shop was usually closed on Mondays."
+    },
+    {
+      "id": "poder_1",
+      "infinitive": "poder",
+      "person": "yo",
+      "sentence_template": "Anoche por fin yo {verb} dormir ocho horas.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night I finally managed to sleep eight hours."
+    },
+    {
+      "id": "poder_2",
+      "infinitive": "poder",
+      "person": "él/ella",
+      "sentence_template": "De joven, mi abuela {verb} correr diez kilómetros.",
+      "correct_tense": "imperfect",
+      "trigger_word": "De joven",
+      "english_translation": "When she was young, my grandmother could run ten kilometres."
+    },
+    {
+      "id": "poder_3",
+      "infinitive": "poder",
+      "person": "ellos",
+      "sentence_template": "Ayer ellos no {verb} abrir la puerta.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday they couldn't get the door open."
+    },
+    {
+      "id": "poder_4",
+      "infinitive": "poder",
+      "person": "nosotros",
+      "sentence_template": "Antes nosotros {verb} aparcar en el centro sin problemas.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Antes",
+      "english_translation": "We used to be able to park downtown without any trouble."
+    },
+    {
+      "id": "poner_1",
+      "infinitive": "poner",
+      "person": "yo",
+      "sentence_template": "Esta mañana yo {verb} las llaves en la mesa.",
+      "correct_tense": "preterite",
+      "trigger_word": "Esta mañana",
+      "english_translation": "This morning I put the keys on the table."
+    },
+    {
+      "id": "poner_2",
+      "infinitive": "poner",
+      "person": "él/ella",
+      "sentence_template": "Mi madre siempre {verb} flores en la ventana.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "My mother always put flowers in the window."
+    },
+    {
+      "id": "poner_3",
+      "infinitive": "poner",
+      "person": "tú",
+      "sentence_template": "El domingo pasado tú {verb} demasiada sal en la sopa.",
+      "correct_tense": "preterite",
+      "trigger_word": "El domingo pasado",
+      "english_translation": "Last Sunday you put too much salt in the soup."
+    },
+    {
+      "id": "poner_4",
+      "infinitive": "poner",
+      "person": "nosotros",
+      "sentence_template": "Cada Navidad, nosotros {verb} el árbol en el salón.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Cada Navidad",
+      "english_translation": "Every Christmas, we put the tree up in the living room."
+    },
+    {
+      "id": "saber_1",
+      "infinitive": "saber",
+      "person": "nosotros",
+      "sentence_template": "Ayer nosotros {verb} la verdad.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday we found out the truth."
+    },
+    {
+      "id": "saber_2",
+      "infinitive": "saber",
+      "person": "él/ella",
+      "sentence_template": "De joven, mi abuelo {verb} tocar la guitarra.",
+      "correct_tense": "imperfect",
+      "trigger_word": "De joven",
+      "english_translation": "When he was young, my grandfather knew how to play the guitar."
+    },
+    {
+      "id": "saber_3",
+      "infinitive": "saber",
+      "person": "ellos",
+      "sentence_template": "Anoche ellos {verb} que habían ganado el premio.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night they found out they had won the prize."
+    },
+    {
+      "id": "saber_4",
+      "infinitive": "saber",
+      "person": "yo",
+      "sentence_template": "Antes yo no {verb} nadar.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Antes",
+      "english_translation": "I didn't use to know how to swim."
+    },
+    {
+      "id": "querer_1",
+      "infinitive": "querer",
+      "person": "él/ella",
+      "sentence_template": "Ayer ella no {verb} venir a la fiesta.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday she refused to come to the party."
+    },
+    {
+      "id": "querer_2",
+      "infinitive": "querer",
+      "person": "yo",
+      "sentence_template": "De niño, yo {verb} ser astronauta.",
+      "correct_tense": "imperfect",
+      "trigger_word": "De niño",
+      "english_translation": "As a child, I wanted to be an astronaut."
+    },
+    {
+      "id": "querer_3",
+      "infinitive": "querer",
+      "person": "nosotros",
+      "sentence_template": "Anoche nosotros {verb} llamarte, pero no contestaste.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night we tried to call you, but you didn't answer."
+    },
+    {
+      "id": "querer_4",
+      "infinitive": "querer",
+      "person": "ellos",
+      "sentence_template": "Mis hermanos siempre {verb} jugar al fútbol después de clase.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "My brothers always wanted to play football after school."
+    },
+    {
+      "id": "venir_1",
+      "infinitive": "venir",
+      "person": "ellos",
+      "sentence_template": "El jueves pasado mis tíos {verb} a cenar.",
+      "correct_tense": "preterite",
+      "trigger_word": "El jueves pasado",
+      "english_translation": "Last Thursday my aunt and uncle came for dinner."
+    },
+    {
+      "id": "venir_2",
+      "infinitive": "venir",
+      "person": "tú",
+      "sentence_template": "Todos los domingos, tú {verb} a comer con nosotros.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Todos los domingos",
+      "english_translation": "Every Sunday, you used to come and eat with us."
+    },
+    {
+      "id": "venir_3",
+      "infinitive": "venir",
+      "person": "yo",
+      "sentence_template": "Ayer yo {verb} a la oficina en metro.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday I came to the office by metro."
+    },
+    {
+      "id": "venir_4",
+      "infinitive": "venir",
+      "person": "él/ella",
+      "sentence_template": "Cada verano, mi prima {verb} a visitarnos.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Cada verano",
+      "english_translation": "Every summer, my cousin used to come and visit us."
+    },
+    {
+      "id": "decir_1",
+      "infinitive": "decir",
+      "person": "tú",
+      "sentence_template": "Anoche tú me {verb} un secreto.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night you told me a secret."
+    },
+    {
+      "id": "decir_2",
+      "infinitive": "decir",
+      "person": "él/ella",
+      "sentence_template": "Mi abuela siempre {verb} que el tiempo es oro.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "My grandmother always said that time is money."
+    },
+    {
+      "id": "decir_3",
+      "infinitive": "decir",
+      "person": "él/ella",
+      "sentence_template": "Ayer el profesor nos {verb} la nota del examen.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday the teacher told us our exam grade."
+    },
+    {
+      "id": "decir_4",
+      "infinitive": "decir",
+      "person": "nosotros",
+      "sentence_template": "De pequeños, nosotros siempre {verb} la verdad.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "As kids, we always told the truth."
+    },
+    {
+      "id": "hablar_1",
+      "infinitive": "hablar",
+      "person": "yo",
+      "sentence_template": "Ayer yo {verb} con mi jefe durante una hora.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday I talked with my boss for an hour."
+    },
+    {
+      "id": "hablar_2",
+      "infinitive": "hablar",
+      "person": "nosotros",
+      "sentence_template": "Antes, nosotros {verb} por teléfono todos los días.",
+      "correct_tense": "imperfect",
+      "trigger_word": "todos los días",
+      "english_translation": "We used to talk on the phone every day."
+    },
+    {
+      "id": "hablar_3",
+      "infinitive": "hablar",
+      "person": "ellos",
+      "sentence_template": "Anoche ellos {verb} de política hasta las dos.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night they talked about politics until two."
+    },
+    {
+      "id": "hablar_4",
+      "infinitive": "hablar",
+      "person": "él/ella",
+      "sentence_template": "Mi abuela siempre {verb} con los vecinos en la plaza.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "My grandmother always chatted with the neighbours in the square."
+    },
+    {
+      "id": "comer_1",
+      "infinitive": "comer",
+      "person": "nosotros",
+      "sentence_template": "Ayer nosotros {verb} paella en la playa.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday we ate paella on the beach."
+    },
+    {
+      "id": "comer_2",
+      "infinitive": "comer",
+      "person": "yo",
+      "sentence_template": "De niño, yo {verb} muchos dulces.",
+      "correct_tense": "imperfect",
+      "trigger_word": "De niño",
+      "english_translation": "As a child, I ate lots of sweets."
+    },
+    {
+      "id": "comer_3",
+      "infinitive": "comer",
+      "person": "tú",
+      "sentence_template": "Anoche tú {verb} demasiado.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night you ate too much."
+    },
+    {
+      "id": "comer_4",
+      "infinitive": "comer",
+      "person": "ellos",
+      "sentence_template": "Los domingos, mis abuelos {verb} en un restaurante del puerto.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Los domingos",
+      "english_translation": "On Sundays, my grandparents used to eat at a restaurant by the harbour."
+    },
+    {
+      "id": "vivir_1",
+      "infinitive": "vivir",
+      "person": "yo",
+      "sentence_template": "En 2015 yo {verb} un año en Madrid.",
+      "correct_tense": "preterite",
+      "trigger_word": "En 2015",
+      "english_translation": "In 2015 I lived in Madrid for a year."
+    },
+    {
+      "id": "vivir_2",
+      "infinitive": "vivir",
+      "person": "él/ella",
+      "sentence_template": "De pequeña, mi familia {verb} en un pueblo.",
+      "correct_tense": "imperfect",
+      "trigger_word": "De pequeña",
+      "english_translation": "When I was little, my family lived in a village."
+    },
+    {
+      "id": "vivir_3",
+      "infinitive": "vivir",
+      "person": "ellos",
+      "sentence_template": "Mis padres {verb} diez años en Chile y luego volvieron.",
+      "correct_tense": "preterite",
+      "trigger_word": "diez años",
+      "english_translation": "My parents lived in Chile for ten years and then came back."
+    },
+    {
+      "id": "vivir_4",
+      "infinitive": "vivir",
+      "person": "nosotros",
+      "sentence_template": "Antes, nosotros {verb} cerca del mar.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Antes",
+      "english_translation": "We used to live near the sea."
+    },
+    {
+      "id": "trabajar_1",
+      "infinitive": "trabajar",
+      "person": "tú",
+      "sentence_template": "La semana pasada tú {verb} el sábado.",
+      "correct_tense": "preterite",
+      "trigger_word": "La semana pasada",
+      "english_translation": "Last week you worked on Saturday."
+    },
+    {
+      "id": "trabajar_2",
+      "infinitive": "trabajar",
+      "person": "él/ella",
+      "sentence_template": "Cuando yo era niño, mi madre {verb} en un hospital.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Cuando yo era niño",
+      "english_translation": "When I was a child, my mother worked in a hospital."
+    },
+    {
+      "id": "trabajar_3",
+      "infinitive": "trabajar",
+      "person": "yo",
+      "sentence_template": "Ayer yo {verb} hasta las diez de la noche.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday I worked until ten at night."
+    },
+    {
+      "id": "trabajar_4",
+      "infinitive": "trabajar",
+      "person": "ellos",
+      "sentence_template": "Por aquel entonces, ellos {verb} en una fábrica.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Por aquel entonces",
+      "english_translation": "Back then, they worked in a factory."
+    },
+    {
+      "id": "beber_1",
+      "infinitive": "beber",
+      "person": "nosotros",
+      "sentence_template": "Anoche nosotros {verb} demasiado vino.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night we drank too much wine."
+    },
+    {
+      "id": "beber_2",
+      "infinitive": "beber",
+      "person": "yo",
+      "sentence_template": "De niña, yo {verb} un vaso de leche cada noche.",
+      "correct_tense": "imperfect",
+      "trigger_word": "cada noche",
+      "english_translation": "As a girl, I drank a glass of milk every night."
+    },
+    {
+      "id": "beber_3",
+      "infinitive": "beber",
+      "person": "él/ella",
+      "sentence_template": "De repente, el perro {verb} toda el agua del cubo.",
+      "correct_tense": "preterite",
+      "trigger_word": "De repente",
+      "english_translation": "Suddenly, the dog drank all the water in the bucket."
+    },
+    {
+      "id": "beber_4",
+      "infinitive": "beber",
+      "person": "él/ella",
+      "sentence_template": "Mi abuelo siempre {verb} café sin azúcar.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "My grandfather always drank his coffee without sugar."
+    },
+    {
+      "id": "escribir_1",
+      "infinitive": "escribir",
+      "person": "yo",
+      "sentence_template": "Ayer yo te {verb} un correo largo.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday I wrote you a long email."
+    },
+    {
+      "id": "escribir_2",
+      "infinitive": "escribir",
+      "person": "tú",
+      "sentence_template": "De adolescente, tú {verb} poemas en tu diario.",
+      "correct_tense": "imperfect",
+      "trigger_word": "De adolescente",
+      "english_translation": "As a teenager, you used to write poems in your diary."
+    },
+    {
+      "id": "escribir_3",
+      "infinitive": "escribir",
+      "person": "él/ella",
+      "sentence_template": "El año pasado mi hermana {verb} su primera novela.",
+      "correct_tense": "preterite",
+      "trigger_word": "El año pasado",
+      "english_translation": "Last year my sister wrote her first novel."
+    },
+    {
+      "id": "escribir_4",
+      "infinitive": "escribir",
+      "person": "él/ella",
+      "sentence_template": "Antes, la gente {verb} cartas a mano.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Antes",
+      "english_translation": "People used to write letters by hand."
+    },
+    {
+      "id": "traer_1",
+      "infinitive": "traer",
+      "person": "ellos",
+      "sentence_template": "Anoche tus amigos {verb} una tarta de chocolate.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night your friends brought a chocolate cake."
+    },
+    {
+      "id": "traer_2",
+      "infinitive": "traer",
+      "person": "él/ella",
+      "sentence_template": "Cada lunes, el cartero nos {verb} el periódico.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Cada lunes",
+      "english_translation": "Every Monday, the postman used to bring us the newspaper."
+    },
+    {
+      "id": "traer_3",
+      "infinitive": "traer",
+      "person": "yo",
+      "sentence_template": "Ayer yo {verb} el pan.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday I brought the bread."
+    },
+    {
+      "id": "traer_4",
+      "infinitive": "traer",
+      "person": "él/ella",
+      "sentence_template": "Siempre que venía, mi tía {verb} regalos.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Siempre que",
+      "english_translation": "Whenever she came, my aunt brought presents."
+    },
+    {
+      "id": "salir_1",
+      "infinitive": "salir",
+      "person": "nosotros",
+      "sentence_template": "Anoche nosotros {verb} a bailar.",
+      "correct_tense": "preterite",
+      "trigger_word": "Anoche",
+      "english_translation": "Last night we went out dancing."
+    },
+    {
+      "id": "salir_2",
+      "infinitive": "salir",
+      "person": "yo",
+      "sentence_template": "Los viernes, yo {verb} con mis amigos.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Los viernes",
+      "english_translation": "On Fridays, I used to go out with my friends."
+    },
+    {
+      "id": "salir_3",
+      "infinitive": "salir",
+      "person": "él/ella",
+      "sentence_template": "De repente, un gato {verb} de debajo de la mesa.",
+      "correct_tense": "preterite",
+      "trigger_word": "De repente",
+      "english_translation": "Suddenly, a cat came out from under the table."
+    },
+    {
+      "id": "salir_4",
+      "infinitive": "salir",
+      "person": "tú",
+      "sentence_template": "Antes, tú {verb} a correr cada mañana.",
+      "correct_tense": "imperfect",
+      "trigger_word": "cada mañana",
+      "english_translation": "You used to go running every morning."
+    },
+    {
+      "id": "conducir_1",
+      "infinitive": "conducir",
+      "person": "yo",
+      "sentence_template": "El verano pasado yo {verb} de Madrid a Lisboa.",
+      "correct_tense": "preterite",
+      "trigger_word": "El verano pasado",
+      "english_translation": "Last summer I drove from Madrid to Lisbon."
+    },
+    {
+      "id": "conducir_2",
+      "infinitive": "conducir",
+      "person": "él/ella",
+      "sentence_template": "Mi padre siempre {verb} muy despacio.",
+      "correct_tense": "imperfect",
+      "trigger_word": "siempre",
+      "english_translation": "My father always drove very slowly."
+    },
+    {
+      "id": "conducir_3",
+      "infinitive": "conducir",
+      "person": "ellos",
+      "sentence_template": "Ayer ellos {verb} toda la noche.",
+      "correct_tense": "preterite",
+      "trigger_word": "Ayer",
+      "english_translation": "Yesterday they drove all night."
+    },
+    {
+      "id": "conducir_4",
+      "infinitive": "conducir",
+      "person": "nosotros",
+      "sentence_template": "Antes nosotros {verb} un coche viejo.",
+      "correct_tense": "imperfect",
+      "trigger_word": "Antes",
+      "english_translation": "We used to drive an old car."
+    }
+  ]
+}

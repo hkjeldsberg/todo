@@ -49,5 +49,7 @@ export type GameProps<Content = unknown, Progress = unknown> = {
  */
 export type GameServerModule<Content = unknown> = {
   loadContent(): Promise<{ content: Content; source: "supabase" | "bundled" }>;
+  /** Games that keep progress in their own table load it here instead of todo.game_progress. */
+  loadProgress?(): Promise<unknown | null>;
   toReviewCard(itemRef: string, content: Content): ChoiceCard | null;
 };

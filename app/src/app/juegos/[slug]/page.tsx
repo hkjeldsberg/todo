@@ -18,7 +18,7 @@ export default async function GamePage({ params }: { params: Promise<{ slug: str
   await connection();
   const [{ content, source }, initialProgress] = await Promise.all([
     server.loadContent(),
-    loadGameProgress(slug),
+    server.loadProgress ? server.loadProgress() : loadGameProgress(slug),
   ]);
 
   return (

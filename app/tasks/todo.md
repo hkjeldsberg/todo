@@ -48,6 +48,24 @@ Decisions (user, 2026-09-27): table in schema `todo` (not `was`), comic style th
 - [x] verify: typecheck, lint, vitest, build, playtest; clean playtest rows if DB is written
 - [ ] USER: run `supabase/migrations/0005_was.sql`, then `supabase/seed/was.sql` (bundled copy is used until then)
 
+## P11 El Candado del Tiempo (`/juegos/pasado`, ../PRD_PAST.md)
+Decisions (Claude, 2026-09-30 — PRD schema mapped onto the existing app):
+- reuse existing `todo.verbs` (infinitive PK, `forms` JSON already has Pretérito + Imperfecto); add missing dar, ver.
+  The PRD's uuid `todo.verbs` would clash with the live table.
+- `todo.past_drills` (slug ids so Repaso refs survive re-seeds), `todo.past_progress` per-verb Leitner
+  (user → `todo.users`, the app is single-user; no `auth.users`).
+- box 1–3 → Tense Lock cloze, box 4–5 → Syntax Scrambler. Wrong → box 1 + re-asked once in the session; wrong drills also → Repaso.
+- Drawer = in-game top-nav button, bottom sheet on phones / right slide-over on desktop.
+- [x] content: dar + ver in verbs.json (+ verbs.sql), `src/content/pasado.json` (22 verbs × 4 drills)
+- [x] migration `0008_pasado.sql` + `scripts/pasado-seed-sql.mjs` → `supabase/seed/pasado.sql`
+- [x] lib: content (zod), forms (check, irregular root split), leitner queue, scramble, matrix, review card
+- [x] server.ts (drills: DB → bundled), optional `loadProgress` hook in the framework, actions.ts (upsert Leitner row)
+- [x] UI: Home (Leitner shelf), TenseLock, Scrambler, Drawer, Summary; tense colour coding + amber irregular roots
+- [x] register: registry, GameHost, server-registry, package.json scripts
+- [x] tests + `pasado:playtest` (390×844 + 1440×900)
+- [x] verify: typecheck, lint, vitest, build, playtest
+- [ ] USER: run `0008_pasado.sql`, then `seed/verbs.sql` + `seed/pasado.sql`
+
 ## Review
 - Whole project: tsc clean, eslint clean, vitest 151/151, `next build` ok.
 - Prod build: every route redirects to /login without a session, even with AUTH_DISABLED=1.
@@ -70,3 +88,8 @@ Decisions (user, 2026-09-27): table in schema `todo` (not `was`), comic style th
 - [x] Repaso: 'story' kind in sessions, stats, filter chip
 - [x] bundled sample story, 11 tests, 2 real generations (131 s / 113 s), reader playtest 16/16 at 390×844 + 1440×900
 - [ ] USER: run 0006_cuentos.sql → then end-to-end: generate in the app, save a word, review it in Repaso
+- P11 El Candado del Tiempo (2026-09-30): tsc/eslint clean, vitest 1063/1063 (29 new), `next build` ok.
+  `pasado:playtest` 390×844 (tap) + 1440×900 (mouse + drag reorder): drawer from nav + "Table" (highlights the verb,
+  drill state kept), wrong tense → box 1 + re-asked later with another sentence, missing accent → wrong with note,
+  browser clock moved 4/8/15 days → verbs climb to box 4 → word blocks. DB writes blocked; tables not in the DB yet,
+  so drills came from the bundled JSON. 0008 not run against a local Postgres.

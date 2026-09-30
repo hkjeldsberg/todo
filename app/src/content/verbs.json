@@ -798,6 +798,90 @@
     }
   },
   {
+    "infinitive": "dar",
+    "english": "to give",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "doy",
+        "tú": "das",
+        "él/ella": "da",
+        "nosotros": "damos",
+        "ellos": "dan"
+      },
+      "Pretérito": {
+        "yo": "di",
+        "tú": "diste",
+        "él/ella": "dio",
+        "nosotros": "dimos",
+        "ellos": "dieron"
+      },
+      "Imperfecto": {
+        "yo": "daba",
+        "tú": "dabas",
+        "él/ella": "daba",
+        "nosotros": "dábamos",
+        "ellos": "daban"
+      },
+      "Perfecto": {
+        "yo": "he dado",
+        "tú": "has dado",
+        "él/ella": "ha dado",
+        "nosotros": "hemos dado",
+        "ellos": "han dado"
+      },
+      "Futuro": {
+        "yo": "daré",
+        "tú": "darás",
+        "él/ella": "dará",
+        "nosotros": "daremos",
+        "ellos": "darán"
+      }
+    }
+  },
+  {
+    "infinitive": "ver",
+    "english": "to see",
+    "isIrregular": true,
+    "forms": {
+      "Presente": {
+        "yo": "veo",
+        "tú": "ves",
+        "él/ella": "ve",
+        "nosotros": "vemos",
+        "ellos": "ven"
+      },
+      "Pretérito": {
+        "yo": "vi",
+        "tú": "viste",
+        "él/ella": "vio",
+        "nosotros": "vimos",
+        "ellos": "vieron"
+      },
+      "Imperfecto": {
+        "yo": "veía",
+        "tú": "veías",
+        "él/ella": "veía",
+        "nosotros": "veíamos",
+        "ellos": "veían"
+      },
+      "Perfecto": {
+        "yo": "he visto",
+        "tú": "has visto",
+        "él/ella": "ha visto",
+        "nosotros": "hemos visto",
+        "ellos": "han visto"
+      },
+      "Futuro": {
+        "yo": "veré",
+        "tú": "verás",
+        "él/ella": "verá",
+        "nosotros": "veremos",
+        "ellos": "verán"
+      }
+    }
+  },
+  {
     "infinitive": "hablar",
     "english": "to speak",
     "isIrregular": false,

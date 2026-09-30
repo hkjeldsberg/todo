@@ -69,6 +69,15 @@ export const GAMES: GameManifest[] = [
     level: "A2",
     tone: "light",
   },
+  {
+    slug: "pasado",
+    title: "El Candado del Tiempo",
+    subtitle: "Pretérito vs imperfecto · daily drills",
+    blurb: "Lock in the right past tense, then conjugate. Spaced repetition keeps the tricky irregulars coming back.",
+    skills: ["past-tenses", "irregulars"],
+    level: "A2",
+    tone: "ink",
+  },
 ];
 
 export function gameBySlug(slug: string): GameManifest | undefined {

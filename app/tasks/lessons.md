@@ -25,3 +25,12 @@
   Action throws. That's expected, but the Next dev overlay it opens intercepts pointer events, so taps time out.
 - Rule: in no-DB playtests, hide `nextjs-portal` via an init script. Keep collecting `pageerror` / console
   errors so real failures still fail the run (see scripts/was-playtest.mjs).
+
+## Playwright clock: setSystemTime, not fastForward, with framer-motion
+- 2026-09-30: `page.clock.fastForward(days)` also jumps rAF/performance time; AnimatePresence finished the
+  drawer's exit animation but never unmounted it, so its invisible backdrop ate every tap.
+- Rule: to make SRS items due in a playtest, move `Date` only with `page.clock.setSystemTime`.
+
+## No git commands in this repo
+- 2026-09-30: ran `git diff --stat` to check a generated file, against ../CLAUDE.md ("Do not use any GIT commands").
+- Rule: inspect files directly (cat/grep/diff against a scratch copy), never git.

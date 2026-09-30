@@ -24,6 +24,7 @@ const GAMES: Record<string, ComponentType<GameProps>> = {
   was: dynamic(() => import("./was/Game"), { ssr: false, loading: Loading }),
   cuentos: dynamic(() => import("./cuentos/Game"), { ssr: false, loading: Loading }),
   posiciones: dynamic(() => import("./posiciones/Game"), { ssr: false, loading: Loading }),
+  pasado: dynamic(() => import("./pasado/Game"), { ssr: false, loading: Loading }),
 };
 
 export default function GameHost({

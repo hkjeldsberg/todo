@@ -7,6 +7,7 @@ import tense from "./tense/server";
 import was from "./was/server";
 import cuentos from "./cuentos/server";
 import posiciones from "./posiciones/server";
+import pasado from "./pasado/server";
 
 /** slug → server module (content loader + review-card builder). */
 export const GAME_SERVERS: Record<string, GameServerModule<unknown>> = {
@@ -17,4 +18,5 @@ export const GAME_SERVERS: Record<string, GameServerModule<unknown>> = {
   was: was as GameServerModule<unknown>,
   cuentos: cuentos as GameServerModule<unknown>,
   posiciones: posiciones as GameServerModule<unknown>,
+  pasado: pasado as GameServerModule<unknown>,
 };
