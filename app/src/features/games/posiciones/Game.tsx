@@ -8,16 +8,15 @@ import type { Progress } from "./model/progress";
 import { sentence } from "./model/phrase";
 import { spotOf, trueFacts } from "./model/relations";
 import type { Content } from "./model/types";
-import type { GnomeTarget } from "./scene/Gnome";
+import type { GnomeTarget } from "./scene/gnome";
 import { GardenMap } from "./scene/Map";
 import { Album } from "./ui/Album";
 import { PrimaryButton } from "./ui/bits";
 import { CommandBar } from "./ui/CommandBar";
 import { DialogBox, type DialogTone } from "./ui/DialogBox";
-import { InputToggle } from "./ui/InputToggle";
 import { Menu } from "./ui/Menu";
 import { Summary } from "./ui/Summary";
-import { Tray } from "./ui/Tray";
+import { Suggestions } from "./ui/Suggestions";
 import { usePosiciones, type PosicionesState, type Shown } from "./usePosiciones";
 
 function parseContent(raw: unknown): Content {
@@ -47,24 +46,20 @@ export default function Game({ content, source, initialProgress, saveProgress, r
   const reducedMotion = useSyncExternalStore(subscribeMotion, () => window.matchMedia("(prefers-reduced-motion: reduce)").matches, () => false);
   const height = useSyncExternalStore(subscribeViewport, () => Math.round(window.visualViewport?.height ?? window.innerHeight), () => 0);
 
-  // Keyboard: Q/E or [ ] turn the map, 1–4 pick a suggestion chip, Escape drops it, N = next room.
-  const { rotate, pickChip, next, tray, run } = s;
+  // Keyboard: N = next room.
+  const { next, run } = s;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.target instanceof HTMLElement && e.target.closest("input, textarea, select")) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       const k = e.key.toLowerCase();
-      if (k === "q" || k === "[") rotate(-1);
-      else if (k === "e" || k === "]") rotate(1);
-      else if (/^[1-4]$/.test(k) && tray?.chips[Number(k) - 1]) pickChip(tray.chips[Number(k) - 1]);
-      else if (k === "escape") pickChip(null);
-      else if (k === "n" && run?.cleared) next();
+      if (k === "n" && run?.cleared) next();
       else return;
       e.preventDefault();
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [rotate, pickChip, next, tray, run]);
+  }, [next, run]);
 
   useDevHook(s);
 
@@ -75,6 +70,7 @@ export default function Game({ content, source, initialProgress, saveProgress, r
     y: spotGeo.y,
     pose: spotGeo.pose,
     face: spotGeo.face,
+    host: spotGeo.host,
     orbit: spotGeo.pose === "circle" && spotGeo.host ? s.world.bodies.get(spotGeo.host)?.at : undefined,
     leanTo: spotGeo.lean ? s.world.bodies.get(spotGeo.lean)?.at : undefined,
   };
@@ -88,7 +84,8 @@ export default function Game({ content, source, initialProgress, saveProgress, r
     .map((o) => o.id);
 
   const playing = s.screen === "play" && !!s.run;
-  const pickable = playing && !s.run!.cleared && s.suggestions && !!s.chip;
+  // Things are tappable (their name goes into the answer) while a room is open.
+  const pickable = playing && !s.run!.cleared && s.ready;
 
   return (
     <main
@@ -98,10 +95,9 @@ export default function Game({ content, source, initialProgress, saveProgress, r
       <section className="relative min-h-[36%] flex-[3] lg:min-h-0 lg:flex-1">
         <GardenMap
           world={s.world}
-          rot={s.rot}
           gnome={gnome}
           pickable={pickable}
-          selected={s.refs}
+          selected={[]}
           labels={s.progress.prefs.labels}
           ghosts={ghosts}
           onPick={s.pickObject}
@@ -110,14 +106,6 @@ export default function Game({ content, source, initialProgress, saveProgress, r
           label={`${s.world.scene.title_es}: mapa del jardín visto desde arriba`}
         />
         <TopBar s={s} exit={exit} source={source} />
-        <div className="absolute right-3 bottom-3 z-20 flex gap-2">
-          <MapButton label="Girar a la izquierda" onClick={() => s.rotate(-1)}>
-            ⟲
-          </MapButton>
-          <MapButton label="Girar a la derecha" onClick={() => s.rotate(1)}>
-            ⟳
-          </MapButton>
-        </div>
         <button
           type="button"
           onClick={() => s.setLabels(!s.progress.prefs.labels)}
@@ -169,20 +157,6 @@ export default function Game({ content, source, initialProgress, saveProgress, r
   );
 }
 
-function MapButton({ label, onClick, children }: { label: string; onClick: () => void; children: React.ReactNode }) {
-  return (
-    <button
-      type="button"
-      aria-label={label}
-      title={label}
-      onClick={onClick}
-      className="glyph press flex h-12 w-12 items-center justify-center rounded-full bg-card text-[22px] font-bold text-ink shadow-[0_4px_0_var(--card-shadow)] [--press:4px]"
-    >
-      {children}
-    </button>
-  );
-}
-
 function TopBar({ s, exit, source }: { s: PosicionesState; exit: () => void; source: string }) {
   const run = s.run;
   return (
@@ -220,19 +194,19 @@ function PlayPanel({ s }: { s: PosicionesState }) {
     <div className="flex min-h-0 flex-1 flex-col gap-2 overflow-y-auto px-4 pt-3 pb-3">
       <div className="flex items-center justify-between gap-2">
         <p className="text-[16px] font-bold text-ink">{run.cleared ? "¡Encontrado!" : s.ready ? "¿Dónde está el gnomo?" : "El gnomo se esconde…"}</p>
-        <InputToggle on={s.suggestions} onChange={s.setSuggestions} />
       </div>
       {run.cleared ? (
         <div className="flex flex-1 flex-col items-center justify-center gap-2">
           <PrimaryButton onClick={s.next}>{run.index + 1 < run.order.length ? "Siguiente sala" : "Ver resumen"}</PrimaryButton>
           <p className="text-[12px] text-faint">Tecla N</p>
         </div>
-      ) : s.suggestions && s.tray ? (
-        <Tray inv={s.inv} chips={s.tray.chips} chip={s.chip} refs={s.refs} objects={s.world.objects.filter((o) => o.id !== s.world.room && !s.world.bodies.get(o.id)!.members)} onChip={s.pickChip} onObject={s.pickObject} disabled={!s.ready} />
       ) : (
-        <CommandBar text={s.text} onText={s.setText} onSubmit={s.submitText} disabled={!s.ready || busy} voiceLang={s.progress.prefs.voiceLang} onVoiceLang={s.setVoiceLang} />
+        <>
+          <CommandBar text={s.text} onText={s.setText} onSubmit={s.submitText} disabled={!s.ready || busy} voiceLang={s.progress.prefs.voiceLang} onVoiceLang={s.setVoiceLang} />
+          <Suggestions inv={s.inv} ids={s.suggestionsForLevel} album={s.progress.album} disabled={!s.ready || busy} onPick={s.applySuggestion} />
+          <p className="text-[12px] text-faint">Typed or spoken from memory: 15 points · started from a suggestion: 5.</p>
+        </>
       )}
-      {!run.cleared && !s.suggestions && <p className="text-[12px] text-faint">Tip: tap a thing on the map to add its name. Q / E turn the map.</p>}
     </div>
   );
 }
@@ -309,8 +283,7 @@ function useDevHook(s: PosicionesState) {
           verdict: c.shown?.verdict.kind ?? null,
           message: c.shown && "message" in c.shown.verdict ? c.shown.verdict.message : c.shown && "note" in c.shown.verdict ? c.shown.verdict.note : null,
           score: c.run?.score ?? 0,
-          suggestions: c.suggestions,
-          tray: c.tray,
+          suggestions: c.suggestionsForLevel,
           album: Object.keys(c.progress.album).length,
           stars: c.progress.stars,
           done: c.run?.done ?? null,

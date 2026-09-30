@@ -1,6 +1,6 @@
 // Headless play-through of /juegos/posiciones (El Laberinto del Gnomo) at phone and
-// desktop sizes: all four dungeons with typed answers (suggestions off), chip + tap on
-// the map (suggestions on), a false answer, a grammar block, a camera turn that changes
+// desktop sizes: all four dungeons with typed answers, suggestion-list + tap on
+// the map, a false answer, a grammar block, a left/right answer in the fixed view,
 // left/right, the summary and the album. Never calls Claude. Screenshots go to
 // .playtest/posiciones/. Server-action writes (progress, attempts) are blocked unless
 // ALLOW_WRITES=1, so playtests never touch the review queue.
@@ -106,37 +106,31 @@ async function run(name) {
     await tap(btn);
   }
 
-  async function setSuggestions(on) {
+  /**
+   * Suggestions list: tap a true position under the input, tap its thing on the
+   * map (name goes into the box, contracted), then Decir.
+   */
+  async function suggestAndTap(tag, used) {
     const s = await state();
-    if (s.suggestions !== on) await tap(page.getByRole("switch", { name: /Mostrar sugerencias/ }));
-    await until((v) => window.__posiciones.state().suggestions === v, on);
-  }
-
-  /** Suggestions on: pick the tray's true chip, then tap its reference on the map (pill list if the tap misses). */
-  async function chipAndTap(tag) {
-    const tray = (await state()).tray;
-    const chips = page.getByRole("group", { name: "Posiciones" }).getByRole("button");
-    const count = await chips.count();
-    check(count >= 3 && count <= 4, `${tag}: ${count} suggestion chips`);
-    await tap(chips.nth(tray.chips.indexOf(tray.target.expression)));
+    const list = page.getByRole("region", { name: "Sugerencias" }).getByRole("button");
+    const count = await list.count();
+    check(count === s.suggestions.length && count >= 8, `${tag}: suggestions listed under the input (${count})`);
+    // Only things drawn on the map can be tapped (not the room itself or a plural group).
+    const tappable = new Set(await hook(() => Object.keys(window.__posiciones.names()).filter((id) => window.__posicionesScene.object(id))));
+    const ts = (await truths()).filter((t) => t.refs.length === 1 && tappable.has(t.refs[0]) && s.suggestions.includes(t.expression));
+    const t = ts.find((x) => !used.has(x.expression)) ?? ts[0];
+    const idx = s.suggestions.indexOf(t.expression);
+    await tap(list.nth(idx));
+    const pt = await hook((id) => window.__posicionesScene.object(id), t.refs[0]);
+    if (touch) await page.touchscreen.tap(pt[0], pt[1]);
+    else await page.mouse.click(pt[0], pt[1]);
     await page.waitForTimeout(300);
-    for (const ref of tray.target.refs) {
-      const pt = await hook((id) => window.__posicionesScene.object(id), ref);
-      if (touch) await page.touchscreen.tap(pt[0], pt[1]);
-      else await page.mouse.click(pt[0], pt[1]);
-      await page.waitForTimeout(300);
-    }
-    let v = await state();
-    if (!v.cleared) {
-      console.log(`    (map tap missed: ${v.verdict ?? "no verdict"}; using the object pills)`);
-      const t2 = (await state()).tray;
-      await tap(page.getByRole("group", { name: "Posiciones" }).getByRole("button").nth(t2.chips.indexOf(t2.target.expression)));
-      const names = await hook(() => window.__posiciones.names());
-      for (const ref of t2.target.refs) await tap(page.getByRole("button", { name: names[ref], exact: true }));
-      await page.waitForTimeout(300);
-      v = await state();
-    }
-    return v;
+    const typed = await page.getByRole("textbox").first().inputValue();
+    await tap(page.getByRole("button", { name: /^Decir$/ }));
+    await until(() => window.__posiciones.state().verdict !== null && window.__posiciones.state().verdict !== "pending");
+    const v = await state();
+    used.add(t.expression);
+    return { ...v, typed };
   }
 
   const used = new Set();
@@ -149,15 +143,14 @@ async function run(name) {
     for (let i = 0; i < rooms; i++) {
       await waitReady();
       const tag = `${d + 1}${title.split(" ")[1].toLowerCase()}-${i + 1}`;
-      // Mercado: suggestions on for the first three rooms (chip + tap).
+      // Mercado: the first three rooms answered from the suggestions list + a map tap.
       const chipMode = d === 1 && i < 3;
-      await setSuggestions(chipMode);
       if (i === 0) await shot(`${tag}-room`);
 
       if (chipMode) {
-        const v = await chipAndTap(tag);
-        if (i === 0) await shot(`${tag}-chip`);
-        check(v.cleared, `${tag}: chip + tap clears the room (${v.verdict}${v.message ? `: ${v.message}` : ""})`);
+        const v = await suggestAndTap(tag, used);
+        if (i === 0) await shot(`${tag}-suggestion`);
+        check(v.cleared, `${tag}: suggestion + tap clears the room ("${v.typed}" → ${v.verdict}${v.message ? `: ${v.message}` : ""})`);
       } else {
         if (d === 0 && i === 0) {
           // A false answer: something true at another spot but not here.
@@ -176,26 +169,13 @@ async function run(name) {
           await shot(`${tag}-grammar`);
         }
         if (d === 0 && i === 2) {
-          // A turn that changes left/right: find a spot/rotation pair with a derecha/izquierda truth.
-          const before = await truths();
-          const lr0 = before.find((t) => /^a_la_(derecha|izquierda)_de$/.test(t.expression));
-          await tap(page.getByRole("button", { name: "Girar a la derecha" }));
-          await tap(page.getByRole("button", { name: "Girar a la derecha" }));
-          await page.waitForTimeout(900);
-          const s = await state();
-          check(s.rot === 2, `${tag}: camera turned 180° (rot ${s.rot})`);
-          const after = await truths();
-          if (lr0) {
-            const flipped = lr0.expression.includes("derecha") ? "a_la_izquierda_de" : "a_la_derecha_de";
-            check(after.some((t) => t.expression === flipped && t.refs.join() === lr0.refs.join()), `${tag}: ${lr0.sentence} became ${flipped} after the turn`);
-            const v = await typeAnswer(lr0.sentence);
-            check(v.verdict === "false", `${tag}: the old left/right answer is false after turning (${v.message})`);
-          }
-          await shot(`${tag}-rotated`);
-          const lr = after.find((t) => /^a_la_(derecha|izquierda)_de$/.test(t.expression));
-          const t = lr ?? pick(after, used);
+          // Left/right in the fixed view (no rotation): the map can't be turned any more.
+          check((await page.getByRole("button", { name: /Girar/ }).count()) === 0, `${tag}: no rotate buttons`);
+          const ts = await truths();
+          const lr = ts.find((t) => /^a_la_(derecha|izquierda)_de$/.test(t.expression));
+          const t = lr ?? pick(ts, used);
           const v = await typeAnswer(fold(t.sentence));
-          check(v.cleared, `${tag}: typed after the turn, voice-style "${fold(t.sentence)}" → ${v.verdict}`);
+          check(v.cleared, `${tag}: voice-style "${fold(t.sentence)}" → ${v.verdict}`);
           used.add(t.expression);
           await shot(`${tag}-true`);
           await nextRoom();

@@ -4,12 +4,12 @@ import { useMemo, useState } from "react";
 import type { Attempt } from "@/features/games/types";
 import { parseWithClaude } from "./actions";
 import { inventoryOf } from "./model/inventory";
-import { judgeChoice, judgeParsedIds, judgeText, type Verdict } from "./model/judge";
-import { joinRef } from "./model/phrase";
+import { judgeParsedIds, judgeText, type Verdict } from "./model/judge";
+import { appendRef, suggestionText } from "./model/phrase";
 import { parseProgress, type Progress } from "./model/progress";
-import { buildWorld, ROTATIONS, trueFacts, type Rotation, type World } from "./model/relations";
+import { buildWorld, trueFacts, VIEW, type World } from "./model/relations";
 import { scoreAnswer, starsFor, type InputMode, type Score } from "./model/score";
-import { trayFor, type Tray } from "./model/suggest";
+import { suggestionsFor } from "./model/suggest";
 import { missesFor, summarize, type Miss, type PlayedRoom } from "./model/summary";
 import type { Content } from "./model/types";
 
@@ -53,16 +53,6 @@ function shuffle<T>(xs: T[]): T[] {
   return a;
 }
 
-/** Tapping a thing while typing adds its name, contracted: "detrás de" + el seto → "detrás del seto". */
-export function appendRef(text: string, name: string): string {
-  const t = text.trimEnd();
-  if (!t) return name;
-  const words = t.split(/\s+/);
-  const last = words[words.length - 1].toLocaleLowerCase("es");
-  if (last === "de" || last === "a") return joinRef(t, name);
-  return `${t} ${name}`;
-}
-
 export function usePosiciones({
   content,
   initialProgress,
@@ -81,23 +71,28 @@ export function usePosiciones({
     const out = new Set<string>();
     for (const w of worlds.values())
       for (const t of w.scene.targets)
-        for (const r of ROTATIONS)
-          for (const f of trueFacts(w, t, r, { regional: true })) out.add(f.expression);
+        for (const f of trueFacts(w, t, VIEW, { regional: true })) out.add(f.expression);
     for (const id of ["aqui", "ahi", "alli", "aca", "alla"]) out.add(id);
     return out;
   }, [worlds]);
+
+  /** Per dungeon: every expression some hiding spot makes true, from any side — the "Sugerencias" list. */
+  const levelSuggestions = useMemo(
+    () => new Map([...worlds].map(([id, w]) => [id, suggestionsFor(w, inv)])),
+    [worlds, inv],
+  );
 
   const [progress, setProgress] = useState<Progress>(() => parseProgress(initialProgress));
   const [screen, setScreen] = useState<Screen>("menu");
   const [preview, setPreview] = useState(content.scenes[0].id);
   const [run, setRun] = useState<Run | null>(null);
-  const [rot, setRot] = useState<Rotation>(0);
+  /** One fixed view of the map: no rotation. */
+  const rot = VIEW;
   const [arrived, setArrived] = useState<string | null>(null);
   const [shown, setShown] = useState<Shown | null>(null);
   const [text, setText] = useState("");
-  const [tray, setTray] = useState<Tray | null>(null);
-  const [chip, setChip] = useState<string | null>(null);
-  const [refs, setRefs] = useState<string[]>([]);
+  /** The answer in the box started from a tapped suggestion (scores as "with suggestions"). */
+  const [fromSuggestion, setFromSuggestion] = useState(false);
   const [summarySel, setSummarySel] = useState(0);
   const [albumOpen, setAlbumOpen] = useState(false);
   const [claudeOff, setClaudeOff] = useState(false);
@@ -107,7 +102,6 @@ export function usePosiciones({
   const spot = run ? (screen === "summary" ? (run.rooms[summarySel]?.spot ?? run.order[0]) : run.order[run.index]) : null;
   const gnomeKey = run && spot ? `${run.id}:${spot}` : null;
   const ready = !!gnomeKey && arrived === gnomeKey;
-  const suggestions = progress.prefs.suggestions;
   const albumSet = new Set(Object.keys(progress.album));
 
   const commit = (next: Progress) => {
@@ -117,12 +111,20 @@ export function usePosiciones({
 
   const resetInput = () => {
     setText("");
-    setChip(null);
-    setRefs([]);
+    setFromSuggestion(false);
   };
 
-  function refreshTray(w: World, spotId: string, r: Rotation, on = suggestions) {
-    setTray(on ? trayFor(w, spotId, r, albumSet) : null);
+  /** Typing into the box; clearing it forgets that it came from a suggestion. */
+  function editText(value: string) {
+    setText(value);
+    if (!value.trim()) setFromSuggestion(false);
+  }
+
+  function applySuggestion(id: string) {
+    if (!run || run.cleared) return;
+    setText(suggestionText(inv.get(id).es, inv.get(id).ref_count));
+    setFromSuggestion(true);
+    setShown((s) => (s?.verdict.kind === "true" ? s : null));
   }
 
   function start(id: string) {
@@ -131,10 +133,8 @@ export function usePosiciones({
     const order = shuffle(scene.targets);
     setRun({ id: Date.now(), scene: id, order, index: 0, cleared: false, rooms: [], score: 0, done: null });
     setPreview(id);
-    setRot(0);
     setShown(null);
     resetInput();
-    refreshTray(worlds.get(id)!, order[0], 0);
     setScreen("play");
   }
 
@@ -143,7 +143,6 @@ export function usePosiciones({
     setRun(null);
     setShown(null);
     resetInput();
-    setRot(0);
   }
 
   function record(v: Verdict, answer: string) {
@@ -181,17 +180,16 @@ export function usePosiciones({
       }
     }
     setShown({ verdict: v });
-    setChip(null);
-    setRefs([]);
   }
 
   async function submitText(raw: string) {
     const answer = raw.trim();
     if (!run || !spot || run.cleared || !ready || !answer || shown?.verdict.kind === "pending") return;
     const r = rot;
+    const mode: InputMode = fromSuggestion ? "chip" : "typed";
     const v = judgeText(world, spot, r, answer);
     if (v.kind !== "unparsed" || claudeOff) {
-      apply(v, "typed", answer);
+      apply(v, mode, answer);
       return;
     }
     // The deterministic parser gave up: Claude maps the words to ids, geometry decides.
@@ -203,53 +201,13 @@ export function usePosiciones({
     } catch {
       fallback = { kind: "unparsed", message: "No te entendí — try again" };
     }
-    apply(fallback, "typed", answer);
-  }
-
-  function pickChip(id: string | null) {
-    if (!run || run.cleared) return;
-    setChip(id);
-    setRefs([]);
-    setShown((s) => (s?.verdict.kind === "true" ? s : null));
+    apply(fallback, mode, answer);
   }
 
   function pickObject(id: string) {
     if (screen !== "play" || !run || !spot || run.cleared) return;
     const obj = world.objects.find((o) => o.id === id);
-    if (!obj) return;
-    if (!suggestions) {
-      setText((t) => appendRef(t, obj.es));
-      return;
-    }
-    if (!chip || !ready) return;
-    const need = inv.get(chip).ref_count;
-    const next = refs.includes(id) ? refs : [...refs, id];
-    if (next.length < need) {
-      setRefs(next);
-      return;
-    }
-    const v = judgeChoice(world, spot, rot, chip, next);
-    const said = v.kind === "true" ? v.sentence : `El gnomo está ${world.inv.get(chip).es} ${next.map((r) => world.objects.find((o) => o.id === r)?.es).join(" y ")}.`;
-    apply(v, "chip", said);
-  }
-
-  function rotate(delta: 1 | -1) {
-    const next = (((rot + delta) % 4) + 4) % 4 as Rotation;
-    setRot(next);
-    // Left/right/front/behind just changed meaning: drop an open ✗ or hint.
-    setShown((s) => (s?.verdict.kind === "true" ? s : null));
-    if (screen === "play" && run && spot && !run.cleared) {
-      refreshTray(world, spot, next);
-      setChip(null);
-      setRefs([]);
-    }
-  }
-
-  function setSuggestions(on: boolean) {
-    commit({ ...progress, prefs: { ...progress.prefs, suggestions: on } });
-    setChip(null);
-    setRefs([]);
-    if (run && spot && !run.cleared) refreshTray(world, spot, rot, on);
+    if (obj) setText((t) => appendRef(t, obj.es));
   }
 
   function setVoiceLang(l: "es-ES" | "es-419") {
@@ -267,7 +225,6 @@ export function usePosiciones({
       setRun({ ...run, index, cleared: false });
       setShown(null);
       resetInput();
-      refreshTray(world, run.order[index], rot);
       return;
     }
     finish();
@@ -288,7 +245,6 @@ export function usePosiciones({
     });
     setRun({ ...run, done: { stars, best, misses } });
     setSummarySel(0);
-    setRot(run.rooms[0]?.rotation ?? 0);
     setShown(null);
     resetInput();
     setScreen("summary");
@@ -297,7 +253,6 @@ export function usePosiciones({
   function selectSummary(i: number) {
     if (!run) return;
     setSummarySel(i);
-    setRot(run.rooms[i]?.rotation ?? 0);
   }
 
   const summary = run && screen === "summary" ? summarize(world, run.rooms) : [];
@@ -317,15 +272,13 @@ export function usePosiciones({
     ready,
     shown,
     text,
-    tray,
-    chip,
-    refs,
-    suggestions,
+    suggestionsForLevel: levelSuggestions.get(sceneId) ?? [],
     summary,
     summarySel,
     albumOpen,
     claudeOff,
-    setText,
+    setText: editText,
+    applySuggestion,
     setPreview,
     setArrived,
     setShown,
@@ -334,10 +287,7 @@ export function usePosiciones({
     start,
     toMenu,
     submitText,
-    pickChip,
     pickObject,
-    rotate,
-    setSuggestions,
     setVoiceLang,
     setLabels,
     next,

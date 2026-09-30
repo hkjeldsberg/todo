@@ -11,6 +11,12 @@ import type { Content, Fact, Scene, SceneObject, Subject } from "./types";
 
 export type Rotation = 0 | 1 | 2 | 3;
 export const ROTATIONS: Rotation[] = [0, 1, 2, 3];
+/**
+ * The map is seen from one fixed side (no rotation in the game): the top of the
+ * screen is the back (detrás, al fondo), the bottom the front, left is left.
+ * The engine still supports all four rotations; the game only uses this one.
+ */
+export const VIEW: Rotation = 0;
 
 export interface World {
   scene: Scene;

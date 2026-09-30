@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { bundledContent } from "@/features/games/posiciones/model/content";
 import { judgeChoice, judgeParsedIds, judgeText } from "@/features/games/posiciones/model/judge";
-import { joinRef, phraseText, sentence } from "@/features/games/posiciones/model/phrase";
-import { buildWorld, ROTATIONS, trueFacts } from "@/features/games/posiciones/model/relations";
+import { appendRef, joinRef, phraseText, sentence, suggestionLabel, suggestionText } from "@/features/games/posiciones/model/phrase";
+import { buildWorld, ROTATIONS, trueFacts, VIEW } from "@/features/games/posiciones/model/relations";
 import { POINTS, scoreAnswer, starsFor } from "@/features/games/posiciones/model/score";
-import { trayFor } from "@/features/games/posiciones/model/suggest";
+import { suggestionsFor } from "@/features/games/posiciones/model/suggest";
 import { missesFor, summarize } from "@/features/games/posiciones/model/summary";
 
 const content = bundledContent();
@@ -146,25 +146,58 @@ describe("score (PRD §3.1)", () => {
   });
 });
 
-describe("suggestion tray", () => {
-  it("3–4 chips: one true, the rest false for every reference", () => {
+describe("suggestions list", () => {
+  const rank = { A1: 0, A2: 1, B1: 2 } as const;
+
+  it("lists, per dungeon, every expression that is true for some spot in the fixed view", () => {
     for (const s of content.scenes) {
       const w = buildWorld(content, s.id);
-      for (const spot of s.targets)
-        for (const rot of ROTATIONS) {
-          let seed = 7;
-          const rng = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
-          const tray = trayFor(w, spot, rot, new Set(), rng);
-          expect(tray, `${spot} r${rot}`).not.toBeNull();
-          expect(tray!.chips.length).toBeGreaterThanOrEqual(3);
-          expect(tray!.chips.length).toBeLessThanOrEqual(4);
-          expect(tray!.chips).toContain(tray!.target.expression);
-          expect(judgeChoice(w, spot, rot, tray!.target.expression, tray!.target.refs).kind).toBe("true");
-          for (const c of tray!.chips.filter((c) => c !== tray!.target.expression)) {
-            for (const o of w.objects) expect(judgeChoice(w, spot, rot, c, [o.id]).kind, `${spot} r${rot} ${c} ${o.id}`).not.toBe("true");
-          }
-        }
+      const list = suggestionsFor(w, w.inv);
+      expect(new Set(list).size).toBe(list.length);
+      const truths = new Set(s.targets.flatMap((spot) => trueFacts(w, spot, VIEW).map((f) => f.expression)));
+      for (const id of truths) if (!w.inv.get(id).standard) expect(list, `${s.id} ${id}`).toContain(id);
+      for (const id of list) expect(truths.has(id), `${s.id} lists ${id}, never true in this view`).toBe(true);
     }
+  });
+
+  it("every hiding spot has at least 5 true positions in the fixed view", () => {
+    for (const s of content.scenes) {
+      const w = buildWorld(content, s.id);
+      for (const spot of s.targets) expect(trueFacts(w, spot, VIEW).length, `${s.id} ${spot}`).toBeGreaterThanOrEqual(5);
+    }
+  });
+
+  it("orders A1 → B1 and leaves regional variants out", () => {
+    for (const s of content.scenes) {
+      const w = buildWorld(content, s.id);
+      const levels = suggestionsFor(w, w.inv).map((id) => rank[w.inv.get(id).level]);
+      expect(levels).toEqual([...levels].sort((a, b) => a - b));
+      for (const id of suggestionsFor(w, w.inv)) expect(w.inv.get(id).standard).toBeFalsy();
+    }
+  });
+
+  it("a tapped suggestion plus tapped things builds a sentence the judge accepts", () => {
+    const w = buildWorld(content, "jardin");
+    const fact = trueFacts(w, "j_seto", 0).find((f) => f.expression === "detras_de")!;
+    const name = w.objects.find((o) => o.id === fact.refs[0])!.es;
+    const said = appendRef(suggestionText(w.inv.get("detras_de").es, 1), name);
+    expect(said).toBe("El gnomo está detrás del seto");
+    expect(judgeText(w, "j_seto", 0, said).kind).toBe("true");
+  });
+
+  it("joins the second thing after entre with y", () => {
+    expect(appendRef("El gnomo está entre el seto", "el jarrón")).toBe("El gnomo está entre el seto y el jarrón");
+    expect(appendRef("El gnomo está entre el seto y el jarrón", "el banco")).toBe("El gnomo está entre el seto y el jarrón el banco");
+  });
+
+  it("joins the second street after en la esquina de with con, and labels both frames", () => {
+    expect(appendRef("El gnomo está en la esquina de", "la calle Mayor")).toBe("El gnomo está en la esquina de la calle Mayor");
+    expect(appendRef("El gnomo está en la esquina de la calle Mayor", "la calle del Pozo")).toBe(
+      "El gnomo está en la esquina de la calle Mayor con la calle del Pozo",
+    );
+    expect(suggestionLabel("en la esquina de", "en_la_esquina_con", 2)).toBe("en la esquina de … con …");
+    expect(suggestionLabel("entre", "entre", 2)).toBe("entre … y …");
+    expect(suggestionLabel("detrás de", "detras_de", 1)).toBe("detrás de");
   });
 });
 

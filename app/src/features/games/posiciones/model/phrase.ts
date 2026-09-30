@@ -83,3 +83,33 @@ export function gapOption(inv: Inventory, scene: Scene, spec: PhraseSpec): strin
   const noun = ref.split(" ").slice(1).join(" ");
   return full.endsWith(` ${noun}`) ? full.slice(0, -noun.length - 1) : full;
 }
+
+/**
+ * Tapping a thing while typing adds its name, contracted: "detrás de" + el seto →
+ * "detrás del seto". The second thing joins with "y" after "entre el seto" and
+ * with "con" after "en la esquina de la calle Mayor".
+ */
+export function appendRef(text: string, name: string): string {
+  const t = text.trimEnd();
+  if (!t) return name;
+  const words = t.split(/\s+/);
+  const last = words[words.length - 1].toLocaleLowerCase("es");
+  if (last === "de" || last === "a") return joinRef(t, name);
+  const lower = t.toLocaleLowerCase("es");
+  const afterEntre = lower.split(/\bentre\b/)[1];
+  if (afterEntre !== undefined && afterEntre.trim() && !/\b(y|e)\b/.test(afterEntre)) return `${t} y ${name}`;
+  const afterEsquina = lower.split(/\ben la esquina de\b/)[1];
+  if (afterEsquina !== undefined && afterEsquina.trim() && !/\bcon\b/.test(afterEsquina)) return `${t} con ${name}`;
+  return `${t} ${name}`;
+}
+
+/** What a tapped suggestion puts in the text box, ready for a tapped reference. */
+export function suggestionText(es: string, refCount: number): string {
+  return refCount === 0 ? `El gnomo está ${es}.` : `El gnomo está ${es} `;
+}
+
+/** How a suggestion reads in the list: two-reference ones show their frame. */
+export function suggestionLabel(es: string, id: string, refCount: number): string {
+  if (id === "en_la_esquina_con") return `${es} … con …`;
+  return refCount === 2 ? `${es} … y …` : es;
+}

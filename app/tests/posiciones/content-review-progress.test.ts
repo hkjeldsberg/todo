@@ -158,13 +158,19 @@ describe("progress", () => {
       stars: { jardin: 2, mercado: 9 },
       best: "nope",
       plays: 3,
-      prefs: { suggestions: true, voiceLang: "es-419", labels: false },
+      prefs: { suggestions: true, voiceLang: "es-ES", labels: false },
     });
     expect(p.album.detras_de.sentence).toBe("El gnomo está detrás del seto.");
     expect(p.stars).toEqual({});
     expect(p.best).toEqual({});
     expect(p.plays).toBe(3);
-    expect(p.prefs).toEqual({ suggestions: true, voiceLang: "es-419", labels: false });
+    // A v1 save is moved to the new LatAm default; the old toggle pref is dropped.
+    expect(p.prefs).toEqual({ voiceLang: "es-419", labels: false });
+  });
+
+  it("keeps an explicit voice choice in v2 saves and defaults new players to LatAm", () => {
+    expect(parseProgress({ v: 2, prefs: { voiceLang: "es-ES", labels: true } }).prefs.voiceLang).toBe("es-ES");
+    expect(emptyProgress().prefs.voiceLang).toBe("es-419");
   });
 
   it("round-trips", () => {
