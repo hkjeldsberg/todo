@@ -34,3 +34,16 @@
 ## No git commands in this repo
 - 2026-09-30: ran `git diff --stat` to check a generated file, against ../CLAUDE.md ("Do not use any GIT commands").
 - Rule: inspect files directly (cat/grep/diff against a scratch copy), never git.
+
+## Back up tsconfig.json *before* starting a side-by-side dev server
+- 2026-10-05: the pasado session copied tsconfig after `next dev` had already appended `.playtest/next-pasado/**`,
+  so the "unchanged" diff passed and the lines stayed in until the next game's playtest.
+- Rule: snapshot tsconfig in the same command, before launching `next dev`; afterwards drop every `.playtest/` and
+  `.next-*` include that isn't `.next/`.
+
+## Animations must not make tap targets unstable
+- 2026-10-05: a scale pulse on the hint chip made Playwright wait forever ("element is not stable"), and a
+  moving target is worse for thumbs too. AnimatePresence mode="wait" also got stuck after its block unmounted
+  and remounted (options froze on the old step).
+- Rule: pulse with rings/glow, not size. For step-by-step option rows, key a plain slide-in by step; skip exit
+  animations unless they're needed. Keyframe arrays need a tween, not a spring.

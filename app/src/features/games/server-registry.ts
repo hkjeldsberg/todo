@@ -8,6 +8,7 @@ import was from "./was/server";
 import cuentos from "./cuentos/server";
 import posiciones from "./posiciones/server";
 import pasado from "./pasado/server";
+import probador from "./probador/server";
 
 /** slug → server module (content loader + review-card builder). */
 export const GAME_SERVERS: Record<string, GameServerModule<unknown>> = {
@@ -19,4 +20,5 @@ export const GAME_SERVERS: Record<string, GameServerModule<unknown>> = {
   cuentos: cuentos as GameServerModule<unknown>,
   posiciones: posiciones as GameServerModule<unknown>,
   pasado: pasado as GameServerModule<unknown>,
+  probador: probador as GameServerModule<unknown>,
 };

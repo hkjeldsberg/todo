@@ -66,6 +66,24 @@ Decisions (Claude, 2026-09-30 — PRD schema mapped onto the existing app):
 - [x] verify: typecheck, lint, vitest, build, playtest
 - [ ] USER: run `0008_pasado.sql`, then `seed/verbs.sql` + `seed/pasado.sql`
 
+## P12 El Probador (`/juegos/probador`, ../PRD_CLOTHES.md)
+Decisions (Claude, 2026-10-05):
+- tables prefixed like the other games (`todo.probador_outfits/_prompts/_stats`): the PRD's `todo.prompts` /
+  `todo.player_stats` are too generic for a shared schema. Slug ids, user → `todo.users`.
+- answer = 3 taps: pronoun → verb (slides in) → complement; prompts store `answer_parts` + per-slot `distractor_options`
+  (the PRD's flat distractor strings can't drive a slot builder). `correct_answer_syntax` kept as the full sentence.
+- "capped at 30": a sprint is at most 30 prompts (due first, then new); nothing due → practice. Misses come back 8 cards
+  later (~2–3 min at sprint pace). First-try right → tomorrow; 3 daily rights in a row → weekly. Misses → Repaso too.
+- avatar: layered inline SVG, 30 items (10 tops, 10 bottoms, 5 accessories, 5 full-body) with fit transforms (big/small/long/short).
+- [x] content: `src/content/probador.json` (30 outfits, 30 prompts: 10 quedar / 10 parecer / 10 parecerse a)
+- [x] migration `0009_probador.sql` + `scripts/probador-seed-sql.mjs`
+- [x] lib: content (zod), judge (per-slot mismatch notes), srs (queue, micro-interval, schedule), review card
+- [x] avatar SVG library + stage
+- [x] UI: Home, Play (60/40 stage/interaction, 5 s hesitation pulse, freeze on miss), Summary
+- [x] server.ts + actions.ts, register, scripts, tests, `probador:playtest`
+- [x] verify: typecheck, lint, vitest, build, playtest 390×844 + 1440×900
+- [ ] USER: run `0009_probador.sql`, then `seed/probador.sql`
+
 ## Review
 - Whole project: tsc clean, eslint clean, vitest 151/151, `next build` ok.
 - Prod build: every route redirects to /login without a session, even with AUTH_DISABLED=1.
@@ -93,3 +111,9 @@ Decisions (Claude, 2026-09-30 — PRD schema mapped onto the existing app):
   drill state kept), wrong tense → box 1 + re-asked later with another sentence, missing accent → wrong with note,
   browser clock moved 4/8/15 days → verbs climb to box 4 → word blocks. DB writes blocked; tables not in the DB yet,
   so drills came from the bundled JSON. 0008 not run against a local Postgres.
+- P12 El Probador (2026-10-05): tsc/eslint clean, vitest 1082/1082 (19 new), `next build` ok.
+  `probador:playtest` 390×844 (tap) + 1440×900 (click): full 30-prompt sprint — a miss (freeze, only the wrong slot
+  marked, re-asked 9 outfits later), the 5 s hesitation pulse on the right pronoun, undo by tapping a filled slot,
+  auto-advance on right answers, 29/30 summary, "All caught up" after. Stage = 56% of the height. Found + fixed two
+  real bugs on the way (options stuck after a miss: AnimatePresence "wait"; shake keyframes with a spring threw).
+  DB writes blocked; tables not in the DB yet, so content came from the bundled JSON. 0009 not run on a local Postgres.

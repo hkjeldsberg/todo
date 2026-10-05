@@ -1,0 +1,1472 @@
+{
+  "outfits": [
+    {
+      "id": "o_q_01",
+      "avatar": {
+        "skin": "#f2c9a0",
+        "hair": "short",
+        "hairColor": "#3b2a20"
+      },
+      "layers": [
+        {
+          "item": "vaqueros",
+          "color": "#3b5b9a"
+        },
+        {
+          "item": "chaqueta",
+          "color": "#d9a531",
+          "fit": "big"
+        }
+      ],
+      "description": "Mustard blazer three sizes too big",
+      "intended_flaw": "too_big"
+    },
+    {
+      "id": "o_q_02",
+      "avatar": {
+        "skin": "#a86f45",
+        "hair": "short",
+        "hairColor": "#2a1a10"
+      },
+      "layers": [
+        {
+          "item": "pantalon_traje",
+          "color": "#2f3446",
+          "fit": "short"
+        },
+        {
+          "item": "camisa",
+          "color": "#f4f4f4"
+        }
+      ],
+      "description": "Suit trousers far too short",
+      "intended_flaw": "too_short"
+    },
+    {
+      "id": "o_q_03",
+      "avatar": {
+        "skin": "#c68a5b",
+        "hair": "long",
+        "hairColor": "#1f1712"
+      },
+      "layers": [
+        {
+          "item": "falda",
+          "color": "#2e6f5e"
+        },
+        {
+          "item": "jersey",
+          "color": "#d6453d",
+          "fit": "small"
+        }
+      ],
+      "description": "Red jumper that has shrunk",
+      "intended_flaw": "too_small"
+    },
+    {
+      "id": "o_q_04",
+      "avatar": {
+        "skin": "#e0ac7e",
+        "hair": "long",
+        "hairColor": "#6b3b1f"
+      },
+      "layers": [
+        {
+          "item": "vestido",
+          "color": "#3f8f5a",
+          "fit": "long"
+        }
+      ],
+      "description": "Green dress dragging on the floor",
+      "intended_flaw": "too_long"
+    },
+    {
+      "id": "o_q_05",
+      "avatar": {
+        "skin": "#8d5a3b",
+        "hair": "curly",
+        "hairColor": "#120c08"
+      },
+      "layers": [
+        {
+          "item": "mallas",
+          "color": "#2b2b33"
+        },
+        {
+          "item": "camiseta",
+          "color": "#8a5bd6",
+          "fit": "big"
+        }
+      ],
+      "description": "Huge purple T-shirt",
+      "intended_flaw": "too_big"
+    },
+    {
+      "id": "o_q_06",
+      "avatar": {
+        "skin": "#f7d7b5",
+        "hair": "bun",
+        "hairColor": "#c9772f"
+      },
+      "layers": [
+        {
+          "item": "vaqueros",
+          "color": "#41629e",
+          "fit": "long"
+        },
+        {
+          "item": "camiseta",
+          "color": "#f0c34a"
+        }
+      ],
+      "description": "Jeans pooling over the shoes",
+      "intended_flaw": "too_long"
+    },
+    {
+      "id": "o_q_07",
+      "avatar": {
+        "skin": "#a86f45",
+        "hair": "short",
+        "hairColor": "#2a1a10"
+      },
+      "layers": [
+        {
+          "item": "vaqueros",
+          "color": "#3b5b9a"
+        },
+        {
+          "item": "camisa",
+          "color": "#c94f3d"
+        },
+        {
+          "item": "sombrero",
+          "color": "#8a5a2b",
+          "fit": "big"
+        }
+      ],
+      "description": "Hat falling over the eyes",
+      "intended_flaw": "too_big"
+    },
+    {
+      "id": "o_q_08",
+      "avatar": {
+        "skin": "#f2c9a0",
+        "hair": "short",
+        "hairColor": "#3b2a20"
+      },
+      "layers": [
+        {
+          "item": "pantalon_traje",
+          "color": "#3a3f55"
+        },
+        {
+          "item": "camisa",
+          "color": "#7fb2e5"
+        }
+      ],
+      "description": "Shirt that fits perfectly",
+      "intended_flaw": "perfect_fit"
+    },
+    {
+      "id": "o_q_09",
+      "avatar": {
+        "skin": "#c68a5b",
+        "hair": "long",
+        "hairColor": "#1f1712"
+      },
+      "layers": [
+        {
+          "item": "falda",
+          "color": "#e07a9b",
+          "fit": "short"
+        },
+        {
+          "item": "camiseta",
+          "color": "#ffffff"
+        }
+      ],
+      "description": "Skirt that is far too short",
+      "intended_flaw": "too_short"
+    },
+    {
+      "id": "o_q_10",
+      "avatar": {
+        "skin": "#8d5a3b",
+        "hair": "curly",
+        "hairColor": "#120c08"
+      },
+      "layers": [
+        {
+          "item": "chandal",
+          "color": "#3a4a8a"
+        },
+        {
+          "item": "sudadera",
+          "color": "#e8833a",
+          "fit": "big"
+        }
+      ],
+      "description": "Enormous orange hoodie",
+      "intended_flaw": "too_big"
+    },
+    {
+      "id": "o_p_01",
+      "avatar": {
+        "skin": "#a86f45",
+        "hair": "short",
+        "hairColor": "#2a1a10"
+      },
+      "layers": [
+        {
+          "item": "pantalon_traje",
+          "color": "#1c1c24"
+        },
+        {
+          "item": "esmoquin",
+          "color": "#1c1c24"
+        }
+      ],
+      "description": "Sharp black tuxedo",
+      "intended_flaw": "stylish"
+    },
+    {
+      "id": "o_p_02",
+      "avatar": {
+        "skin": "#f2c9a0",
+        "hair": "short",
+        "hairColor": "#3b2a20"
+      },
+      "layers": [
+        {
+          "item": "pantalon_corto",
+          "color": "#d9c79a"
+        },
+        {
+          "item": "hawaiana",
+          "color": "#ff6f91"
+        },
+        {
+          "item": "gafas",
+          "color": "#1d1d1d"
+        }
+      ],
+      "description": "Loud flowered shirt",
+      "intended_flaw": "loud"
+    },
+    {
+      "id": "o_p_03",
+      "avatar": {
+        "skin": "#f7d7b5",
+        "hair": "bun",
+        "hairColor": "#c9772f"
+      },
+      "layers": [
+        {
+          "item": "escocesa",
+          "color": "#7b3fa0"
+        },
+        {
+          "item": "hawaiana",
+          "color": "#a6e22e"
+        },
+        {
+          "item": "bufanda",
+          "color": "#ff8a00"
+        }
+      ],
+      "description": "Clashing tartan, flowers and neon",
+      "intended_flaw": "clash"
+    },
+    {
+      "id": "o_p_04",
+      "avatar": {
+        "skin": "#8d5a3b",
+        "hair": "curly",
+        "hairColor": "#120c08"
+      },
+      "layers": [
+        {
+          "item": "chandal",
+          "color": "#2d6a4f"
+        },
+        {
+          "item": "sudadera",
+          "color": "#2d6a4f"
+        }
+      ],
+      "description": "Tracksuit",
+      "intended_flaw": "casual"
+    },
+    {
+      "id": "o_p_05",
+      "avatar": {
+        "skin": "#e0ac7e",
+        "hair": "long",
+        "hairColor": "#6b3b1f"
+      },
+      "layers": [
+        {
+          "item": "vestido",
+          "color": "#c8263f"
+        }
+      ],
+      "description": "Elegant red dress",
+      "intended_flaw": "stylish"
+    },
+    {
+      "id": "o_p_06",
+      "avatar": {
+        "skin": "#c68a5b",
+        "hair": "long",
+        "hairColor": "#1f1712"
+      },
+      "layers": [
+        {
+          "item": "vaqueros",
+          "color": "#23232b"
+        },
+        {
+          "item": "cazadora",
+          "color": "#3a2a24"
+        },
+        {
+          "item": "gafas",
+          "color": "#111111"
+        }
+      ],
+      "description": "Leather jacket and sunglasses",
+      "intended_flaw": "cool"
+    },
+    {
+      "id": "o_p_07",
+      "avatar": {
+        "skin": "#a86f45",
+        "hair": "short",
+        "hairColor": "#2a1a10"
+      },
+      "layers": [
+        {
+          "item": "pantalon_corto",
+          "color": "#f2a541"
+        },
+        {
+          "item": "tirantes",
+          "color": "#47c1bf"
+        }
+      ],
+      "description": "Tank top and shorts",
+      "intended_flaw": "too_casual"
+    },
+    {
+      "id": "o_p_08",
+      "avatar": {
+        "skin": "#f7d7b5",
+        "hair": "bun",
+        "hairColor": "#c9772f"
+      },
+      "layers": [
+        {
+          "item": "campana",
+          "color": "#c47a2c"
+        },
+        {
+          "item": "rayas",
+          "color": "#f6e7c8"
+        }
+      ],
+      "description": "1970s flared trousers",
+      "intended_flaw": "dated"
+    },
+    {
+      "id": "o_p_09",
+      "avatar": {
+        "skin": "#f2c9a0",
+        "hair": "short",
+        "hairColor": "#3b2a20"
+      },
+      "layers": [
+        {
+          "item": "cargo",
+          "color": "#7a7a52"
+        },
+        {
+          "item": "sudadera",
+          "color": "#9aa0a6"
+        }
+      ],
+      "description": "Soft grey hoodie",
+      "intended_flaw": "comfy"
+    },
+    {
+      "id": "o_p_10",
+      "avatar": {
+        "skin": "#8d5a3b",
+        "hair": "curly",
+        "hairColor": "#120c08"
+      },
+      "layers": [
+        {
+          "item": "minifalda",
+          "color": "#2a2a3a"
+        },
+        {
+          "item": "camiseta",
+          "color": "#ffffff"
+        },
+        {
+          "item": "corona",
+          "color": "#f4c430",
+          "fit": "big"
+        }
+      ],
+      "description": "Giant crown with a T-shirt",
+      "intended_flaw": "over_the_top"
+    },
+    {
+      "id": "o_s_01",
+      "avatar": {
+        "skin": "#f2c9a0",
+        "hair": "short",
+        "hairColor": "#3b2a20"
+      },
+      "layers": [
+        {
+          "item": "pantalon_corto",
+          "color": "#2b2b33"
+        },
+        {
+          "item": "rayas",
+          "color": "#ffffff"
+        },
+        {
+          "item": "parche",
+          "color": "#c0392b"
+        }
+      ],
+      "description": "Striped top, bandana and eye patch",
+      "intended_flaw": "looks_like_pirate"
+    },
+    {
+      "id": "o_s_02",
+      "avatar": {
+        "skin": "#a86f45",
+        "hair": "short",
+        "hairColor": "#2a1a10"
+      },
+      "layers": [
+        {
+          "item": "vaqueros",
+          "color": "#3b5b9a"
+        },
+        {
+          "item": "camisa",
+          "color": "#b5452f"
+        },
+        {
+          "item": "sombrero",
+          "color": "#c9a26b"
+        }
+      ],
+      "description": "Cowboy hat, shirt and jeans",
+      "intended_flaw": "looks_like_cowboy"
+    },
+    {
+      "id": "o_s_03",
+      "avatar": {
+        "skin": "#c68a5b",
+        "hair": "long",
+        "hairColor": "#1f1712"
+      },
+      "layers": [
+        {
+          "item": "vaqueros",
+          "color": "#1a1a1f"
+        },
+        {
+          "item": "cazadora",
+          "color": "#141414"
+        },
+        {
+          "item": "gafas",
+          "color": "#111111"
+        }
+      ],
+      "description": "Black leather and shades",
+      "intended_flaw": "looks_like_rockstar"
+    },
+    {
+      "id": "o_s_04",
+      "avatar": {
+        "skin": "#8d5a3b",
+        "hair": "curly",
+        "hairColor": "#120c08"
+      },
+      "layers": [
+        {
+          "item": "tunica_mago",
+          "color": "#3b3b98"
+        }
+      ],
+      "description": "Starry robe and pointed hat",
+      "intended_flaw": "looks_like_wizard"
+    },
+    {
+      "id": "o_s_05",
+      "avatar": {
+        "skin": "#f2c9a0",
+        "hair": "short",
+        "hairColor": "#3b2a20"
+      },
+      "layers": [
+        {
+          "item": "astronauta",
+          "color": "#f2f2f2"
+        }
+      ],
+      "description": "White spacesuit and helmet",
+      "intended_flaw": "looks_like_astronaut"
+    },
+    {
+      "id": "o_s_06",
+      "avatar": {
+        "skin": "#e0ac7e",
+        "hair": "long",
+        "hairColor": "#6b3b1f"
+      },
+      "layers": [
+        {
+          "item": "superheroe",
+          "color": "#2f5fd0"
+        }
+      ],
+      "description": "Bodysuit, mask and cape",
+      "intended_flaw": "looks_like_superhero"
+    },
+    {
+      "id": "o_s_07",
+      "avatar": {
+        "skin": "#a86f45",
+        "hair": "short",
+        "hairColor": "#2a1a10"
+      },
+      "layers": [
+        {
+          "item": "gabardina",
+          "color": "#c2a679"
+        },
+        {
+          "item": "sombrero",
+          "color": "#5b4636"
+        }
+      ],
+      "description": "Trench coat and hat",
+      "intended_flaw": "looks_like_detective"
+    },
+    {
+      "id": "o_s_08",
+      "avatar": {
+        "skin": "#f7d7b5",
+        "hair": "bun",
+        "hairColor": "#c9772f"
+      },
+      "layers": [
+        {
+          "item": "pantalon_corto",
+          "color": "#8fb8de"
+        },
+        {
+          "item": "hawaiana",
+          "color": "#29b6a8"
+        },
+        {
+          "item": "gafas",
+          "color": "#3b2a20"
+        }
+      ],
+      "description": "Flowered shirt, shorts and sunglasses",
+      "intended_flaw": "looks_like_tourist"
+    },
+    {
+      "id": "o_s_09",
+      "avatar": {
+        "skin": "#c68a5b",
+        "hair": "long",
+        "hairColor": "#1f1712"
+      },
+      "layers": [
+        {
+          "item": "vestido",
+          "color": "#f29cc2"
+        },
+        {
+          "item": "corona",
+          "color": "#f4c430"
+        }
+      ],
+      "description": "Pink gown and crown",
+      "intended_flaw": "looks_like_princess"
+    },
+    {
+      "id": "o_s_10",
+      "avatar": {
+        "skin": "#8d5a3b",
+        "hair": "curly",
+        "hairColor": "#120c08"
+      },
+      "layers": [
+        {
+          "item": "campana",
+          "color": "#f5f0e6"
+        },
+        {
+          "item": "camisa",
+          "color": "#e8742c"
+        }
+      ],
+      "description": "Flares and a big-collared shirt",
+      "intended_flaw": "looks_like_70s_singer"
+    }
+  ],
+  "prompts": [
+    {
+      "id": "q_01",
+      "outfit_id": "o_q_01",
+      "target_verb": "quedar",
+      "question_text": "¿Cómo le {verb} la chaqueta?",
+      "question_fill": "queda",
+      "answer_parts": {
+        "pronoun": "Le",
+        "verb": "queda",
+        "complement": "grande"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Me",
+          "Se",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "quedan"
+        ],
+        "complement": [
+          "pequeña",
+          "muy bien"
+        ]
+      },
+      "english_translation": "The jacket is too big on them."
+    },
+    {
+      "id": "q_02",
+      "outfit_id": "o_q_02",
+      "target_verb": "quedar",
+      "question_text": "¿Cómo le {verb} los pantalones?",
+      "question_fill": "quedan",
+      "answer_parts": {
+        "pronoun": "Le",
+        "verb": "quedan",
+        "complement": "cortos"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Me",
+          "Se",
+          "Te"
+        ],
+        "verb": [
+          "queda",
+          "parecen"
+        ],
+        "complement": [
+          "largos",
+          "grandes"
+        ]
+      },
+      "english_translation": "The trousers are too short on them."
+    },
+    {
+      "id": "q_03",
+      "outfit_id": "o_q_03",
+      "target_verb": "quedar",
+      "question_text": "¿Qué tal le {verb} el jersey?",
+      "question_fill": "queda",
+      "answer_parts": {
+        "pronoun": "Le",
+        "verb": "queda",
+        "complement": "pequeño"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Me",
+          "Se",
+          "Nos"
+        ],
+        "verb": [
+          "parece",
+          "quedan"
+        ],
+        "complement": [
+          "grande",
+          "largo"
+        ]
+      },
+      "english_translation": "The jumper is too small on them."
+    },
+    {
+      "id": "q_04",
+      "outfit_id": "o_q_04",
+      "target_verb": "quedar",
+      "question_text": "¿Cómo le {verb} el vestido?",
+      "question_fill": "queda",
+      "answer_parts": {
+        "pronoun": "Le",
+        "verb": "queda",
+        "complement": "largo"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Me",
+          "Se",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "quedan"
+        ],
+        "complement": [
+          "corto",
+          "pequeño"
+        ]
+      },
+      "english_translation": "The dress is too long on them."
+    },
+    {
+      "id": "q_05",
+      "outfit_id": "o_q_05",
+      "target_verb": "quedar",
+      "question_text": "¿Cómo te {verb} la camiseta?",
+      "question_fill": "queda",
+      "answer_parts": {
+        "pronoun": "Me",
+        "verb": "queda",
+        "complement": "grande"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Te",
+          "Le",
+          "Se"
+        ],
+        "verb": [
+          "parece",
+          "quedan"
+        ],
+        "complement": [
+          "pequeña",
+          "corta"
+        ]
+      },
+      "english_translation": "The T-shirt is too big on me."
+    },
+    {
+      "id": "q_06",
+      "outfit_id": "o_q_06",
+      "target_verb": "quedar",
+      "question_text": "¿Cómo te {verb} los vaqueros?",
+      "question_fill": "quedan",
+      "answer_parts": {
+        "pronoun": "Me",
+        "verb": "quedan",
+        "complement": "largos"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Te",
+          "Le",
+          "Se"
+        ],
+        "verb": [
+          "queda",
+          "parecen"
+        ],
+        "complement": [
+          "cortos",
+          "pequeños"
+        ]
+      },
+      "english_translation": "The jeans are too long on me."
+    },
+    {
+      "id": "q_07",
+      "outfit_id": "o_q_07",
+      "target_verb": "quedar",
+      "question_text": "¿Qué tal le {verb} el sombrero?",
+      "question_fill": "queda",
+      "answer_parts": {
+        "pronoun": "Le",
+        "verb": "queda",
+        "complement": "grande"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Me",
+          "Se",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "parece a"
+        ],
+        "complement": [
+          "pequeño",
+          "corto"
+        ]
+      },
+      "english_translation": "The hat is too big on them."
+    },
+    {
+      "id": "q_08",
+      "outfit_id": "o_q_08",
+      "target_verb": "quedar",
+      "question_text": "¿Cómo le {verb} la camisa?",
+      "question_fill": "queda",
+      "answer_parts": {
+        "pronoun": "Le",
+        "verb": "queda",
+        "complement": "muy bien"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Me",
+          "Se",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "quedan"
+        ],
+        "complement": [
+          "grande",
+          "pequeña"
+        ]
+      },
+      "english_translation": "The shirt fits them really well."
+    },
+    {
+      "id": "q_09",
+      "outfit_id": "o_q_09",
+      "target_verb": "quedar",
+      "question_text": "¿Cómo te {verb} la falda?",
+      "question_fill": "queda",
+      "answer_parts": {
+        "pronoun": "Me",
+        "verb": "queda",
+        "complement": "corta"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Te",
+          "Le",
+          "Se"
+        ],
+        "verb": [
+          "parece",
+          "quedan"
+        ],
+        "complement": [
+          "larga",
+          "grande"
+        ]
+      },
+      "english_translation": "The skirt is too short on me."
+    },
+    {
+      "id": "q_10",
+      "outfit_id": "o_q_10",
+      "target_verb": "quedar",
+      "question_text": "¿Qué tal le {verb} la sudadera?",
+      "question_fill": "queda",
+      "answer_parts": {
+        "pronoun": "Le",
+        "verb": "queda",
+        "complement": "enorme"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Me",
+          "Se",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "quedan"
+        ],
+        "complement": [
+          "pequeña",
+          "justa"
+        ]
+      },
+      "english_translation": "The hoodie is enormous on them."
+    },
+    {
+      "id": "p_01",
+      "outfit_id": "o_p_01",
+      "target_verb": "parecer",
+      "question_text": "¿Qué te {verb} este estilo?",
+      "question_fill": "parece",
+      "answer_parts": {
+        "pronoun": "Me",
+        "verb": "parece",
+        "complement": "elegante"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Te",
+          "Se",
+          "Le"
+        ],
+        "verb": [
+          "queda",
+          "parece a"
+        ],
+        "complement": [
+          "informal",
+          "deportivo"
+        ]
+      },
+      "english_translation": "What do you think of this style? — I think it's elegant."
+    },
+    {
+      "id": "p_02",
+      "outfit_id": "o_p_02",
+      "target_verb": "parecer",
+      "question_text": "¿Qué te {verb} la camisa?",
+      "question_fill": "parece",
+      "answer_parts": {
+        "pronoun": "Me",
+        "verb": "parece",
+        "complement": "llamativa"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Te",
+          "Se",
+          "Le"
+        ],
+        "verb": [
+          "queda",
+          "parece a"
+        ],
+        "complement": [
+          "discreta",
+          "seria"
+        ]
+      },
+      "english_translation": "What do you think of the shirt? — I think it's loud."
+    },
+    {
+      "id": "p_03",
+      "outfit_id": "o_p_03",
+      "target_verb": "parecer",
+      "question_text": "¿Qué le {verb} el conjunto a tu abuela?",
+      "question_fill": "parece",
+      "answer_parts": {
+        "pronoun": "Le",
+        "verb": "parece",
+        "complement": "horrible"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Me",
+          "Se",
+          "Te"
+        ],
+        "verb": [
+          "queda",
+          "parece a"
+        ],
+        "complement": [
+          "perfecto",
+          "discreto"
+        ]
+      },
+      "english_translation": "What does your grandmother think of the outfit? — She thinks it's horrible."
+    },
+    {
+      "id": "p_04",
+      "outfit_id": "o_p_04",
+      "target_verb": "parecer",
+      "question_text": "¿Qué te {verb} este look para una boda?",
+      "question_fill": "parece",
+      "answer_parts": {
+        "pronoun": "Me",
+        "verb": "parece",
+        "complement": "demasiado informal"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Te",
+          "Se",
+          "Le"
+        ],
+        "verb": [
+          "queda",
+          "parece a"
+        ],
+        "complement": [
+          "muy elegante",
+          "perfecto"
+        ]
+      },
+      "english_translation": "What do you think of this look for a wedding? — I think it's too casual."
+    },
+    {
+      "id": "p_05",
+      "outfit_id": "o_p_05",
+      "target_verb": "parecer",
+      "question_text": "¿Qué os {verb} el vestido?",
+      "question_fill": "parece",
+      "answer_parts": {
+        "pronoun": "Nos",
+        "verb": "parece",
+        "complement": "precioso"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Os",
+          "Me",
+          "Se"
+        ],
+        "verb": [
+          "queda",
+          "parece a"
+        ],
+        "complement": [
+          "feo",
+          "informal"
+        ]
+      },
+      "english_translation": "What do you (all) think of the dress? — We think it's beautiful."
+    },
+    {
+      "id": "p_06",
+      "outfit_id": "o_p_06",
+      "target_verb": "parecer",
+      "question_text": "¿Qué te {verb} la cazadora?",
+      "question_fill": "parece",
+      "answer_parts": {
+        "pronoun": "Me",
+        "verb": "parece",
+        "complement": "moderna"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Te",
+          "Se",
+          "Le"
+        ],
+        "verb": [
+          "queda",
+          "parece a"
+        ],
+        "complement": [
+          "anticuada",
+          "formal"
+        ]
+      },
+      "english_translation": "What do you think of the leather jacket? — I think it's modern."
+    },
+    {
+      "id": "p_07",
+      "outfit_id": "o_p_07",
+      "target_verb": "parecer",
+      "question_text": "¿Qué te {verb} ir así a la oficina?",
+      "question_fill": "parece",
+      "answer_parts": {
+        "pronoun": "Me",
+        "verb": "parece",
+        "complement": "poco profesional"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Te",
+          "Se",
+          "Le"
+        ],
+        "verb": [
+          "queda",
+          "parece a"
+        ],
+        "complement": [
+          "muy formal",
+          "perfecto"
+        ]
+      },
+      "english_translation": "What do you think of going to the office like this? — I think it's unprofessional."
+    },
+    {
+      "id": "p_08",
+      "outfit_id": "o_p_08",
+      "target_verb": "parecer",
+      "question_text": "¿Qué le {verb} los pantalones a tu hija?",
+      "question_fill": "parecen",
+      "answer_parts": {
+        "pronoun": "Le",
+        "verb": "parecen",
+        "complement": "anticuados"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Me",
+          "Se",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "quedan"
+        ],
+        "complement": [
+          "modernos",
+          "discretos"
+        ]
+      },
+      "english_translation": "What does your daughter think of the trousers? — She thinks they're old-fashioned."
+    },
+    {
+      "id": "p_09",
+      "outfit_id": "o_p_09",
+      "target_verb": "parecer",
+      "question_text": "¿Qué te {verb} la sudadera?",
+      "question_fill": "parece",
+      "answer_parts": {
+        "pronoun": "Me",
+        "verb": "parece",
+        "complement": "cómoda"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Te",
+          "Se",
+          "Le"
+        ],
+        "verb": [
+          "queda",
+          "parece a"
+        ],
+        "complement": [
+          "incómoda",
+          "elegante"
+        ]
+      },
+      "english_translation": "What do you think of the hoodie? — I think it's comfortable."
+    },
+    {
+      "id": "p_10",
+      "outfit_id": "o_p_10",
+      "target_verb": "parecer",
+      "question_text": "¿Qué os {verb} la corona?",
+      "question_fill": "parece",
+      "answer_parts": {
+        "pronoun": "Nos",
+        "verb": "parece",
+        "complement": "exagerada"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Os",
+          "Se",
+          "Me"
+        ],
+        "verb": [
+          "queda",
+          "parece a"
+        ],
+        "complement": [
+          "discreta",
+          "invisible"
+        ]
+      },
+      "english_translation": "What do you (all) think of the crown? — We think it's over the top."
+    },
+    {
+      "id": "s_01",
+      "outfit_id": "o_s_01",
+      "target_verb": "parecerse",
+      "question_text": "Con ese parche, ¿a quién {verb}?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "un pirata"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "un mago",
+          "un astronauta"
+        ]
+      },
+      "english_translation": "Who do they look like with that eye patch? — They look like a pirate."
+    },
+    {
+      "id": "s_02",
+      "outfit_id": "o_s_02",
+      "target_verb": "parecerse",
+      "question_text": "Con ese sombrero, ¿a quién {verb} tu tío?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "un vaquero"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "un astronauta",
+          "un mago"
+        ]
+      },
+      "english_translation": "Who does your uncle look like in that hat? — He looks like a cowboy."
+    },
+    {
+      "id": "s_03",
+      "outfit_id": "o_s_03",
+      "target_verb": "parecerse",
+      "question_text": "Con esa cazadora, ¿a quién {verb}?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "una estrella de rock"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "una princesa",
+          "un mago"
+        ]
+      },
+      "english_translation": "Who do they look like in that jacket? — They look like a rock star."
+    },
+    {
+      "id": "s_04",
+      "outfit_id": "o_s_04",
+      "target_verb": "parecerse",
+      "question_text": "Con esa túnica, ¿a quién {verb}?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "un mago"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "un pirata",
+          "un vaquero"
+        ]
+      },
+      "english_translation": "Who do they look like in that robe? — They look like a wizard."
+    },
+    {
+      "id": "s_05",
+      "outfit_id": "o_s_05",
+      "target_verb": "parecerse",
+      "question_text": "Con ese traje, ¿a quién {verb} tu hermano?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "un astronauta"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "un superhéroe",
+          "un turista"
+        ]
+      },
+      "english_translation": "Who does your brother look like in that suit? — He looks like an astronaut."
+    },
+    {
+      "id": "s_06",
+      "outfit_id": "o_s_06",
+      "target_verb": "parecerse",
+      "question_text": "Con esa capa, ¿a quién {verb}?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "un superhéroe"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "un detective",
+          "un turista"
+        ]
+      },
+      "english_translation": "Who do they look like with that cape? — They look like a superhero."
+    },
+    {
+      "id": "s_07",
+      "outfit_id": "o_s_07",
+      "target_verb": "parecerse",
+      "question_text": "Con esa gabardina, ¿a quién {verb}?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "un detective"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "un astronauta",
+          "una princesa"
+        ]
+      },
+      "english_translation": "Who do they look like in that trench coat? — They look like a detective."
+    },
+    {
+      "id": "s_08",
+      "outfit_id": "o_s_08",
+      "target_verb": "parecerse",
+      "question_text": "Con esa camisa de flores, ¿a quién {verb}?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "un turista"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "un mago",
+          "un detective"
+        ]
+      },
+      "english_translation": "Who do they look like in that flowered shirt? — They look like a tourist."
+    },
+    {
+      "id": "s_09",
+      "outfit_id": "o_s_09",
+      "target_verb": "parecerse",
+      "question_text": "Con la corona, ¿a quién {verb} tu sobrina?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "una princesa"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "una estrella de rock",
+          "un pirata"
+        ]
+      },
+      "english_translation": "Who does your niece look like with the crown? — She looks like a princess."
+    },
+    {
+      "id": "s_10",
+      "outfit_id": "o_s_10",
+      "target_verb": "parecerse",
+      "question_text": "Con esos pantalones de campana, ¿a quién {verb}?",
+      "question_fill": "se parece",
+      "answer_parts": {
+        "pronoun": "Se",
+        "verb": "parece a",
+        "complement": "un cantante de los setenta"
+      },
+      "distractor_options": {
+        "pronoun": [
+          "Le",
+          "Me",
+          "Te"
+        ],
+        "verb": [
+          "parece",
+          "queda"
+        ],
+        "complement": [
+          "un astronauta",
+          "un pirata"
+        ]
+      },
+      "english_translation": "Who do they look like in those flares? — They look like a seventies singer."
+    }
+  ]
+}

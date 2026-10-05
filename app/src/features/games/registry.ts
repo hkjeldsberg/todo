@@ -78,6 +78,15 @@ export const GAMES: GameManifest[] = [
     level: "A2",
     tone: "ink",
   },
+  {
+    slug: "probador",
+    title: "El Probador",
+    subtitle: "quedar · parecer · parecerse a",
+    blurb: "The fitting room critic: does it fit, what do you think of it, and who does it make them look like? Three taps per outfit.",
+    skills: ["vocab"],
+    level: "A2",
+    tone: "accent",
+  },
 ];
 
 export function gameBySlug(slug: string): GameManifest | undefined {
