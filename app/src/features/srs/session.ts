@@ -56,6 +56,7 @@ const KIND_LABEL: Record<ReviewKind, string> = {
   conjugation: "Conjugar",
   game_item: "Juego",
   story: "Cuento",
+  glossary: "Glosario",
 };
 
 // ── queue ────────────────────────────────────────────────────────────────────
@@ -239,6 +240,38 @@ async function phraseCards(items: ItemRow[]): Promise<Map<string, SessionCard>> 
   return out;
 }
 
+// ── glosario (my own words) ─────────────────────────────────────────────────
+
+/** A glossary word as a recall card: Spanish first while it's new, then English → Spanish. */
+async function glossaryCards(items: ItemRow[]): Promise<Map<string, SessionCard>> {
+  const out = new Map<string, SessionCard>();
+  const ids = items.map((item) => item.ref.slice("glossary:".length));
+  if (ids.length === 0) return out;
+  const { data, error } = await db().from("glossary_words").select("id, spanish, english, norwegian").in("id", ids);
+  if (error) throw new Error(error.message);
+  const byId = new Map((data ?? []).map((row) => [row.id as string, row]));
+  for (const item of items) {
+    const word = byId.get(item.ref.slice("glossary:".length));
+    if (!word) continue;
+    const meaning = word.norwegian ? `${word.english} · ${word.norwegian}` : (word.english as string);
+    const esFirst = item.box <= 2;
+    out.set(item.ref, {
+      key: item.ref,
+      kind: "glossary",
+      ref: item.ref,
+      source: item.source,
+      box: item.box,
+      isNew: false,
+      label: KIND_LABEL.glossary,
+      view: "recall",
+      frontLang: esFirst ? "es" : "en",
+      front: esFirst ? (word.spanish as string) : meaning,
+      back: esFirst ? meaning : (word.spanish as string),
+    });
+  }
+  return out;
+}
+
 // ── conjugation ──────────────────────────────────────────────────────────────
 
 async function conjugationCard(
@@ -389,6 +422,7 @@ export async function buildSession(options: {
   const phrases = await phraseCards(due.filter((item) => item.kind === "phrase"));
   const games = await gameCards(due.filter((item) => item.kind === "game_item"));
   const stories = await storyCards(due.filter((item) => item.kind === "story"));
+  const glossary = await glossaryCards(due.filter((item) => item.kind === "glossary"));
 
   let wordIndex = 0;
   const viewFor = (): "cloze" | "scramble" =>
@@ -409,6 +443,8 @@ export async function buildSession(options: {
           return phrases.get(item.ref) ?? null;
         case "story":
           return stories.get(item.ref) ?? null;
+        case "glossary":
+          return glossary.get(item.ref) ?? null;
         case "game_item":
           return games.get(item.ref) ?? null;
         case "conjugation": {
@@ -476,7 +512,7 @@ export async function reviewStats(): Promise<ReviewStats> {
   ]);
   if (wordsError) throw new Error(wordsError.message);
 
-  const dueByKind: Record<ReviewKind, number> = { word: 0, phrase: 0, conjugation: 0, game_item: 0, story: 0 };
+  const dueByKind: Record<ReviewKind, number> = { word: 0, phrase: 0, conjugation: 0, game_item: 0, story: 0, glossary: 0 };
   const wordBoxes = [0, 0, 0, 0, 0, 0];
   let seenWords = 0;
   for (const item of items) {

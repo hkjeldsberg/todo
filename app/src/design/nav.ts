@@ -1,6 +1,7 @@
 /** Top-level sections. Adding a feature = one entry here + a route in app/(shell). */
 export const NAV_ITEMS = [
   { href: "/frases", label: "Frases", hint: "Phrases" },
+  { href: "/glosario", label: "Glosario", hint: "Words" },
   { href: "/gramatica", label: "Gramática", hint: "Grammar" },
   { href: "/diario", label: "Diario", hint: "Diary" },
   { href: "/juegos", label: "Juegos", hint: "Games" },

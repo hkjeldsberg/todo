@@ -29,7 +29,11 @@
     "pasado:seed": "node scripts/pasado-seed-sql.mjs",
     "pasado:playtest": "node scripts/pasado-playtest.mjs",
     "probador:seed": "node scripts/probador-seed-sql.mjs",
-    "probador:playtest": "node scripts/probador-playtest.mjs"
+    "probador:playtest": "node scripts/probador-playtest.mjs",
+    "glossary:seed": "tsx scripts/glossary-seed-sql.mts",
+    "glossary:import": "tsx --env-file=.env.local scripts/glossary-import.mts",
+    "glossary:enrich": "tsx --env-file=.env.local scripts/glossary-enrich.mts",
+    "glossary:playtest": "node scripts/glossary-playtest.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",

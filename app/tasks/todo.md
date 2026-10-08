@@ -84,6 +84,19 @@ Decisions (Claude, 2026-10-05):
 - [x] verify: typecheck, lint, vitest, build, playtest 390×844 + 1440×900
 - [ ] USER: run `0009_probador.sql`, then `seed/probador.sql`
 
+## P13 Glosario (`/glosario`, new tab, ../PRD_GLOSSARY.md)
+Decisions (user, 2026-10-08, PRD §9): new tab · own theme list (not Frases scenarios) · Repaso manual · Bokmål · no link to Léxico.
+Claude: Repaso card = recall (Spanish → English · Norsk); `GLOSSARY_STORE=memory` dev-only store so the UI can be
+playtested before 0010 runs; enrich runs words one by one (Batch API not worth it for a one-off of a few hundred).
+- [x] migration `0010_glossary.sql` (3 tables, srs kind `glossary`, delete trigger) + 10 seed words (`content/glossary-seed.json` → `seed/glossary.sql`)
+- [x] lib: keys/sort/group/search/highlight (pure), AI check + examples (Haiku, zod), store (Supabase + dev memory)
+- [x] actions: check, create, update, delete, regenerate examples, recheck unchecked, add to Repaso
+- [x] UI: list (search, sort, group, filter chips, sticky group headers), word sheet, add flow (verdict, spelling confirm, duplicate, AI-fail → unchecked), edit dialog, delete confirm, speaker
+- [x] nav tab + Repaso kind/filter/card
+- [x] scripts: `glossary-import.mjs` (CSV), `glossary:enrich`
+- [x] tests + `glossary:playtest` 390×844 + 1440×900; one live AI check (nutralista)
+- [ ] USER: run `0010_glossary.sql`, then `seed/glossary.sql`
+
 ## Review
 - Whole project: tsc clean, eslint clean, vitest 151/151, `next build` ok.
 - Prod build: every route redirects to /login without a session, even with AUTH_DISABLED=1.
@@ -117,3 +130,11 @@ Decisions (Claude, 2026-10-05):
   auto-advance on right answers, 29/30 summary, "All caught up" after. Stage = 56% of the height. Found + fixed two
   real bugs on the way (options stuck after a miss: AnimatePresence "wait"; shake keyframes with a spring threw).
   DB writes blocked; tables not in the DB yet, so content came from the bundled JSON. 0009 not run on a local Postgres.
+- P13 Glosario (2026-10-08): tsc/eslint clean, vitest 1097/1097 (15 new), `next build` ok.
+  `glossary:playtest` (in-memory store) at 390×844 + 1440×900 with real Claude Haiku: tab active, A–Z ignores articles,
+  "cafe" → el café, group by type/theme (el café under 2 themes), remembered after reload, type filter, card (EN/NO/guess,
+  highlighted examples, fits the screen), edit, add to Repaso, new examples, duplicate → existing card, misspelled word →
+  "Did you mean…" → saved with Norsk + 2 examples, delete. MODE=offline (no API key): saved unchecked + Unchecked filter.
+  Fixed on the way: sticky group headers covered rows (overflow-hidden list box), chips invisible on the header,
+  Norwegian came back in the definite form (prompt). Not run against Supabase: 0010 isn't applied yet, so the
+  Supabase store, the Repaso glossary card, import and enrich are type-checked but untested against the DB.

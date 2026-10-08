@@ -14,7 +14,7 @@ export function BottomBar() {
   return (
     <nav
       aria-label="Sections"
-      className="grid grid-cols-5 gap-1 border-t-2 border-dash bg-shell px-2 pt-1.5 pb-[calc(6px+env(safe-area-inset-bottom))] lg:hidden"
+      className="grid grid-cols-6 gap-0.5 border-t-2 border-dash bg-shell px-2 pt-1.5 pb-[calc(6px+env(safe-area-inset-bottom))] lg:hidden"
     >
       {NAV_ITEMS.map((item) => {
         const active = isActive(pathname, item.href);
@@ -23,7 +23,7 @@ export function BottomBar() {
             key={item.href}
             href={item.href}
             aria-current={active ? "page" : undefined}
-            className={`flex min-h-11 items-center justify-center rounded-full px-1 text-center text-[13px] leading-none ${
+            className={`flex min-h-11 items-center justify-center rounded-full px-0.5 text-center text-[12px] leading-none ${
               active ? "bg-pill-deep font-bold text-ink" : "font-medium text-muted"
             }`}
           >

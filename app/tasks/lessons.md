@@ -47,3 +47,10 @@
   and remounted (options froze on the old step).
 - Rule: pulse with rings/glow, not size. For step-by-step option rows, key a plain slide-in by step; skip exit
   animations unless they're needed. Keyframe arrays need a tween, not a spring.
+
+## overflow-hidden breaks sticky children
+- 2026-10-08: the Glosario list box had `overflow-hidden` (for its rounded corners); that made it the sticky
+  containing scroller, so group headers with `top: <header height>` were pushed down inside each section and
+  covered rows. Full-page screenshots made it look like a capture glitch.
+- Rule: round a box that holds sticky elements with `overflow-clip`, not `overflow-hidden`. Playtests assert the
+  first sticky header's position instead of trusting a screenshot.

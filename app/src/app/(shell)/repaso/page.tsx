@@ -29,6 +29,7 @@ export default async function RepasoPage() {
     { filter: "conjugar", label: "Conjugar", count: dueByKind.conjugation },
     { filter: "games", label: "Errores de juegos", count: dueByKind.game_item },
     { filter: "cuentos", label: "Cuentos", count: dueByKind.story },
+    { filter: "glosario", label: "Glosario", count: dueByKind.glossary },
   ];
 
   return (
