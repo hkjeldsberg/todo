@@ -117,7 +117,14 @@ async function run(name) {
   await openRow("la mesa");
   await card.waitFor();
   const text = await card.innerText();
-  check(text.includes("table") && text.includes("bord") && text.includes("You guessed"), `${name}: card has English, Norsk and my guess`);
+  check(text.includes("table") && text.includes("bord"), `${name}: card has English and Norsk`);
+  check(!/You guessed|Different word|Close|Right first/.test(text), `${name}: no verdict on my guess`);
+  check((await card.getByRole("button", { name: /Repaso/ }).count()) === 0, `${name}: no Repaso button`);
+  const buttons = await Promise.all((await card.getByTestId("glossary-card-actions").getByRole("button").all()).map((b) => b.boundingBox()));
+  check(
+    buttons.length === 3 && new Set(buttons.map((b) => Math.round(b.y))).size === 1 && Math.max(...buttons.map((b) => b.width)) - Math.min(...buttons.map((b) => b.width)) < 2,
+    `${name}: Edit / New examples / Archive on one row, equal width (${buttons.map((b) => Math.round(b.width)).join("/")})`,
+  );
   check((await card.locator("mark").count()) === 2, `${name}: both examples highlight the word`);
   await page.waitForTimeout(400);
   await page.screenshot({ path: `${OUT}${name}-card.png` });
@@ -136,14 +143,28 @@ async function run(name) {
   await closeCard();
   check((await rowsText()).some((t) => t.includes("la mesa") && t.includes("table")), `${name}: list shows the edit`);
 
-  // Add to Repaso.
+  // Dates: move el café to 14 Sep, then sort oldest first and group by date.
+  await openRow("el café");
+  await card.waitFor();
+  await tap(card.getByRole("button", { name: "Edit" }));
+  await edit.waitFor();
+  await edit.getByLabel("Date", { exact: true }).fill("2026-09-14");
+  await tap(edit.getByRole("button", { name: "Save" }));
+  const dated = await card.filter({ hasText: "Saved" }).getByTestId("glossary-card-date").innerText().catch(() => "");
+  check(/14 Sept?/.test(dated), `${name}: edited date shows on the card (${dated})`);
+  await closeCard();
+  await page.getByLabel("Sort").selectOption("oldest");
+  await page.getByLabel("Group").selectOption("date");
+  const dayHeaders = await list.locator("h2").allInnerTexts();
+  check(dayHeaders.length >= 2 && /14 Sept?/.test(dayHeaders[0]), `${name}: grouped by date, oldest day first (${dayHeaders.map((h) => h.split("\n")[0]).join(" / ")})`);
+  check((await rowsText())[0].startsWith("el café"), `${name}: el café is first, oldest first`);
+  await page.screenshot({ path: `${OUT}${name}-dates.png` });
+  await page.getByLabel("Sort").selectOption("spanish");
+  await page.getByLabel("Group").selectOption("none");
+
+  // New examples (desktop only: one real Claude call).
   await openRow("barato");
   await card.waitFor();
-  // The memory store lives as long as the dev server, so a re-run may find it added already.
-  const addButton = card.getByRole("button", { name: "Add to Repaso" });
-  if (await addButton.isVisible()) await tap(addButton);
-  await card.getByRole("button", { name: "✓ In Repaso" }).waitFor();
-  check(true, `${name}: added to Repaso`);
   if (name === "desktop") {
     const before = await card.locator("li").first().innerText();
     await tap(card.getByRole("button", { name: "New examples" }));
@@ -171,7 +192,7 @@ async function run(name) {
   const checked = page.getByTestId("glossary-check");
   await checked.waitFor({ timeout: 20000 });
   const verdict = await checked.innerText();
-  check(verdict.includes("Did you mean"), `${name}: spelling fix offered (${verdict.split("\n")[0]})`);
+  check(verdict.includes("Did you mean") && !/Right!|Close|Different word|you wrote/.test(verdict), `${name}: spelling fix offered, no verdict`);
   await page.screenshot({ path: `${OUT}${name}-check.png` });
   await tap(checked.getByRole("button", { name: /^Save “/ }));
   await card.waitFor();
@@ -179,14 +200,46 @@ async function run(name) {
   check(/ventana|silla/.test(saved) && saved.includes("Norsk") && (await card.locator("li").count()) === 2, `${name}: new word saved with Norsk + 2 examples`);
   await closeCard();
 
-  // Delete it again.
+  // Archive it: gone from the list, findable through the quiet Archive link, then deleted for good there.
   await openRow(name === "phone" ? "la ventana" : "la silla");
   await card.waitFor();
-  const title = await card.locator("h2").innerText();
+  const title = (await card.locator("h2").innerText()).trim();
+  await tap(card.getByRole("button", { name: "Archive", exact: true }));
+  await card.waitFor({ state: "detached" });
+  check(!(await rowsText()).some((t) => t.startsWith(title)), `${name}: archived "${title}" left the list`);
+  const archiveLink = page.getByTestId("glossary-archive-link");
+  check((await archiveLink.innerText()).startsWith("Archive ("), `${name}: quiet Archive link shows (${await archiveLink.innerText()})`);
+  const linkStyle = await archiveLink.evaluate((el) => getComputedStyle(el).fontSize);
+  check(parseFloat(linkStyle) <= 13, `${name}: Archive link is small (${linkStyle})`);
+  await page.screenshot({ path: `${OUT}${name}-archive-link.png`, fullPage: true });
+
+  // Archive a second word and restore it.
+  await openRow("cocinar");
+  await card.waitFor();
+  await tap(card.getByRole("button", { name: "Archive", exact: true }));
+  await card.waitFor({ state: "detached" });
+  await tap(archiveLink);
+  await page.getByTestId("glossary-archive-back").waitFor();
+  const archivedRows = await rowsText();
+  check(archivedRows.some((t) => t.startsWith(title)) && archivedRows.some((t) => t.startsWith("cocinar")), `${name}: archive lists both words`);
+  await openRow("cocinar");
+  await card.waitFor();
+  check((await card.innerText()).includes("archived"), `${name}: archived card is marked`);
+  await page.screenshot({ path: `${OUT}${name}-archive-card.png` });
+  await tap(card.getByRole("button", { name: "Restore", exact: true }));
+  await card.waitFor({ state: "detached" });
+  check(!(await rowsText()).some((t) => t.startsWith("cocinar")), `${name}: restored word left the archive`);
+
+  // Delete for good, from the archive only.
+  await openRow(title);
+  await card.waitFor();
   await tap(card.getByRole("button", { name: "Delete", exact: true }));
   await tap(card.getByRole("button", { name: "Delete", exact: true }));
   await card.waitFor({ state: "detached" });
-  check(!(await rowsText()).some((t) => t.startsWith(title.trim())), `${name}: deleted "${title.trim()}"`);
+  check(await page.getByText("Nothing archived.").isVisible(), `${name}: deleted "${title}" for good, archive empty`);
+  await tap(page.getByTestId("glossary-archive-back"));
+  check((await rowsText()).some((t) => t.startsWith("cocinar")), `${name}: cocinar is back in the glossary`);
+  check(!(await page.getByTestId("glossary-archive-link").isVisible()), `${name}: no Archive link when the archive is empty`);
   await ctx.close();
 }
 

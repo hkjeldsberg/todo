@@ -54,3 +54,9 @@
   covered rows. Full-page screenshots made it look like a capture glitch.
 - Rule: round a box that holds sticky elements with `overflow-clip`, not `overflow-hidden`. Playtests assert the
   first sticky header's position instead of trusting a screenshot.
+
+## Deleting seeded rows: match on content, not on dates
+- 2026-10-09: the first cleanup SQL deleted the starter words by "checked imports created before 9 Oct". The local
+  dry run (seed applied today) deleted nothing, and after enrich the same filter could have hit my own words.
+- Rule: identify seeded rows by something only the seed has (word + its seeded example sentence), check the match
+  count against the live DB read-only first, and dry-run destructive SQL on a throwaway local Postgres, re-run included.

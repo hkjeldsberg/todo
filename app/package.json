@@ -30,10 +30,10 @@
     "pasado:playtest": "node scripts/pasado-playtest.mjs",
     "probador:seed": "node scripts/probador-seed-sql.mjs",
     "probador:playtest": "node scripts/probador-playtest.mjs",
-    "glossary:seed": "tsx scripts/glossary-seed-sql.mts",
     "glossary:import": "tsx --env-file=.env.local scripts/glossary-import.mts",
     "glossary:enrich": "tsx --env-file=.env.local scripts/glossary-enrich.mts",
-    "glossary:playtest": "node scripts/glossary-playtest.mjs"
+    "glossary:playtest": "node scripts/glossary-playtest.mjs",
+    "glossary:notes-sql": "tsx scripts/glossary-notes-sql.mts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.120.0",

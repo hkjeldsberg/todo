@@ -23,6 +23,8 @@ export type GlossaryWord = {
   source: "manual" | "import";
   themes: string[];
   inReview: boolean;
+  /** ISO timestamp when archived (hidden from the list), or null. */
+  archivedAt: string | null;
   createdAt: string;
 };
 
@@ -39,6 +41,8 @@ export type WordDraft = {
   examples: Example[];
   status: "unchecked" | "checked";
   themes: string[];
+  /** The word's date (YYYY-MM-DD): when I noted it down. Defaults to the day it's added. */
+  date?: string;
 };
 
 /** What Claude returns for a new (or unchecked) word. */
@@ -55,5 +59,5 @@ export type CheckResult = {
   themeSuggestion: string | null;
 };
 
-export type SortKey = "spanish" | "english" | "newest";
-export type GroupKey = "none" | "pos" | "theme";
+export type SortKey = "spanish" | "english" | "newest" | "oldest";
+export type GroupKey = "none" | "pos" | "theme" | "date";

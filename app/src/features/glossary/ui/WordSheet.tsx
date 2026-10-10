@@ -2,11 +2,9 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { genderLabel } from "../text";
+import { dayLabel, dayOf, genderLabel } from "../text";
 import type { GlossaryWord } from "../types";
 import { ExampleLine, PosChip, speak, SpeakButton } from "./bits";
-
-const VERDICT_TEXT = { correct: "✓ Right first time", close: "≈ Close", different: "✗ Different word" } as const;
 
 type Props = {
   word: GlossaryWord | null;
@@ -14,15 +12,17 @@ type Props = {
   notice: string | null;
   onClose: () => void;
   onEdit: (word: GlossaryWord) => void;
+  /** Archive (true) or restore (false). */
+  onArchive: (word: GlossaryWord, archived: boolean) => Promise<void>;
+  /** Permanent; only offered for archived words. */
   onDelete: (word: GlossaryWord) => Promise<void>;
   onRegenerate: (word: GlossaryWord) => Promise<boolean>;
-  onReview: (word: GlossaryWord) => Promise<void>;
 };
 
 /** The look-up card (PRD §3.2): a bottom sheet on phones, a centred card on wide screens. */
-export function WordSheet({ word, notice, onClose, onEdit, onDelete, onRegenerate, onReview }: Props) {
+export function WordSheet({ word, notice, onClose, onEdit, onArchive, onDelete, onRegenerate }: Props) {
   const [confirming, setConfirming] = useState(false);
-  const [busy, setBusy] = useState<"delete" | "examples" | "review" | null>(null);
+  const [busy, setBusy] = useState<"delete" | "examples" | "archive" | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [shownId, setShownId] = useState(word?.id);
   if (word?.id !== shownId) {
@@ -41,7 +41,7 @@ export function WordSheet({ word, notice, onClose, onEdit, onDelete, onRegenerat
     return () => window.removeEventListener("keydown", onKey);
   }, [word, onClose]);
 
-  async function run(kind: "delete" | "examples" | "review", task: () => Promise<boolean | void>) {
+  async function run(kind: "delete" | "examples" | "archive", task: () => Promise<boolean | void>) {
     setBusy(kind);
     setError(null);
     try {
@@ -55,7 +55,6 @@ export function WordSheet({ word, notice, onClose, onEdit, onDelete, onRegenerat
   }
 
   const details = word ? genderLabel(word.gender) : null;
-  const showGuess = word?.myGuess && word.verdict && word.verdict !== "correct";
 
   return (
     <AnimatePresence>
@@ -89,9 +88,11 @@ export function WordSheet({ word, notice, onClose, onEdit, onDelete, onRegenerat
                   {word.spanish}
                   <SpeakButton label="Read the word aloud" onClick={() => speak(word.spanish)} />
                 </h2>
-                <p className="mt-0.5 flex items-center gap-1.5 text-[13px] text-muted">
+                <p className="mt-0.5 flex flex-wrap items-center gap-1.5 text-[13px] text-muted">
                   <PosChip pos={word.pos} />
                   {details && <span>{details}</span>}
+                  <span data-testid="glossary-card-date">· {dayLabel(dayOf(word.createdAt))}</span>
+                  {word.archivedAt && <span>· archived</span>}
                 </p>
               </div>
               <button type="button" onClick={onClose} aria-label="Close" className="h-8 w-8 shrink-0 rounded-full bg-pill text-[13px] text-muted">
@@ -105,14 +106,6 @@ export function WordSheet({ word, notice, onClose, onEdit, onDelete, onRegenerat
               <dt className="font-bold text-faint">Norsk</dt>
               <dd className="font-bold">{word.norwegian ?? <span className="text-faint">—</span>}</dd>
             </dl>
-
-            {showGuess && (
-              <p className="mt-2 rounded-[12px] bg-ai px-3 py-2 text-[14px]">
-                <b>{VERDICT_TEXT[word.verdict!]}.</b> You guessed <i>{word.myGuess}</i>
-                {word.note ? `: ${word.note}` : "."}
-              </p>
-            )}
-            {word.verdict === "correct" && word.note && <p className="mt-2 text-[14px] text-muted">{word.note}</p>}
 
             {word.examples.length > 0 ? (
               <ul className="mt-3 flex flex-col gap-2">
@@ -144,7 +137,7 @@ export function WordSheet({ word, notice, onClose, onEdit, onDelete, onRegenerat
 
             {confirming ? (
               <div className="mt-4 rounded-[16px] bg-ai p-3">
-                <p className="text-[15px] font-bold">Delete “{word.spanish}”? This can&apos;t be undone.</p>
+                <p className="text-[15px] font-bold">Delete “{word.spanish}” for good? This can&apos;t be undone.</p>
                 <div className="mt-2 flex gap-2">
                   <button type="button" onClick={() => setConfirming(false)} className="min-h-11 flex-1 rounded-full bg-card text-[15px] font-bold">
                     Cancel
@@ -160,29 +153,52 @@ export function WordSheet({ word, notice, onClose, onEdit, onDelete, onRegenerat
                 </div>
               </div>
             ) : (
-              <div className="mt-4 grid grid-cols-2 gap-2">
-                <button type="button" onClick={() => onEdit(word)} className="min-h-11 rounded-full bg-ink text-[15px] font-extrabold text-on-ink">
+              <div className="mt-4 grid grid-cols-3 gap-2" data-testid="glossary-card-actions">
+                <button
+                  type="button"
+                  onClick={() => onEdit(word)}
+                  className="min-h-11 rounded-full bg-ink px-2 text-[14px] font-extrabold whitespace-nowrap text-on-ink"
+                >
                   Edit
                 </button>
-                <button type="button" onClick={() => setConfirming(true)} className="min-h-11 rounded-full bg-pill text-[15px] font-bold">
-                  Delete
-                </button>
-                <button
-                  type="button"
-                  disabled={busy !== null || word.status !== "checked"}
-                  onClick={() => run("examples", () => onRegenerate(word))}
-                  className="min-h-11 rounded-full bg-pill text-[14px] font-bold disabled:opacity-40"
-                >
-                  {busy === "examples" ? "Writing…" : "New examples"}
-                </button>
-                <button
-                  type="button"
-                  disabled={busy !== null || word.inReview}
-                  onClick={() => run("review", () => onReview(word))}
-                  className="min-h-11 rounded-full bg-pill text-[14px] font-bold disabled:opacity-60"
-                >
-                  {word.inReview ? "✓ In Repaso" : busy === "review" ? "Adding…" : "Add to Repaso"}
-                </button>
+                {word.archivedAt ? (
+                  <>
+                    <button
+                      type="button"
+                      disabled={busy !== null}
+                      onClick={() => run("archive", () => onArchive(word, false))}
+                      className="min-h-11 rounded-full bg-pill px-2 text-[14px] font-bold whitespace-nowrap"
+                    >
+                      {busy === "archive" ? "Restoring…" : "Restore"}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setConfirming(true)}
+                      className="min-h-11 rounded-full bg-pill px-2 text-[14px] font-bold whitespace-nowrap text-muted"
+                    >
+                      Delete
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button
+                      type="button"
+                      disabled={busy !== null || word.status !== "checked"}
+                      onClick={() => run("examples", () => onRegenerate(word))}
+                      className="min-h-11 rounded-full bg-pill px-2 text-[14px] font-bold whitespace-nowrap disabled:opacity-40"
+                    >
+                      {busy === "examples" ? "Writing…" : "New examples"}
+                    </button>
+                    <button
+                      type="button"
+                      disabled={busy !== null}
+                      onClick={() => run("archive", () => onArchive(word, true))}
+                      className="min-h-11 rounded-full bg-pill px-2 text-[14px] font-bold whitespace-nowrap"
+                    >
+                      {busy === "archive" ? "Archiving…" : "Archive"}
+                    </button>
+                  </>
+                )}
               </div>
             )}
           </motion.div>

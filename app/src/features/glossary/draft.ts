@@ -18,6 +18,7 @@ export const draftSchema = z.object({
   examples: z.array(z.object({ es: text(200), en: text(200) })).max(4),
   status: z.enum(["unchecked", "checked"]),
   themes: z.array(text(40)).max(12),
+  date: z.iso.date().optional(),
 });
 
 export function parseDraft(raw: unknown): WordDraft {

@@ -3,13 +3,14 @@ import { randomUUID } from "node:crypto";
 import seed from "@/content/glossary-seed.json";
 import { db } from "@/lib/db";
 import { currentUserId } from "@/lib/user";
+import { dateToTimestamp } from "./dates";
 import { spanishKey } from "./text";
 import type { GlossaryWord, WordDraft } from "./types";
 
 /**
  * Where glossary words live. Supabase in normal use; `GLOSSARY_STORE=memory`
- * (dev only) keeps them in this process, seeded with the ten starter words, so
- * the page can be played with before migration 0010 is run.
+ * (dev only) keeps them in this process, seeded with the ten fixture words in
+ * content/glossary-seed.json (dev playtests and tests only; never inserted into the DB).
  */
 export type Store = {
   list(): Promise<{ words: GlossaryWord[]; themes: string[] }>;
@@ -18,6 +19,8 @@ export type Store = {
   insert(draft: WordDraft, source?: "manual" | "import"): Promise<GlossaryWord>;
   update(id: string, draft: WordDraft): Promise<GlossaryWord>;
   remove(id: string): Promise<void>;
+  /** Archive (hide) or restore a word. */
+  setArchived(id: string, archived: boolean): Promise<GlossaryWord>;
   addToReview(id: string): Promise<void>;
 };
 
@@ -35,6 +38,16 @@ export function isMemoryStore(): boolean {
 
 const WORD_COLUMNS =
   "id, spanish, english, norwegian, pos, gender, my_guess, guess_verdict, guess_note, examples, status, source, created_at, glossary_word_themes(glossary_themes(name))";
+
+/** Before migration 0011 there is no archived_at column: fall back to the base columns (nothing archived). */
+const ARCHIVE_MISSING = /archived_at/;
+export const ARCHIVE_MIGRATION_MESSAGE = "To use the archive, run app/supabase/migrations/0011_glossary_archive.sql.";
+
+async function selectWords<T extends { error: { message: string } | null }>(run: (columns: string) => PromiseLike<T>): Promise<T> {
+  const withArchive = await run(`${WORD_COLUMNS}, archived_at`);
+  if (!withArchive.error || !ARCHIVE_MISSING.test(withArchive.error.message)) return withArchive;
+  return run(WORD_COLUMNS);
+}
 
 type ThemeRef = { name: string } | { name: string }[] | null;
 type Row = Record<string, unknown> & { glossary_word_themes?: { glossary_themes: ThemeRef }[] };
@@ -59,12 +72,14 @@ function fromRow(row: Row, inReview: boolean): GlossaryWord {
       .filter(Boolean)
       .sort(),
     inReview,
+    archivedAt: row.archived_at ? new Date(row.archived_at as string).toISOString() : null,
     createdAt: new Date(row.created_at as string).toISOString(),
   };
 }
 
 function toRow(draft: WordDraft) {
   return {
+    ...(draft.date ? { created_at: dateToTimestamp(draft.date) } : {}),
     spanish: draft.spanish.trim(),
     spanish_key: spanishKey(draft.spanish),
     english: draft.english.trim(),
@@ -83,7 +98,7 @@ const supabaseStore: Store = {
   async list() {
     const user_id = currentUserId();
     const [words, themes, review] = await Promise.all([
-      db().from("glossary_words").select(WORD_COLUMNS).eq("user_id", user_id).limit(5000),
+      selectWords((columns) => db().from("glossary_words").select(columns).eq("user_id", user_id).limit(5000)),
       db().from("glossary_themes").select("name").eq("user_id", user_id),
       db().from("srs_items").select("ref").eq("user_id", user_id).eq("kind", "glossary"),
     ]);
@@ -98,7 +113,9 @@ const supabaseStore: Store = {
   },
 
   async get(id) {
-    const { data, error } = await db().from("glossary_words").select(WORD_COLUMNS).eq("user_id", currentUserId()).eq("id", id).maybeSingle();
+    const { data, error } = await selectWords((columns) =>
+      db().from("glossary_words").select(columns).eq("user_id", currentUserId()).eq("id", id).maybeSingle(),
+    );
     if (error) throw new Error(error.message);
     if (!data) return null;
     const { count } = await db()
@@ -148,6 +165,18 @@ const supabaseStore: Store = {
     const { error } = await db().from("glossary_words").delete().eq("user_id", currentUserId()).eq("id", id);
     if (error) throw new Error(error.message);
     await dropUnusedThemes();
+  },
+
+  async setArchived(id, archived) {
+    const { error } = await db()
+      .from("glossary_words")
+      .update({ archived_at: archived ? new Date().toISOString() : null })
+      .eq("user_id", currentUserId())
+      .eq("id", id);
+    if (error) throw new Error(ARCHIVE_MISSING.test(error.message) ? ARCHIVE_MIGRATION_MESSAGE : error.message);
+    const word = await this.get(id);
+    if (!word) throw new Error("word not found");
+    return word;
   },
 
   async addToReview(id) {
@@ -218,6 +247,7 @@ function memory(): Memory {
         source: "import",
         themes: [...w.themes].sort(),
         inReview: false,
+        archivedAt: null,
         createdAt: new Date(Date.UTC(2026, 9, 1, 12, i)).toISOString(),
       });
     });
@@ -243,7 +273,8 @@ function fromDraft(id: string, draft: WordDraft, base?: GlossaryWord): GlossaryW
     source: base?.source ?? "manual",
     themes: [...new Set(draft.themes.map((t) => t.trim()).filter(Boolean))].sort(),
     inReview: m.review.has(id),
-    createdAt: base?.createdAt ?? new Date().toISOString(),
+    archivedAt: base?.archivedAt ?? null,
+    createdAt: draft.date ? dateToTimestamp(draft.date) : (base?.createdAt ?? new Date().toISOString()),
   };
 }
 
@@ -279,6 +310,13 @@ const memoryStore: Store = {
   async remove(id) {
     memory().words.delete(id);
     memory().review.delete(id);
+  },
+  async setArchived(id, archived) {
+    const word = memory().words.get(id);
+    if (!word) throw new Error("word not found");
+    const next = { ...word, archivedAt: archived ? new Date().toISOString() : null };
+    memory().words.set(id, next);
+    return { ...next, inReview: memory().review.has(id) };
   },
   async addToReview(id) {
     memory().review.add(id);

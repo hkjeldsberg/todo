@@ -1,5 +1,5 @@
 -- todo — Glosario, my own Spanish word list (../PRD_GLOSSARY.md). Run after 0001–0009. Idempotent.
--- Ten starter words come from supabase/seed/glossary.sql (generated from src/content/glossary-seed.json).
+-- My words come from supabase/seed/glossary_notes.sql (scripts/glossary-notes-sql.mts), then `npm run glossary:enrich`.
 
 create table if not exists todo.glossary_words (
   id            uuid primary key default gen_random_uuid(),

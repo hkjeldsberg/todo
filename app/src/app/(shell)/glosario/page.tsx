@@ -16,7 +16,7 @@ export default async function GlosarioPage() {
   } catch (cause) {
     // Most often: migration 0010 hasn't been run yet.
     const message = cause instanceof Error ? cause.message : String(cause);
-    return <Setup error={`${message} — run app/supabase/migrations/0010_glossary.sql, then seed/glossary.sql.`} />;
+    return <Setup error={`${message} — run app/supabase/migrations/0010_glossary.sql.`} />;
   }
   return <GlossaryView initialWords={data.words} initialThemes={data.themes} memory={memory} />;
 }

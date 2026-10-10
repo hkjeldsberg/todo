@@ -84,16 +84,16 @@ export async function recheckWord(id: string): Promise<GlossaryWord | null> {
   const result = await checkWithClaude({ spanish: word.spanish, guess, themes });
   if (!result) return null;
   const draft = draftFromCheck(result, guess, word.themes.length ? word.themes : result.themeSuggestion ? [result.themeSuggestion] : []);
+  // A Norwegian translation I wrote myself (e.g. imported) wins over Claude's.
+  if (word.norwegian) draft.norwegian = word.norwegian;
   // Keep my spelling if the corrected one is already another word.
   const clash = await store().findByKey(spanishKey(result.spanish));
   if (clash && clash.id !== id) draft.spanish = word.spanish;
   return store().update(id, draft);
 }
 
-export async function addWordToReview(id: string): Promise<GlossaryWord> {
+/** Archive hides a word from the list (reversible); restore brings it back. */
+export async function setWordArchived(id: string, archived: boolean): Promise<GlossaryWord> {
   await requireSession();
-  await store().addToReview(id);
-  const word = await store().get(id);
-  if (!word) throw new Error("word not found");
-  return word;
+  return store().setArchived(id, archived);
 }

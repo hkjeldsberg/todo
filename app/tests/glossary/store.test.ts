@@ -38,6 +38,17 @@ describe("glossary memory store (dev playtests)", () => {
     await expect(s.update(silla.id, { ...draftOf(edited), spanish: "la Mesa" })).rejects.toBeInstanceOf(DuplicateWordError);
     expect(mesa).toBeDefined();
 
+    const redated = await s.update(silla.id, { ...draftOf(edited), date: "2026-09-14" });
+    expect(redated.createdAt).toBe("2026-09-14T12:00:00.000Z");
+    expect((await s.update(silla.id, draftOf(redated))).createdAt).toBe(redated.createdAt);
+
+    const archived = await s.setArchived(silla.id, true);
+    expect(archived.archivedAt).not.toBeNull();
+    expect((await s.list()).words.find((w) => w.id === silla.id)?.archivedAt).toBe(archived.archivedAt);
+    // an archived word still blocks a duplicate, so re-adding it finds the archived one
+    await expect(s.insert(uncheckedDraft("la silla", "chair", []))).rejects.toBeInstanceOf(DuplicateWordError);
+    expect((await s.setArchived(silla.id, false)).archivedAt).toBeNull();
+
     await s.addToReview(silla.id);
     expect((await s.get(silla.id))?.inReview).toBe(true);
     await s.remove(silla.id);

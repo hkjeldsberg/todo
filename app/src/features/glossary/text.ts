@@ -36,6 +36,7 @@ export function matches(word: GlossaryWord, query: string): boolean {
 export function sortWords(words: GlossaryWord[], by: SortKey): GlossaryWord[] {
   const out = [...words];
   if (by === "newest") return out.sort((a, b) => b.createdAt.localeCompare(a.createdAt));
+  if (by === "oldest") return out.sort((a, b) => a.createdAt.localeCompare(b.createdAt));
   const key = by === "spanish" ? (w: GlossaryWord) => spanishKey(w.spanish) : (w: GlossaryWord) => englishKey(w.english);
   return out.sort((a, b) => key(a).localeCompare(key(b), "es"));
 }
@@ -66,9 +67,34 @@ export const NO_TYPE = "Not checked yet";
 
 export type Group = { key: string; label: string; words: GlossaryWord[] };
 
-/** Already-sorted words → groups. By theme, a word shows under each of its themes. */
-export function groupWords(words: GlossaryWord[], by: GroupKey): Group[] {
+/** A word's date as YYYY-MM-DD in the viewer's time zone. */
+export function dayOf(iso: string): string {
+  const d = new Date(iso);
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+/** "Mon 14 Sep" (the year only when it isn't this year). */
+export function dayLabel(day: string, now = new Date()): string {
+  const d = new Date(`${day}T12:00:00`);
+  return d.toLocaleDateString("en-GB", {
+    weekday: "short",
+    day: "numeric",
+    month: "short",
+    ...(d.getFullYear() === now.getFullYear() ? {} : { year: "numeric" }),
+  });
+}
+
+/**
+ * Already-sorted words → groups. By theme, a word shows under each of its
+ * themes. By date, days run newest first unless `oldestFirst`.
+ */
+export function groupWords(words: GlossaryWord[], by: GroupKey, oldestFirst = false): Group[] {
   if (by === "none") return [{ key: "all", label: "", words }];
+  if (by === "date") {
+    const days = [...new Set(words.map((w) => dayOf(w.createdAt)))].sort();
+    if (!oldestFirst) days.reverse();
+    return days.map((day) => ({ key: `d:${day}`, label: dayLabel(day), words: words.filter((w) => dayOf(w.createdAt) === day) }));
+  }
   if (by === "pos") {
     return POS_ORDER.map((pos) => ({
       key: pos ?? "none",

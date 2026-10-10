@@ -8,12 +8,6 @@ import { genderLabel, POS_SHORT } from "../text";
 import type { CheckResult, GlossaryWord } from "../types";
 import { ExampleLine, ThemePicker } from "./bits";
 
-const VERDICT = {
-  correct: { mark: "✓", title: "Right!" },
-  close: { mark: "≈", title: "Close" },
-  different: { mark: "✗", title: "Different word" },
-} as const;
-
 type Props = {
   open: boolean;
   themes: string[];
@@ -75,9 +69,11 @@ export function AddWordDialog({ open, themes, findExisting, onClose, onSaved, on
       } else if (outcome.kind === "unavailable") {
         // Nothing typed is lost: save as is, check later.
         finish(await createWord(uncheckedDraft(s, g, picked)), "Saved without a check. Claude will check it next time the list opens.");
-      } else if (outcome.result.verdict === "correct" && !outcome.result.spellingFixed) {
-        finish(await createWord(draftFromCheck(outcome.result, g, withSuggestion(picked, outcome.result))), "✓ Right first time");
+      } else if (!outcome.result.spellingFixed) {
+        // Nothing to decide: save Claude's checked entry straight away.
+        finish(await createWord(draftFromCheck(outcome.result, g, withSuggestion(picked, outcome.result))), null);
       } else {
+        // Claude spelled the word differently: confirm which one to keep.
         setResult(outcome.result);
         setPicked(withSuggestion(picked, outcome.result));
         setBusy(null);
@@ -103,7 +99,7 @@ export function AddWordDialog({ open, themes, findExisting, onClose, onSaved, on
   }
 
   return (
-    <Modal open={open} onClose={close} title={result ? "Checked" : "Add a word"}>
+    <Modal open={open} onClose={close} title={result ? "Check the spelling" : "Add a word"}>
       {!result ? (
         <form
           onSubmit={(event) => {
@@ -126,18 +122,9 @@ export function AddWordDialog({ open, themes, findExisting, onClose, onSaved, on
         </form>
       ) : (
         <div className="flex flex-col gap-3" data-testid="glossary-check">
-          <div className={`rounded-[14px] px-3 py-2 ${result.verdict === "different" ? "bg-ai" : "bg-pill-deep"}`}>
-            <p className="text-[16px] font-extrabold">
-              {VERDICT[result.verdict].mark} {VERDICT[result.verdict].title}
-              <span className="font-medium"> · you wrote <i>{guess.trim()}</i></span>
-            </p>
-            {result.note && <p className="text-[14px]">{result.note}</p>}
-          </div>
-          {result.spellingFixed && (
-            <p className="text-[15px]">
-              Did you mean <b lang="es">{result.spanish}</b>? You typed <i lang="es">{spanish.trim()}</i>.
-            </p>
-          )}
+          <p className="text-[15px]">
+            Did you mean <b lang="es">{result.spanish}</b>? You typed <i lang="es">{spanish.trim()}</i>.
+          </p>
           <div>
             <p lang="es" className="text-[22px] font-extrabold">{result.spanish}</p>
             <p className="text-[13px] text-muted">{[POS_SHORT[result.pos], genderLabel(result.gender)].filter(Boolean).join(", ")}</p>
@@ -152,25 +139,12 @@ export function AddWordDialog({ open, themes, findExisting, onClose, onSaved, on
           <ThemePicker value={picked} all={themes} onChange={setPicked} suggestion={result.themeSuggestion} />
           {error && <p role="alert" className="text-[14px] font-bold text-accent">{error}</p>}
           <div className="flex gap-2">
-            {result.spellingFixed ? (
-              <>
-                <button type="button" disabled={busy !== null} onClick={() => save(true)} className="min-h-12 flex-1 rounded-full bg-pill text-[14px] font-bold">
-                  Keep “{spanish.trim()}”
-                </button>
-                <button type="button" disabled={busy !== null} onClick={() => save(false)} className="min-h-12 flex-[1.4] rounded-full bg-ink text-[15px] font-extrabold text-on-ink">
-                  {busy === "save" ? "Saving…" : `Save “${result.spanish}”`}
-                </button>
-              </>
-            ) : (
-              <>
-                <button type="button" onClick={() => setResult(null)} className="min-h-12 flex-1 rounded-full bg-pill text-[15px] font-bold">
-                  Back
-                </button>
-                <button type="button" disabled={busy !== null} onClick={() => save(false)} className="min-h-12 flex-[2] rounded-full bg-ink text-[16px] font-extrabold text-on-ink">
-                  {busy === "save" ? "Saving…" : "Save"}
-                </button>
-              </>
-            )}
+            <button type="button" disabled={busy !== null} onClick={() => save(true)} className="min-h-12 flex-1 rounded-full bg-pill text-[14px] font-bold">
+              Keep “{spanish.trim()}”
+            </button>
+            <button type="button" disabled={busy !== null} onClick={() => save(false)} className="min-h-12 flex-[1.4] rounded-full bg-ink text-[15px] font-extrabold text-on-ink">
+              {busy === "save" ? "Saving…" : `Save “${result.spanish}”`}
+            </button>
           </div>
         </div>
       )}

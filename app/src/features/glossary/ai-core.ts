@@ -33,11 +33,11 @@ in the sense being translated, Spain Spanish unless the word is regional, each w
 Use different sentences each time you're asked.`;
 
 const SYSTEM = `You check entries in a Spanish learner's personal glossary. The learner types a Spanish word or expression
-and their guess at the English. You return the corrected entry.
+and their guess at the meaning, in English or Norwegian. You return the corrected entry.
 
 - spanish: the headword. Fix spelling (nutralista → nutricionista). Nouns get their article (la mesa, el agua). Verbs in
   the infinitive. Keep multi-word expressions as typed if correct (echar de menos).
-- guess_verdict: "correct" if the guess means the same, "close" if nearly (wrong word class, missing nuance, slow vs
+- guess_verdict (judge the meaning, whatever language the guess is in): "correct" if the guess means the same, "close" if nearly (wrong word class, missing nuance, slow vs
   slowly), "different" if it means something else. guess_note: one short English sentence saying what was off; say what
   the guess would be in Spanish when that helps. Empty string when correct.
 - english / norwegian: the usual translation in dictionary form, add a short gloss in brackets only if needed to

@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Modal, { Chip, Field } from "@/design/Modal";
 import { draftOf } from "../draft";
-import { POS_SHORT } from "../text";
+import { dayOf, POS_SHORT } from "../text";
 import { GENDERS, POS, type Gender, type GlossaryWord, type WordDraft } from "../types";
 import { ThemePicker } from "./bits";
 
@@ -44,7 +44,7 @@ function EditForm({
     const d = draftOf(word);
     const examples = [...d.examples];
     while (examples.length < 2) examples.push({ es: "", en: "" });
-    return { ...d, examples };
+    return { ...d, examples, date: dayOf(word.createdAt) };
   });
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -59,7 +59,9 @@ function EditForm({
     const examples = draft.examples.map((e) => ({ es: e.es.trim(), en: e.en.trim() })).filter((e) => e.es && e.en);
     // Hand edits make the entry final; an unchecked word with no type stays unchecked.
     const status = draft.pos ? "checked" : draft.status;
-    const message = await onSave(word, { ...draft, examples, status });
+    // Only send the date when it changed, so the word keeps its exact time otherwise.
+    const date = draft.date && draft.date !== dayOf(word.createdAt) ? draft.date : undefined;
+    const message = await onSave(word, { ...draft, examples, status, date });
     setBusy(false);
     if (message) setError(message);
   }
@@ -76,6 +78,7 @@ function EditForm({
       <Field label="Spanish" value={draft.spanish} onChange={(e) => set({ spanish: e.target.value })} lang="es" autoComplete="off" />
       <Field label="English" value={draft.english} onChange={(e) => set({ english: e.target.value })} autoComplete="off" />
       <Field label="Norsk" value={draft.norwegian ?? ""} onChange={(e) => set({ norwegian: e.target.value })} lang="nb" autoComplete="off" />
+      <Field label="Date" type="date" value={draft.date ?? ""} onChange={(e) => set({ date: e.target.value || undefined })} />
       <div>
         <span className="text-[12px] font-bold text-faint">Type</span>
         <div className="mt-1 flex flex-wrap gap-1.5">

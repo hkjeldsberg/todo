@@ -95,7 +95,7 @@ playtested before 0010 runs; enrich runs words one by one (Batch API not worth i
 - [x] nav tab + Repaso kind/filter/card
 - [x] scripts: `glossary-import.mjs` (CSV), `glossary:enrich`
 - [x] tests + `glossary:playtest` 390×844 + 1440×900; one live AI check (nutralista)
-- [ ] USER: run `0010_glossary.sql`, then `seed/glossary.sql`
+- [x] USER: ran `0010_glossary.sql` + the old `seed/glossary.sql` (starter words; removed again by `seed/glossary_notes.sql`, seed deleted 2026-10-09)
 
 ## Review
 - Whole project: tsc clean, eslint clean, vitest 151/151, `next build` ok.

@@ -1,7 +1,11 @@
 // One-time import of my word list (PRD §6):  npm run glossary:import -- words.csv
-// CSV: spanish,english[,theme] (themes separated by ;). Rows go in as source=import, status=unchecked,
-// with the English as my guess; then run `npm run glossary:enrich`. Safe to re-run: duplicates are skipped.
+// CSV (comma or semicolon) with a header row: Spanish, English, Norwegian, Theme, Date (any order, other columns
+// ignored), e.g. glossary/glossary-notes.xlsx exported as CSV. Without a header: spanish,english[,theme].
+// Themes are separated by ;. The date becomes the word's date in the app (sort/group by date).
+// Rows go in as source=import, status=unchecked, with what I wrote as my guess; then run
+// `npm run glossary:enrich`. Safe to re-run: duplicates are skipped.
 import { readFileSync } from "node:fs";
+import { dateToTimestamp } from "../src/features/glossary/dates";
 import { spanishKey } from "../src/features/glossary/text";
 import { parseCsv, validateRows } from "./glossary-csv.mjs";
 import { OWNER, scriptDb } from "./glossary-db.mjs";
@@ -31,7 +35,18 @@ for (const row of ok) {
   seen.add(key);
   const { data, error: insertError } = await db
     .from("glossary_words")
-    .insert({ user_id: OWNER, spanish: row.spanish, spanish_key: key, english: row.english, my_guess: row.english, source: "import", status: "unchecked" })
+    .insert({
+      user_id: OWNER,
+      spanish: row.spanish,
+      spanish_key: key,
+      // English is required; a Norwegian-only row shows its Norwegian until enrich fills in the English.
+      english: row.english || row.norwegian,
+      norwegian: row.norwegian,
+      my_guess: row.english || row.norwegian,
+      source: "import",
+      status: "unchecked",
+      ...(row.date ? { created_at: dateToTimestamp(row.date) } : {}),
+    })
     .select("id")
     .single();
   if (insertError) {
